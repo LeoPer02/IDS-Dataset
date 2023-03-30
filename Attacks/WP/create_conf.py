@@ -50,17 +50,7 @@ def gen_config():
 		else:
 			f = False
 	
-	## VICTIM CREDENTIALS
-	print('[?] To run the exploit you are required to have the credentials of a user with atleast, author permissions')
-	print('Username:')
-	v_user = str(input())
-	print('Password:')
-	v_pass = str(input())
 	
-	## VICTIM ROOT DIR
-	
-	print('''[?] What\'s the theme of the website? ('You might use WP Scan to detect the theme') ''')
-	v_theme = input()
 	
 	 
 	config_object["ATTACKERINFO"] = {
@@ -70,10 +60,7 @@ def gen_config():
 
 	config_object["VICTIMINFO"] = {
 	    "ip": v_ip,
-	    "port": v_port,
-	    "login": v_user,
-	    "pass": v_pass,
-	    "theme": v_theme
+	    "port": v_port
 	}
 
 	if os.path.exists('./config.ini'):
