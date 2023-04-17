@@ -1,0 +1,46 @@
+version: '3.8'
+
+# All services needed to run the wordpress service
+services:
+  # Container for the wordpress itself
+  wordpress:
+      container_name: Main_Container
+      build: .                                    # This grabs the Dockerfile in the current folder and uses it as the image
+      restart: always
+      ports: 
+          - 8080:80
+      environment:
+          WORDPRESS_DB_HOST: db
+          WORDPRESS_DB_USER: wpuser
+          WORDPRESS_DB_PASSWORD: wppass
+          WORDPRESS_DB_NAME: wpdb
+      volumes:
+          - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini     # Used to increase the maximum upload file so that it is possible to install plugins
+          - ./wordpress/:/var/www/html/                             # Imports the wordpress files
+  # Container responsible for the database
+  db:
+      container_name: db
+      image: mysql:5.7
+      restart: always
+      environment:
+          MYSQL_DATABASE: wpdb
+          MYSQL_USER: wpuser
+          MYSQL_PASSWORD: wppass
+          MYSQL_RANDOM_ROOT_PASSWORD: '1'
+      volumes:
+          - db:/var/lib/mysql
+  # Container responsible for the adminer, (to manipulate the db)
+  adminer:
+      container_name: adminer
+      depends_on:
+          - db
+      image: adminer
+      restart: always
+      ports:
+          - 8888:8080
+
+networks:
+    back:
+
+volumes:
+    db:
