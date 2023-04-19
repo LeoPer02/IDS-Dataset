@@ -59,10 +59,24 @@ def gen_config(change):
 			else:
 				f = False
 	
+		## EXPLOIT TO USE
+		print('[?] Which of the following exploit do you wish to use?')
+		print('''
+		[1] LXD container privilege escalation exploit.
+		[2] Meterpreter shell.
+		... (More to be implemented)
+		''') 
+		exp = 0
+		# Represents the different exploit available
+		l = [1, 2]
+		while exp not in l:
+			exp = int(input())
+	
 	else:
 		config_object.read("config.ini")
 		attacker_info = config_object["ATTACKERINFO"]
 		victim_info = config_object["VICTIMINFO"]
+		general_info = config_object["GENERALINFO"]
 		a_ip = attacker_info['ip']
 		a_port = random.randint(1024, 65536)
 		# Making sure the random port is not in use
@@ -71,6 +85,7 @@ def gen_config(change):
 		v_ip = victim_info['ip']
 		v_port = victim_info['port']
 		v_secure = victim_info['secure']
+		exp = general_info['exploit']
 	
 	 
 	config_object["ATTACKERINFO"] = {
@@ -82,6 +97,9 @@ def gen_config(change):
 	    "ip": v_ip,
 	    "port": v_port,
 	    "secure": v_secure
+	}
+	config_object["GENERALINFO"] = {
+	    "exploit": exp
 	}
 
 	if os.path.exists('./config.ini'):

