@@ -41,6 +41,14 @@ def gen_config(change):
 			except ValueError:
 				print('Not a valid ipaddress, reenter a valid one')
 		
+		## VICTIM PROTOCOL
+		v_secure = True
+		print('[?] Does the victim use HTTPS? (y|n)')
+		ans = input();
+		if ans == "n" or ans == "N":
+			v_secure = False
+			
+		 
 		## VICTIM PORT
 		print('[?] Victim port: (Port used for accesing the webserver, default: 80)')
 		f = True
@@ -62,6 +70,7 @@ def gen_config(change):
 			a_port = random.randint(1024, 65536)
 		v_ip = victim_info['ip']
 		v_port = victim_info['port']
+		v_secure = victim_info['secure']
 	
 	 
 	config_object["ATTACKERINFO"] = {
@@ -71,7 +80,8 @@ def gen_config(change):
 
 	config_object["VICTIMINFO"] = {
 	    "ip": v_ip,
-	    "port": v_port
+	    "port": v_port,
+	    "secure": v_secure
 	}
 
 	if os.path.exists('./config.ini'):

