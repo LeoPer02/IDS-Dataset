@@ -4,3 +4,5 @@
 
 
 # Important  Note, in order for the LXD privilege escalation to work, the user needs access to the unix.socket, that can be achieved by chmod 0666 /var/lib/lxd/unix.socket
+
+# Mention that the exploits migh have been slightly modified in order to be easier to combine them with the rest of the script

