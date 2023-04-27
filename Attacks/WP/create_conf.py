@@ -71,7 +71,44 @@ def gen_config(change):
 		l = [1, 2]
 		while exp not in l:
 			exp = int(input())
-	
+		
+		print('''
+		########################################################################
+		#								       #
+		#		SYSCALL LOGGING SERVER CONFIGURATION!                  #		  
+		#								       #
+		#		During development a server responsible                #
+		#		for starting and stopping the logging                  #
+		#		of syscalls was implemented.			       #
+		#		 						       #
+		#		This server was programmed to received GET             #
+		#		requests with the form:                                #
+		#		{ip}:{port}/start?exploit={exploit}&pid={pid}          #
+		#		{ip}:{port}/stop?exploit={exploit}&pid={pid}	       #
+		#								       #
+		#		Therefore, this script was developed in order to       #
+		# 		communicate with such server.                          #
+		#                                                                      #
+		#		Do you wish to activate this feature and configure     #
+		#		the ip and port of the server? (y|n)                   #
+		#                                                                      #
+		########################################################################
+		''')
+		n = input()
+		g_active = False
+		g_host = ""
+		g_port = ""
+		g_exp = 0
+		if n == 'Y' or n == 'y':
+			g_active = True
+			print('[?] What\'s the ip/host of the server?')
+			g_host = input()
+			print('[?] What\' the port of the server?')
+			g_port = input()
+			print('[*] Quick reminder:')
+			print('In order to start the logging we will access {ip}:{port}/start?exploit=exploit_name&pid=rev_shell_pid'.format(ip=g_host, port=g_host))
+			print('And to stop the logging we will access {ip}:{port}/stop?exploit=exploit_name&pid=rev_shell_pid'.format(ip=g_host, port=g_host))
+			g_exp = exp
 	else:
 		config_object.read("config.ini")
 		attacker_info = config_object["ATTACKERINFO"]
@@ -86,6 +123,10 @@ def gen_config(change):
 		v_port = victim_info['port']
 		v_secure = victim_info['secure']
 		exp = general_info['exploit']
+		g_active = general_info['active']
+		g_host = general_info['host']
+		g_port = int(general_info['port'])
+		g_exp = int(general_info['exploit'])
 	
 	 
 	config_object["ATTACKERINFO"] = {
@@ -99,7 +140,11 @@ def gen_config(change):
 	    "secure": v_secure
 	}
 	config_object["GENERALINFO"] = {
-	    "exploit": exp
+	    "exploit": g_exp,
+	    "host": g_host,
+	    "port": g_port,
+	    "active": g_active
+	 
 	}
 
 	if os.path.exists('./config.ini'):

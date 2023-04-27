@@ -18,7 +18,9 @@
 #
 #
 #
-#
+#				TO DO:
+# Write an automation script (RUBY)
+# Remember to wait for connection before continuing script
 #
 #
 #

