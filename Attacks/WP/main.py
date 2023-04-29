@@ -5,7 +5,7 @@ import requests
 import errno
 import socket
 
-from exploit_LXD import exploit_LXD
+from initial_access import wp_file_manager
 from datetime import datetime
 from configparser import ConfigParser 	
 
@@ -43,12 +43,11 @@ def main():
 	attacker_info = config_object["ATTACKERINFO"]
 	victim_info = config_object["VICTIMINFO"]
 	general_info = config_object["GENERALINFO"]
-	
-	match int(general_info['exploit']):
-		case 1:
-			exploit_LXD()
-		case default:
-			sys.exit('Something went wrong :(\nExploit chosen is not valid')
+	l = [1,2,3]
+	if int(general_info['exploit']) in [1,2,3]:
+		wp_file_manager(victim_info, attacker_info, general_info, general_info['exploit'])
+	else:
+		sys.exit("Something went wrong, invalid exploit")
 	
 if __name__ == '__main__':
 	main()

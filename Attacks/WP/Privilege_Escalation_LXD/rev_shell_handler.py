@@ -1,6 +1,10 @@
 import socket, sys, time, os, requests, datetime, re, random, errno
 import threading
 
+# DISCLAIMER
+# I utilized as base code for this listener the code found on:
+# https://tpetersonkth.github.io/2021/10/16/Creating-a-Basic-Python-Reverse-Shell-Listener.html
+
 def listen(ip,port, t2, r_port, file_name, general_info):
 	s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 	s.bind((ip, port))

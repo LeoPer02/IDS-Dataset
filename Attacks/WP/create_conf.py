@@ -64,13 +64,14 @@ def gen_config(change):
 		print('''
 		[1] LXD container privilege escalation exploit.
 		[2] Meterpreter shell.
+		[3] Docker Escape
 		... (More to be implemented)
 		''') 
-		exp = 0
+		exp = '0'
 		# Represents the different exploit available
-		l = [1, 2]
+		l = ['1', '2', '3']
 		while exp not in l:
-			exp = int(input())
+			exp = input()
 		
 		print('''
 		########################################################################
@@ -98,7 +99,7 @@ def gen_config(change):
 		g_active = False
 		g_host = ""
 		g_port = ""
-		g_exp = 0
+		g_exp = exp
 		if n == 'Y' or n == 'y':
 			g_active = True
 			print('[?] What\'s the ip/host of the server?')
@@ -108,7 +109,6 @@ def gen_config(change):
 			print('[*] Quick reminder:')
 			print('In order to start the logging we will access {ip}:{port}/start?exploit=exploit_name&pid=rev_shell_pid'.format(ip=g_host, port=g_host))
 			print('And to stop the logging we will access {ip}:{port}/stop?exploit=exploit_name&pid=rev_shell_pid'.format(ip=g_host, port=g_host))
-			g_exp = exp
 	else:
 		config_object.read("config.ini")
 		attacker_info = config_object["ATTACKERINFO"]
@@ -125,7 +125,10 @@ def gen_config(change):
 		exp = general_info['exploit']
 		g_active = general_info['active']
 		g_host = general_info['host']
-		g_port = int(general_info['port'])
+		if general_info['port'] != '':
+			g_port = int(general_info['port'])
+		else:
+			g_port = 0
 		g_exp = int(general_info['exploit'])
 	
 	 
