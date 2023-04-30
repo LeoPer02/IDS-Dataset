@@ -41,8 +41,8 @@ while getopts ':hf:i:s:e:' OPTION; do
 			echo "-f defines file in wich the results will be saved, default '/Overhead_Logging.txt'. This will overwrite whatever is in the file, or create a new one if it doens't exist"
 			echo ""
 			echo "##################### YOUR OWN MODULE #######################"
-			echo "-s defines the script used to stop the module after is has been used, you can omit this step if the script in -e stops by itself" 
-			echo "-e defines the script used to inialize the module (in case you want to use your own), for that provide an .sh file that will monitor this process"			
+			echo "-s defines the script used to start the module (in the case you want to use your own), for that, provide an .sh file that will monitor this script" 
+			echo "-e defines the script used to stop/end the module after is has been used, you can omit this step if the script in -e stops by itself"			
 			echo ""
 			echo "By default we will execute $HOME/ebriareospf/briareospf-master/syscall_exit_tracer.py"
 			exit 0
@@ -52,7 +52,7 @@ while getopts ':hf:i:s:e:' OPTION; do
 			;;
 		i)	
 			iter=$OPTARG
-			re='^([1-9]+[0-9]*)$'
+			re='^([1-9]+[0-9]*)$' # Force the number of iterations to be at least 1
 			if ! [[ $iter =~ $re ]] ; then
 				echo "error: Not a number" >&2; exit 1
 			fi
@@ -79,7 +79,7 @@ exec_random(){
 	local counter=1
 	while [ $counter -le 500 ]
 	do
-		# This cycle will generate multiple read/write instructions
+		# This cycle will generate multiple read/write syscalls
 		let counter=counter+1
 		echo "çfweuohfisadnbfkjghsgayirtyaioury793" | cat > ./random_file_.txt
 		cat ./random_file_.txt > ./random_file_.txt
@@ -161,8 +161,13 @@ get_with_audit() {
 init_module() {
 	if [[ $module_start == "" ]]; then
 		cur_wd=$(pwd)
-		# Hardcoded
+		# Hardcoded (Will be changed later on)
 		cd /home/vagrant/ebriareospf/briareospf-master
+		# To avoid over consuption of resources I set a timeout to the module
+		# However this leads to it being alive even after the script ends
+		# possibly affecting another script if ran sequentially
+		# Not only that but 60s might not be enough for a high value of iterations
+		# Later on a way to kill the process will be implemented
 		timeout 60 python3 /home/vagrant/ebriareospf/briareospf-master/syscall_exit_tracer.py -p $(echo $$) & > /dev/null 2>&1
 		cd $cur_wd
 	else
@@ -211,7 +216,9 @@ service auditd stop
 
 # Get time without any logging system
 get_no_logging
+# Get time with auditd logging info
 get_with_audit
+# Get time with module logging info
 get_with_module
 
 #### TO FILE #############
