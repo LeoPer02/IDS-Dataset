@@ -7,48 +7,29 @@ ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update -y &&\
     apt-get install php -y &&\
     apt-get install apache2 -y &&\
-    apt-get install php-mysql -y
+    apt-get install php-mysql -y &&\
+    apt-get install wget -y &&\
+    apt-get install systemd -y &&\
+    apt-get install vim -y &&\
+    apt-get install sudo -y
 
 RUN rm -f /var/www/html/index.html
 
-
-
-# Install BCC dependencies
-RUN apt-get -y install bison build-essential cmake flex git libedit-dev \
-  libllvm6.0 llvm-6.0-dev libclang-6.0-dev python zlib1g-dev libelf-dev libfl-dev python3-distutils
+# Changing the max upload size limit to allow the upload of files
+RUN echo 'upload_max_filesize = 10M--post_max_size = 10M' | sed 's/--/\n/g' | cat >> /etc/php/7.2/cli/php.ini
+RUN echo 'upload_max_filesize = 10M--post_max_size = 10M' | sed 's/--/\n/g' | cat >> /etc/php/7.2/apache2/php.ini
 
 # Change Work Directory
 WORKDIR /
 
-RUN dpkg-reconfigure dash
-
-# Download and Install BCC
-# It uses bash because of pushd and popd
-RUN bash -xc "\
-git clone https://github.com/iovisor/bcc.git --branch v0.24.0; \
-mkdir bcc/build; \ 
-cd bcc/build; \
-cmake ..; \
-make; \
-make install; \
-cmake -DPYTHON_CMD=python3 ..; \
-pushd src/python/; \
-make; \
-make install; \
-popd; \
-"
+# Copying the file responsable of setting up LXC and starting apache2
+# COPY setup_lxc.sh .
 
 WORKDIR /
 
-##################################################
-#                                                #   
-#                                                #
-#            SYSCALL TRACING AFONSO              #
-#         (Confirmar se posso publicar)          #
-#                                                #
-#                                                #
-##################################################
+# This will allow www-data to use sudo find
+# That will come in handy in order to escalate our privilege
+RUN echo "www-data ALL=(ALL) NOPASSWD: /usr/bin/find"
 
-RUN git clone https://github.com/fonsow/ebriareospf.git
-
+# CMD ["/bin/bash", "-c", "chmod 777 ./setup_lxc.sh && ./setup_lxc.sh"]
 CMD ["apache2ctl", "-D", "FOREGROUND"]

