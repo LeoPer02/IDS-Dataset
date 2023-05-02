@@ -10,7 +10,7 @@ def run(victim_info, attacker_info, general_info):
 	##################################################################################
 	''')
 	print('''[*] This attack will take advantage of a Docker with too much privileges that allow for
-an attacker to not only break isolation but to be able to run scripts with higher privileges, possibily root''')
+an attacker to not only break isolation but to be able to run scripts with higher privileges, possibily root, within the host system''')
 	print('''[*] If don't have an already configured docker machine for this attack or if you want
 to configure your own to perform this attack, please look at the information provided in the
 docker-compose.yml in the directory /Docker that comes with this project''')

