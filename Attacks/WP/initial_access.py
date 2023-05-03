@@ -63,7 +63,7 @@ def wp_file_manager(victim_info, attacker_info, general_info, exp, arguments):
 		
 		# Generate a new port for each attack, avoid the TIME_WAIT
 		create_conf.gen_config(False)
-
+		
 def launch_exploit(attacker_info, victim_info):
 	now = datetime.now()
 	s = ''

