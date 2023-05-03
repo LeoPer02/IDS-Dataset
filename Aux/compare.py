@@ -71,7 +71,7 @@ for i in range(0, max(len(module_list), len(audit_list))):
 				audit_pid, audit_sys = audit_list[i]
 				break
 		if audit_pid == -1:
-			f.write('Pid: {0: <{fill}} Module: {1: <{fill}} Audit: UNKNOWN\n'.format(module_pid, module_sys, fill=16))
+			f.write('Pid: {0: <{fill}} Module: {1: <{fill}} Audit: NOT_FILTERED\n'.format(module_pid, module_sys, fill=16))
 		else:
 			f.write('Pid: {0: <{fill}} Module: {1: <{fill}} Audit: {audit_sys}\n'.format(module_pid, module_sys, audit_sys=audit_sys, fill=16))
 		del module_list[0]
@@ -79,12 +79,12 @@ for i in range(0, max(len(module_list), len(audit_list))):
 
 	elif len(module_list) != 0 and len(audit_list) == 0:
 		module_pid, module_sys = module_list[0]
-		f.write('Pid: {0: <{fill}} Module: {1: <{fill}} Audit: UNKNOWN\n'.format(module_pid, module_sys, fill=16))
+		f.write('Pid: {0: <{fill}} Module: {1: <{fill}} Audit: NOT_FILTERED\n'.format(module_pid, module_sys, fill=16))
 		del module_list[0]
 		
 	elif len(module_list) == 0 and len(audit_list) != 0:
 		audit_pid, audit_sys = audit_list[0]
-		f.write('Pid: {0: <{fill}} Module: {1: <{fill}} Audit: {audit_sys}\n'.format(audit_pid,'UNKNOWN', audit_sys=audit_sys, fill=16))
+		f.write('Pid: {0: <{fill}} Module: {1: <{fill}} Audit: {audit_sys}\n'.format(audit_pid,'NOT_FILTERED', audit_sys=audit_sys, fill=16))
 		del audit_list[0]
 		
 	else:
