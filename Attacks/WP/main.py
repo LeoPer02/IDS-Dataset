@@ -71,7 +71,7 @@ def main():
 	attacker_info = config_object["ATTACKERINFO"]
 	victim_info = config_object["VICTIMINFO"]
 	general_info = config_object["GENERALINFO"]
-	l = [1,2,3,4]
+	l = [1,2,3,4,5]
 	if int(general_info['exploit']) in l:
 		wp_file_manager(victim_info, attacker_info, general_info, general_info['exploit'], arguments)
 	else:

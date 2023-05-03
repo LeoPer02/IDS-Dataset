@@ -66,17 +66,22 @@ def gen_config(change):
 		[2] Meterpreter shell.
 		[3] Docker Escape
 		[4] SSH Bruteforce
+		[5] FTP Bruteforce
 		... (More to be implemented)
 		''') 
 		exp = '0'
 		# Represents the different exploit available
-		l = ['1', '2', '3', '4']
+		l = ['1', '2', '3', '4', '5']
 		while exp not in l:
 			exp = input()
 		v_ssh_user = ""
+		v_ftp_user = ""
 		v_ssh_port = 22
+		v_ftp_port = 21
 		g_default_ssh = True
+		g_default_ftp = True
 		g_ssh = False
+		g_ftp = False
 		g_wordlist = "/usr/share/wordlists/rockyou.txt"
 		if exp == '4':
 			n=input('[?] Do you know the username on the ssh service? (y|n) ')
@@ -103,6 +108,31 @@ def gen_config(change):
 					else:
 						f = False
 						g_default_ssh = False
+		elif exp == '5':
+			n=input('[?] Do you know the username on the ftp service? (y|n) ')
+			if n == 'Y' or n == 'y':
+				v_ftp_user=input('[?] FTP user: ')
+				g_ftp = True
+			
+			n=input('''[?] Which password wordlist do you want to use to bruteforce?\n    Press Enter to use default, /usr/share/wordlists/rockyou.txt\n    Keep in mind, the file will be used to both username (if not provided) and password\n''')
+			if n != '':
+				while not os.path.exists(n):
+					print('[-] That file does not exist, please insert a new one or Enter to use default /usr/share/wordlists/rockyou.txt')
+					n = input()
+					if n == '':
+						break
+				if os.path.exists(n):
+					g_wordlist = n
+			n = input('[?] Is the FTP port the default one, 21? (y|n)\n')
+			if n != 'Y' and n != 'y':
+				f = True
+				while f:
+					v_ftp_port = int(input())
+					if v_ftp_port <= 0 or v_ftp_port >= 65536:
+						print('Please enter a port between 0 and 65536')
+					else:
+						f = False
+						g_default_ftp = False
 						
 		
 		print('''
@@ -136,7 +166,7 @@ def gen_config(change):
 			g_active = True
 			print('[?] What\'s the ip/host of the server?')
 			g_host = input()
-			print('[?] What\' the port of the server?')
+			print('[?] What\'s the port of the server?')
 			g_port = input()
 			print('[*] Quick reminder:')
 			print('In order to start the logging we will access {ip}:{port}/start?exploit=exploit_name&pid=rev_shell_pid'.format(ip=g_host, port=g_port))
@@ -155,7 +185,9 @@ def gen_config(change):
 		v_port = victim_info['port']
 		v_secure = victim_info['secure']
 		v_ssh_user = victim_info['ssh_user']
+		v_ftp_user = victim_info['ftp_user']
 		v_ssh_port = victim_info['ssh_port']
+		v_ftp_port = victim_info['ftp_port']
 		exp = general_info['exploit']
 		g_active = general_info['active']
 		g_host = general_info['host']
@@ -165,8 +197,10 @@ def gen_config(change):
 			g_port = 0
 		g_exp = int(general_info['exploit'])
 		g_ssh = general_info['has_ssh_user']
+		g_ftp = general_info['has_ftp_user']
 		g_wordlist = general_info['wordlist']
 		g_default_ssh = general_info['default_ssh']
+		g_default_ftp = general_info['default_ftp']
 		
 	
 	 
@@ -180,7 +214,9 @@ def gen_config(change):
 	    "port": v_port,
 	    "secure": v_secure,
 	    "ssh_user": v_ssh_user,
-	    "ssh_port": v_ssh_port
+	    "ftp_user": v_ftp_user,
+	    "ssh_port": v_ssh_port,
+	    "ftp_port": v_ftp_port
 	}
 	config_object["GENERALINFO"] = {
 	    "exploit": g_exp,
@@ -188,8 +224,10 @@ def gen_config(change):
 	    "port": g_port,
 	    "active": g_active,
 	    "has_ssh_user": g_ssh,
+	    "has_ftp_user": g_ftp,
 	    "wordlist": g_wordlist,
-	    "default_ssh": g_default_ssh
+	    "default_ssh": g_default_ssh,
+	    "default_ftp": g_default_ftp
 	 
 	}
 

