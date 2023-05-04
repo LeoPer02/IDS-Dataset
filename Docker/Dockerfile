@@ -22,11 +22,6 @@ RUN echo 'upload_max_filesize = 10M--post_max_size = 10M' | sed 's/--/\n/g' | ca
 # Change Work Directory
 WORKDIR /
 
-# Copying the file responsable of setting up LXC and starting apache2
-# COPY setup_lxc.sh .
-
-WORKDIR /
-
 # This will allow www-data to use sudo find
 # That will come in handy in order to escalate our privilege
 RUN echo "www-data ALL=(ALL) NOPASSWD: /usr/bin/find"
