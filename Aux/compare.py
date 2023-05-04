@@ -56,7 +56,7 @@ for i in all_pids:
 		audit_list.append((i, v))
 
 f = open('differences.txt', 'w')
-
+f.write('Module Entrys: {0: <{fill}} Audit Entrys: {1: <{fill}}\n'.format(len(module_list), len(audit_list), fill=16))
 # Both have elements
 for i in range(0, max(len(module_list), len(audit_list))):
 
@@ -90,4 +90,3 @@ for i in range(0, max(len(module_list), len(audit_list))):
 	else:
 		break
 f.close()
-	
