@@ -30,14 +30,14 @@ then
 	exit 1
 fi
 
-while getopts ':hf:i:s:e:' OPTION; do
+while getopts ':hf:r:s:e:' OPTION; do
 	case "$OPTION" in
 		h)
 			echo ""
 			echo "script usage: $(basename $0) [-p path/to/folder/] [-h] [-f name_of_file] [-i some_int]" >&2
 			echo ""
 			echo "-h displays this help information"
-			echo "-i defines the number of times each test will be performed, higher number increases accuracy but at the cost of time, default value: 5"
+			echo "-r defines the number of times each test will be performed, higher number increases accuracy but at the cost of time, default value: 5"
 			echo "-f defines file in wich the results will be saved, default '/Overhead_Logging.txt'. This will overwrite whatever is in the file, or create a new one if it doens't exist"
 			echo ""
 			echo "##################### YOUR OWN MODULE #######################"
@@ -50,7 +50,7 @@ while getopts ':hf:i:s:e:' OPTION; do
 		f)
 			file_path="$OPTARG"
 			;;
-		i)	
+		r)	
 			iter=$OPTARG
 			re='^([1-9]+[0-9]*)$' # Force the number of iterations to be at least 1
 			if ! [[ $iter =~ $re ]] ; then
@@ -163,12 +163,8 @@ init_module() {
 		cur_wd=$(pwd)
 		# Hardcoded (Will be changed later on)
 		cd /home/vagrant/ebriareospf/briareospf-master
-		# To avoid over consuption of resources I set a timeout to the module
-		# However this leads to it being alive even after the script ends
-		# possibly affecting another script if ran sequentially
-		# Not only that but 60s might not be enough for a high value of iterations
-		# Later on a way to kill the process will be implemented
-		timeout 60 python3 /home/vagrant/ebriareospf/briareospf-master/syscall_exit_tracer.py -p $(echo $$) & > /dev/null 2>&1
+		# Execute the module
+		python3 /home/vagrant/ebriareospf/briareospf-master/syscall_exit_tracer.py -p $(echo $$) & > /dev/null 2>&1
 		cd $cur_wd
 	else
 		bash $module_start
@@ -177,8 +173,10 @@ init_module() {
 
 clean_module() {
 	# Even if provided there's no need to execute a module_end without a module_start
-	if [ $module_start != "" ] && [ $module_end != "" ]; then
+	if ( [[ $module_start == "" ]] && [[ $module_end != "" ]] ) || [ $module_end != "" ]; then
 		bash $module_end
+	else
+		pkill -9 -f syscall_exit_tracer.py
 	fi
 }
 
@@ -187,6 +185,7 @@ get_with_module() {
 	echo "WITH MODULE" | cat >> $file_path
 	echo "==============================" | cat >> $file_path 
 	with_module=$(take_measurements)
+	clean_module
 	echo "==============================" | cat >> $file_path 
 	echo "Average: $with_module" | cat >> $file_path 
 	echo ""  | cat >> $file_path
