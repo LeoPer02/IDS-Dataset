@@ -36,7 +36,7 @@ def run(victim_info, attacker_info, general_info, arguments):
 	time.sleep(0.8)
 	if general_info['active'] == 'True':
 			try:
-				requests.get('http://'+ informAudittingStart(general_info) + '3232', timeout=(1,1)) # Pid here doenst really matter
+				requests.get('http://'+ informAudittingStart(general_info), timeout=(1,1))
 			except requests.exceptions.ReadTimeout:
 		    		pass
 			except requests.exceptions.ConnectTimeout:
@@ -46,7 +46,7 @@ def run(victim_info, attacker_info, general_info, arguments):
 	print('[*] Exiting ...')
 	if general_info['active'] == 'True':
 			try:
-				requests.get('http://'+ informAudittingStop(general_info) + '3232', timeout=(1,1)) # Pid here doenst really matter
+				requests.get('http://'+ informAudittingStop(general_info), timeout=(1,1)) 
 			except requests.exceptions.ReadTimeout:
 		    		pass
 			except requests.exceptions.ConnectTimeout:
@@ -54,12 +54,10 @@ def run(victim_info, attacker_info, general_info, arguments):
 
 def informAudittingStart(general_info):
 	exploit = 'SSH'
-	# Pid is added on the terminal using $(echo $$)
-	url = general_info['host'] + ':' + general_info['port'] + '/start?exploit=' + exploit + '&pid='
+	url = general_info['host'] + ':' + general_info['port'] + '/start?exploit=' + exploit 
 	return url
 
 def informAudittingStop(general_info):
 	exploit = 'SSH'
-	# Pid is added on the terminal using $(echo $$)
-	url = general_info['host'] + ':' + general_info['port'] + '/stop?exploit=' + exploit + '&pid='
+	url = general_info['host'] + ':' + general_info['port'] + '/stop?exploit=' + exploit 
 	return url

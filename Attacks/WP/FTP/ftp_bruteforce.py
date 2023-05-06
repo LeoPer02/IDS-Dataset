@@ -33,11 +33,11 @@ def run(victim_info, attacker_info, general_info, arguments):
 	
 	
 	process = subprocess.Popen(cmd, shell=True, stdin=subprocess.PIPE, stdout=subprocess.PIPE)
-	# Give time for Hydra to send the connection and sshd create the processes
+	# Give time for Hydra to send the connection and ftpd create the processes
 	time.sleep(0.8)
 	if general_info['active'] == 'True':
 			try:
-				requests.get('http://'+ informAudittingStart(general_info) + '3232', timeout=(1,1)) # Pid here doenst really matter
+				requests.get('http://'+ informAudittingStart(general_info), timeout=(1,1))
 			except requests.exceptions.ReadTimeout:
 		    		pass
 			except requests.exceptions.ConnectTimeout:
@@ -47,7 +47,7 @@ def run(victim_info, attacker_info, general_info, arguments):
 	print('[*] Exiting ...')
 	if general_info['active'] == 'True':
 			try:
-				requests.get('http://'+ informAudittingStop(general_info) + '3232', timeout=(1,1)) # Pid here doenst really matter
+				requests.get('http://'+ informAudittingStop(general_info), timeout=(1,1))
 			except requests.exceptions.ReadTimeout:
 		    		pass
 			except requests.exceptions.ConnectTimeout:
@@ -55,12 +55,12 @@ def run(victim_info, attacker_info, general_info, arguments):
 
 def informAudittingStart(general_info):
 	exploit = 'FTP'
-	# Pid is added on the terminal using $(echo $$)
-	url = general_info['host'] + ':' + general_info['port'] + '/start?exploit=' + exploit + '&pid='
+
+	url = general_info['host'] + ':' + general_info['port'] + '/start?exploit=' + exploit
 	return url
 
 def informAudittingStop(general_info):
 	exploit = 'FTP'
-	# Pid is added on the terminal using $(echo $$)
-	url = general_info['host'] + ':' + general_info['port'] + '/stop?exploit=' + exploit + '&pid='
+
+	url = general_info['host'] + ':' + general_info['port'] + '/stop?exploit=' + exploit
 	return url

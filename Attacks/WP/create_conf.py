@@ -41,33 +41,19 @@ def gen_config(change):
 			except ValueError:
 				print('Not a valid ipaddress, reenter a valid one')
 		
-		## VICTIM PROTOCOL
-		v_secure = True
-		print('[?] Does the victim use HTTPS? (y|n)')
-		ans = input();
-		if ans == "n" or ans == "N":
-			v_secure = False
-			
-		 
-		## VICTIM PORT
-		print('[?] Victim port: (Port used for accesing the webserver, default: 80)')
-		f = True
-		while f:
-			v_port = int(input())
-			if v_port < 0 or v_port > 65536:
-				print('Please enter a port between 0 and 65536')
-			else:
-				f = False
-	
+		# DEFAULT VALUES
+		# Make the default port 80
+		# Make Secure disabled
+		v_port = 80
+		v_secure = False
 		## EXPLOIT TO USE
 		print('[?] Which of the following exploit do you wish to use?')
 		print('''
 		[1] LXD container privilege escalation exploit.
-		[2] Meterpreter shell.
+		[2] Meterpreter shell. (No automation)
 		[3] Docker Escape
 		[4] SSH Bruteforce
 		[5] FTP Bruteforce
-		... (More to be implemented)
 		''') 
 		exp = '0'
 		# Represents the different exploit available
@@ -133,6 +119,28 @@ def gen_config(change):
 					else:
 						f = False
 						g_default_ftp = False
+		elif exp == '1' or exp == '3':
+			## VICTIM PROTOCOL
+			v_secure = True
+			print('[?] Does the victim use HTTPS? (y|n)')
+			ans = input();
+			if ans == "n" or ans == "N":
+				v_secure = False
+				
+			 
+			## VICTIM PORT
+			print('[?] Victim port: (Port used for accesing the webserver, default: 80)')
+			f = True
+			while f:
+				n = input()
+				# If the user passes the empty string, just use default 80
+				if n == '':
+					break;
+				v_port = int(n)
+				if v_port < 0 or v_port > 65536:
+					print('Please enter a port between 0 and 65536')
+				else:
+					f = False
 						
 		
 		print('''
@@ -146,8 +154,8 @@ def gen_config(change):
 		#		 						       #
 		#		This server was programmed to received GET             #
 		#		requests with the form:                                #
-		#		{ip}:{port}/start?exploit={exploit}&pid={pid}          #
-		#		{ip}:{port}/stop?exploit={exploit}&pid={pid}	       #
+		#		{ip}:{port}/start?exploit={name_of_exploit}            #
+		#		{ip}:{port}/stop?exploit={name_of_exploit}             #
 		#								       #
 		#		Therefore, this script was developed in order to       #
 		# 		communicate with such server.                          #
@@ -169,8 +177,8 @@ def gen_config(change):
 			print('[?] What\'s the port of the server?')
 			g_port = input()
 			print('[*] Quick reminder:')
-			print('In order to start the logging we will access {ip}:{port}/start?exploit=exploit_name&pid=rev_shell_pid'.format(ip=g_host, port=g_port))
-			print('And to stop the logging we will access {ip}:{port}/stop?exploit=exploit_name&pid=rev_shell_pid'.format(ip=g_host, port=g_port))
+			print('In order to start the logging we will access {ip}:{port}/start?exploit=exploit_name'.format(ip=g_host, port=g_port))
+			print('And to stop the logging we will access {ip}:{port}/stop?exploit=exploit_name'.format(ip=g_host, port=g_port))
 	else:
 		config_object.read("config.ini")
 		attacker_info = config_object["ATTACKERINFO"]
