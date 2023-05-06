@@ -13,7 +13,7 @@ from configparser import ConfigParser
 epilog ="This script was created in order to automate the exploitation and logging of the syscalls produced by the attacks"
 
 parser = argparse.ArgumentParser(epilog=epilog)
-parser.add_argument("-c", "--config", action="store_true", help='''	Allows you to only configure the exploit and not run it.''')
+parser.add_argument("-c", "--config", action="store_true", help='''	Allows you to only configure the exploit and not run it. Althougth if combined with -r will prompt the configuration before running the attacks''')
 
 parser.add_argument("-r", "--repeat", action="store",
 		    help='''	This options allows you to repeat the same exploit multiple times, the configuration used will be the one
