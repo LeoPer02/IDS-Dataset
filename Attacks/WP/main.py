@@ -6,6 +6,19 @@ import errno
 import socket
 import argparse
 
+class color:
+	PURPLE = '\033[1;35;48m'
+	CYAN = '\033[1;36;48m'
+	BOLD = '\033[1;37;48m'
+	BLUE = '\033[1;34;48m'
+	GREEN = '\033[1;32;48m'
+	YELLOW = '\033[1;33;48m'
+	RED = '\033[1;31;48m'
+	BLACK = '\033[1;30;48m'
+	UNDERLINE = '\033[4;37;48m'
+	END = '\033[1;37;0m'
+
+
 from initial_access import wp_file_manager
 from datetime import datetime
 from configparser import ConfigParser 	
@@ -30,7 +43,7 @@ if arguments.config:
 
 if arguments.repeat:
 	if not os.path.exists('./config.ini'):
-		print('[-] Configuration file not found')
+		print(color.YELLOW + '[-]'+ color.END+ ' Configuration file not found')
 		create_conf.gen_config(True)
 	else:
 		# Just randomize the port but keep the other changes
@@ -38,7 +51,7 @@ if arguments.repeat:
 		create_conf.gen_config(False)
 
 if os.geteuid() != 0:
-		exit("[-] You need root privileges to run this script")	  	  
+		exit(color.RED + "[-]" + color.END + " You need root privileges to run this script")	  	  
 	
 def main():
 
@@ -47,15 +60,15 @@ def main():
 	config_object = ConfigParser()
 
 	if arguments.repeat == None:
-		print('[+] Executing exploit...')
-		print('[?] Do you wish to continue? (y|n)')
+		print(color.GREEN + '[+]' + color.END + ' Executing exploit...')
+		print(color.YELLOW + '[?] Do you wish to continue?' + color.END + color.BOLD + ' (y|n)' + color.END )
 		ans = input()
 
 	# Don't ask to configure if the script is in repeat mode
 	if arguments.repeat == None:
 		if os.path.exists('./config.ini'):			  
-			print('[+] Config file detected')
-			print('[?] Do you wish to modify the configuration file? (y|n)')
+			print(color.GREEN + '[+]' + color.END + ' Config file detected')
+			print(color.YELLOW + '[?] Do you wish to modify the configuration file?' + color.END + color.BOLD + ' (y|n)' + color.END)
 			ans = input()
 			if(ans == 'y' or ans == 'Y'):
 				flag = True
@@ -75,7 +88,7 @@ def main():
 	if int(general_info['exploit']) in l:
 		wp_file_manager(victim_info, attacker_info, general_info, general_info['exploit'], arguments)
 	else:
-		sys.exit("Something went wrong, invalid exploit")
+		sys.exit(color.RED + "Something went wrong, invalid exploit" + color.END)
 	
 if __name__ == '__main__':
 	main()

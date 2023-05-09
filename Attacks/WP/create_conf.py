@@ -4,13 +4,25 @@ import os
 import random
 import socket
 
+class color:
+	PURPLE = '\033[1;35;48m'
+	CYAN = '\033[1;36;48m'
+	BOLD = '\033[1;37;48m'
+	BLUE = '\033[1;34;48m'
+	GREEN = '\033[1;32;48m'
+	YELLOW = '\033[1;33;48m'
+	RED = '\033[1;31;48m'
+	BLACK = '\033[1;30;48m'
+	UNDERLINE = '\033[4;37;48m'
+	END = '\033[1;37;0m'
+
 def gen_config(change):
 	config_object = ConfigParser()
 	# If the use wants to change the info query him
 	# Otherwise just randomize the port and keep the other information
 	if change:
 		#Get the configparser object
-		print('[?] Attacker Ip: (Ip address of the attacking machine)')
+		print(color.YELLOW + '[?]' + color.END + ' Attacker Ip: (Ip address of the attacking machine)')
 		f = True
 		a_ip = ""
 		## ATTACKER IP
@@ -20,7 +32,7 @@ def gen_config(change):
 				ip_object = ipaddress.ip_address(a_ip)
 				f = False
 			except ValueError:
-				print('Not a valid ipaddress, reenter a valid one')
+				print(color.RED + 'Not a valid ipaddress, reenter a valid one' + color.END)
 		
 		## ATTACKER PORT
 		a_port = random.randint(1024, 65536)
@@ -32,14 +44,14 @@ def gen_config(change):
 		## VICTIM IP
 		f = True
 		v_ip = ""
-		print('[?] Victim ip: (Ip of the website you want to attack)')
+		print(color.YELLOW + '[?]' + color.END + ' Victim ip: (Ip of the website you want to attack)')
 		while f:
 			v_ip = input()
 			try:
 				ip_object = ipaddress.ip_address(v_ip)
 				f = False
 			except ValueError:
-				print('Not a valid ipaddress, reenter a valid one')
+				print(color.END + 'Not a valid ipaddress, reenter a valid one' + color.END)
 		
 		# DEFAULT VALUES
 		# Make the default port 80
@@ -47,15 +59,14 @@ def gen_config(change):
 		v_port = 80
 		v_secure = False
 		## EXPLOIT TO USE
-		print('[?] Which of the following exploit do you wish to use?')
+		print(color.YELLOW + '[?]' + color.END + ' Which of the following exploit do you wish to use?')
 		print('''
-		[1] LXD container privilege escalation exploit.
-		[2] Meterpreter shell. (No automation)
-		[3] Docker Escape
-		[4] SSH Bruteforce
-		[5] FTP Bruteforce
-		[6] Remote File Inclusion
-		''') 
+		'''+ color.GREEN + '''[1]''' + color.END + color.BLUE + ''' LXD container privilege escalation exploit''' + color.END + '''
+		'''+ color.GREEN + '''[2]''' + color.END + color.BLUE + ''' Meterpreter Shell''' + color.END + '''
+		'''+ color.GREEN + '''[3]''' + color.END + color.BLUE + ''' Docker Escape''' + color.END + '''
+		'''+ color.GREEN + '''[4]''' + color.END + color.BLUE + ''' SSH Bruteforce''' + color.END + '''
+		'''+ color.GREEN + '''[5]''' + color.END + color.BLUE + ''' FTP Bruteforce''' + color.END + '''
+		'''+ color.GREEN + '''[6]''' + color.END + color.BLUE + ''' Remote File Inclusion''' + color.END) 
 		exp = '0'
 		# Represents the different exploit available
 		l = ['1', '2', '3', '4', '5', '6']
@@ -72,66 +83,66 @@ def gen_config(change):
 		g_ftp = False
 		g_wordlist = "/usr/share/wordlists/rockyou.txt"
 		if exp == '4':
-			n=input('[?] Do you know the username on the ssh service? (y|n) ')
+			n=input(color.YELLOW + '[?]' + color.END + ' Do you know the username on the ssh service? (y|n) ')
 			if n == 'Y' or n == 'y':
-				v_ssh_user=input('[?] SSH user: ')
+				v_ssh_user=input(color.YELLOW + '[?]' + color.END + ' SSH user: ')
 				g_ssh = True
 			
-			n=input('''[?] Which password wordlist do you want to use to bruteforce?\n    Press Enter to use default, /usr/share/wordlists/rockyou.txt\n    Keep in mind, the file will be used to both username (if not provided) and password\n''')
+			n=input(color.YELLOW + '''[?]''' + color.END + ''' Which password wordlist do you want to use to bruteforce?\n    Press Enter to use default, /usr/share/wordlists/rockyou.txt\n    Keep in mind, the file will be used to both username (if not provided) and password\n''')
 			if n != '':
 				while not os.path.exists(n):
-					print('[-] That file does not exist, please insert a new one or Enter to use default /usr/share/wordlists/rockyou.txt')
+					print(color.RED + '[-]' + color.END + ' That file does not exist, please insert a new one or Enter to use default /usr/share/wordlists/rockyou.txt')
 					n = input()
 					if n == '':
 						break
 				if os.path.exists(n):
 					g_wordlist = n
-			n = input('[?] Is the ssh port the default one, 22? (y|n)\n')
+			n = input(color.YELLOW + '[?]' + color.END + ' Is the ssh port the default one, 22? (y|n)\n')
 			if n != 'Y' and n != 'y':
 				f = True
 				while f:
 					v_ssh_port = int(input())
 					if v_ssh_port <= 0 or v_ssh_port >= 65536:
-						print('Please enter a port between 0 and 65536')
+						print(color.RED +'Please enter a port between 0 and 65536' + color.END)
 					else:
 						f = False
 						g_default_ssh = False
 		elif exp == '5':
-			n=input('[?] Do you know the username on the ftp service? (y|n) ')
+			n=input(color.YELLOW + '[?]' + color.END + ' Do you know the username on the ftp service? (y|n) ')
 			if n == 'Y' or n == 'y':
-				v_ftp_user=input('[?] FTP user: ')
+				v_ftp_user=input(color.YELLOW + '[?]' + color.END + ' FTP user: ')
 				g_ftp = True
 			
-			n=input('''[?] Which password wordlist do you want to use to bruteforce?\n    Press Enter to use default, /usr/share/wordlists/rockyou.txt\n    Keep in mind, the file will be used to both username (if not provided) and password\n''')
+			n=input(color.YELLOW + '''[?]''' + color.END + ''' Which password wordlist do you want to use to bruteforce?\n    Press Enter to use default, /usr/share/wordlists/rockyou.txt\n    Keep in mind, the file will be used to both username (if not provided) and password\n''')
 			if n != '':
 				while not os.path.exists(n):
-					print('[-] That file does not exist, please insert a new one or Enter to use default /usr/share/wordlists/rockyou.txt')
+					print(color.RED + '[-]' + color.END + ' That file does not exist, please insert a new one or Enter to use default /usr/share/wordlists/rockyou.txt')
 					n = input()
 					if n == '':
 						break
 				if os.path.exists(n):
 					g_wordlist = n
-			n = input('[?] Is the FTP port the default one, 21? (y|n)\n')
+			n = input(color.YELLOW + '[?]' + color.END + ' Is the FTP port the default one, 21? (y|n)\n')
 			if n != 'Y' and n != 'y':
 				f = True
 				while f:
 					v_ftp_port = int(input())
 					if v_ftp_port <= 0 or v_ftp_port >= 65536:
-						print('Please enter a port between 0 and 65536')
+						print(color.RED + 'Please enter a port between 0 and 65536' + color.END)
 					else:
 						f = False
 						g_default_ftp = False
 		elif exp == '1' or exp == '3' or exp == '6':
 			## VICTIM PROTOCOL
 			v_secure = True
-			print('[?] Does the victim use HTTPS? (y|n)')
+			print(color.YELLOW + '[?]' + color.END + ' Does the victim use HTTPS? (y|n)')
 			ans = input();
 			if ans == "n" or ans == "N":
 				v_secure = False
 				
 			 
 			## VICTIM PORT
-			print('[?] Victim port: (Port used for accesing the webserver, default: 80)')
+			print(color.YELLOW + '[?]' + color.END + ' Victim port: (Port used for accesing the webserver, default: 80)')
 			f = True
 			while f:
 				n = input()
@@ -140,21 +151,21 @@ def gen_config(change):
 					break;
 				v_port = int(n)
 				if v_port < 0 or v_port > 65536:
-					print('Please enter a port between 0 and 65536')
+					print(color.RED + 'Please enter a port between 0 and 65536' + color.END)
 				else:
 					f = False
 			
 			if exp == '6':
 				## FILE INCLUSION PATH
-				print('[?] What\'s the resource vulnerable to file inclusion?')
-				print('[*] Example:')
-				print('''If http://example.com/dir/vulnerable_file?file_query=file_name\nInsert /dir/vulnerable_file?file_query=''')
+				print(color.YELLOW + '[?]' + color.END +' What\'s the resource vulnerable to file inclusion?')
+				print(color.GREEN + '[*]' + color.END + ' Example:')
+				print(color.BOLD + '''If http://example.com/dir/vulnerable_file?file_query=file_name\nInsert /dir/vulnerable_file?file_query=\n''' + color.END)
 				v_rec_path = input()
 				x = ''
-				x = input("{n} Is this correct? (y|n)".format(n=v_rec_path))
+				x = input(color.GREEN + "{n}".format(n=v_rec_path) + color.END + color.YELLOW + " Is this correct?" + color.END + " (y|n) ")
 				while x != 'Y' and x != 'y':
-					v_rec_path = input('Insert the path to the resource > ')
-					x = input('{n} Is it correct? (y|n) '.format(n=v_rec_path))
+					v_rec_path = input(color.GREEN + 'Insert the path to the resource > ' + color.END)
+					x = input(color.GREEN + '{n}'.format(n=v_rec_path) + color.END + color.YELLOW + ' Is it correct?' + color.END + ' (y|n) ')
 						
 		
 		print('''
@@ -174,8 +185,8 @@ def gen_config(change):
 		#		Therefore, this script was developed in order to       #
 		# 		communicate with such server.                          #
 		#                                                                      #
-		#		Do you wish to activate this feature and configure     #
-		#		the ip and port of the server? (y|n)                   #
+		#		''' + color.YELLOW + '''Do you wish to activate this feature and configure  ''' + color.END + '''   #
+		#		''' + color.YELLOW + '''the ip and port of the server? (y|n)''' + color.END + '''                   #
 		#                                                                      #
 		########################################################################
 		''')
@@ -186,11 +197,11 @@ def gen_config(change):
 		g_exp = exp
 		if n == 'Y' or n == 'y':
 			g_active = True
-			print('[?] What\'s the ip/host of the server?')
+			print(color.YELLOW + '[?]' + color.END + ' What\'s the ip/host of the server?')
 			g_host = input()
-			print('[?] What\'s the port of the server?')
+			print(color.YELLOW + '[?]' + color.END + ' What\'s the port of the server?')
 			g_port = input()
-			print('[*] Quick reminder:')
+			print(color.GREEN + '[*]' + color.END + ' Quick reminder:')
 			print('In order to start the logging we will access {ip}:{port}/start?exploit=exploit_name'.format(ip=g_host, port=g_port))
 			print('And to stop the logging we will access {ip}:{port}/stop?exploit=exploit_name'.format(ip=g_host, port=g_port))
 	else:
