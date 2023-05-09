@@ -54,16 +54,18 @@ def gen_config(change):
 		[3] Docker Escape
 		[4] SSH Bruteforce
 		[5] FTP Bruteforce
+		[6] Remote File Inclusion
 		''') 
 		exp = '0'
 		# Represents the different exploit available
-		l = ['1', '2', '3', '4', '5']
+		l = ['1', '2', '3', '4', '5', '6']
 		while exp not in l:
 			exp = input()
 		v_ssh_user = ""
 		v_ftp_user = ""
 		v_ssh_port = 22
 		v_ftp_port = 21
+		v_rec_path = ""
 		g_default_ssh = True
 		g_default_ftp = True
 		g_ssh = False
@@ -119,7 +121,7 @@ def gen_config(change):
 					else:
 						f = False
 						g_default_ftp = False
-		elif exp == '1' or exp == '3':
+		elif exp == '1' or exp == '3' or exp == '6':
 			## VICTIM PROTOCOL
 			v_secure = True
 			print('[?] Does the victim use HTTPS? (y|n)')
@@ -141,6 +143,18 @@ def gen_config(change):
 					print('Please enter a port between 0 and 65536')
 				else:
 					f = False
+			
+			if exp == '6':
+				## FILE INCLUSION PATH
+				print('[?] What\'s the resource vulnerable to file inclusion?')
+				print('[*] Example:')
+				print('''If http://example.com/dir/vulnerable_file?file_query=file_name\nInsert /dir/vulnerable_file?file_query=''')
+				v_rec_path = input()
+				x = ''
+				x = input("{n} Is this correct? (y|n)".format(n=v_rec_path))
+				while x != 'Y' and x != 'y':
+					v_rec_path = input('Insert the path to the resource > ')
+					x = input('{n} Is it correct? (y|n) '.format(n=v_rec_path))
 						
 		
 		print('''
@@ -196,6 +210,7 @@ def gen_config(change):
 		v_ftp_user = victim_info['ftp_user']
 		v_ssh_port = victim_info['ssh_port']
 		v_ftp_port = victim_info['ftp_port']
+		v_rec_path = victim_info['file_inclusion_path']
 		exp = general_info['exploit']
 		g_active = general_info['active']
 		g_host = general_info['host']
@@ -224,7 +239,8 @@ def gen_config(change):
 	    "ssh_user": v_ssh_user,
 	    "ftp_user": v_ftp_user,
 	    "ssh_port": v_ssh_port,
-	    "ftp_port": v_ftp_port
+	    "ftp_port": v_ftp_port,
+	    "file_inclusion_path": v_rec_path
 	}
 	config_object["GENERALINFO"] = {
 	    "exploit": g_exp,

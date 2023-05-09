@@ -49,8 +49,7 @@ with open(sys.argv[1], 'r') as module:
 
 audit_list = []
 for i in all_pids:
-	cmd = '''cat ''' + sys.argv[2] + ''' | grep pid=''' + i + ''' | awk '{ print $4 }' | cut -d '=' -f2'''
-	p = os.popen('''cat ''' + sys.argv[2] + ''' | grep pid=''' +i +''' | awk '{ print $4 }' | cut -d '=' -f2''').read().split('\n')
+	p = os.popen('''cat ''' + sys.argv[2] + ''' | grep pid=''' +i +''' | grep type=SYSCALL | awk '{ print $4 }' | cut -d '=' -f2''').read().split('\n')
 	p[:] = (value for value in p if value.isdigit())
 	for v in p:
 		audit_list.append((i, v))

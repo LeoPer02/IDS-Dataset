@@ -17,9 +17,11 @@ with open(sys.argv[1], 'r') as module:
 	if syscall[0] == 'b':
 		syscall=syscall[2:-1]
 	else:
-		syscall=syscall[:-3]
+		syscall=syscall[:-2]
 	#print(pid, syscall)
 	module_line = module.readline()
+	if syscall == '4294967295':
+		syscall = 'UNKNOWN'
 	module_list = [(pid, syscall)]
 
 	while module_line:
@@ -32,6 +34,8 @@ with open(sys.argv[1], 'r') as module:
 		else:
 			syscall=syscall[0:-3]
 		#print(pid, syscall)
+		if syscall == '4294967295':
+			syscall = 'UNKNOWN'
 		module_list.append((pid, syscall))
 		module_line = module.readline()
 

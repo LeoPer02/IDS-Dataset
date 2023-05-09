@@ -111,7 +111,7 @@ def listen(ip,port, t2, r_port, file_name, general_info, arguments, rep):
 		if conn:
 			print('\n[-] Unbinding...')
 			# Cleanup
-			cleanup(conn, file_name, general_info)
+			cleanup(conn, file_name, general_info, rep)
 			time.sleep(0.2)
 			conn.close()
 			s.close()
