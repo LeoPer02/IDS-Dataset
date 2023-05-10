@@ -170,12 +170,10 @@ def cleanup(conn, general_info):
 
 def informAudittingStart(general_info):
 	exploit = 'Docker'
-	# Pid is added on the terminal using $(echo $$)
 	url = general_info['host'] + ':' + general_info['port'] + '/start?exploit=' + exploit 
 	return url
 
 def informAudittingStop(general_info):
 	exploit = 'Docker'
-	# Pid is added on the terminal using $(echo $$)
 	url = general_info['host'] + ':' + general_info['port'] + '/stop?exploit=' + exploit 
 	return url
