@@ -66,10 +66,11 @@ def gen_config(change):
 		'''+ color.GREEN + '''[3]''' + color.END + color.BLUE + ''' Docker Escape''' + color.END + '''
 		'''+ color.GREEN + '''[4]''' + color.END + color.BLUE + ''' SSH Bruteforce''' + color.END + '''
 		'''+ color.GREEN + '''[5]''' + color.END + color.BLUE + ''' FTP Bruteforce''' + color.END + '''
-		'''+ color.GREEN + '''[6]''' + color.END + color.BLUE + ''' Remote File Inclusion''' + color.END) 
+		'''+ color.GREEN + '''[6]''' + color.END + color.BLUE + ''' Remote File Inclusion''' + color.END + '''
+		''' + color.GREEN + '''[7]''' + color.END + color.BLUE + ''' Reverse Shell (Get the syscalls of the Reverse Shell)''' + color.END) 
 		exp = '0'
 		# Represents the different exploit available
-		l = ['1', '2', '3', '4', '5', '6']
+		l = ['1', '2', '3', '4', '5', '6', '7']
 		while exp not in l:
 			exp = input()
 		v_ssh_user = ""
@@ -167,30 +168,33 @@ def gen_config(change):
 					v_rec_path = input(color.GREEN + 'Insert the path to the resource > ' + color.END)
 					x = input(color.GREEN + '{n}'.format(n=v_rec_path) + color.END + color.YELLOW + ' Is it correct?' + color.END + ' (y|n) ')
 						
-		
-		print('''
-		########################################################################
-		#								       #
-		#		SYSCALL LOGGING SERVER CONFIGURATION!                  #		  
-		#								       #
-		#		During development a server responsible                #
-		#		for starting and stopping the logging                  #
-		#		of syscalls was implemented.			       #
-		#		 						       #
-		#		This server was programmed to received GET             #
-		#		requests with the form:                                #
-		#		{ip}:{port}/start?exploit={name_of_exploit}            #
-		#		{ip}:{port}/stop?exploit={name_of_exploit}             #
-		#								       #
-		#		Therefore, this script was developed in order to       #
-		# 		communicate with such server.                          #
-		#                                                                      #
-		#		''' + color.YELLOW + '''Do you wish to activate this feature and configure  ''' + color.END + '''   #
-		#		''' + color.YELLOW + '''the ip and port of the server? (y|n)''' + color.END + '''                   #
-		#                                                                      #
-		########################################################################
-		''')
-		n = input()
+		if exp != '7':
+			print('''
+			########################################################################
+			#								       #
+			#		SYSCALL LOGGING SERVER CONFIGURATION!                  #		  
+			#								       #
+			#		During development a server responsible                #
+			#		for starting and stopping the logging                  #
+			#		of syscalls was implemented.			       #
+			#		 						       #
+			#		This server was programmed to received GET             #
+			#		requests with the form:                                #
+			#		{ip}:{port}/start?exploit={name_of_exploit}            #
+			#		{ip}:{port}/stop?exploit={name_of_exploit}             #
+			#								       #
+			#		Therefore, this script was developed in order to       #
+			# 		communicate with such server.                          #
+			#                                                                      #
+			#		''' + color.YELLOW + '''Do you wish to activate this feature and configure  ''' + color.END + '''   #
+			#		''' + color.YELLOW + '''the ip and port of the server? (y|n)''' + color.END + '''                   #
+			#                                                                      #
+			########################################################################
+			''')
+			n = input()
+		else:
+			n = 'Y'
+			print(color.GREEN + '[*]' + color.END + color.BOLD + ' Please provide the logging server information.' + color.END)
 		g_active = False
 		g_host = ""
 		g_port = ""

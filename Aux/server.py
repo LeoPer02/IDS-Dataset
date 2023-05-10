@@ -71,7 +71,7 @@ if arguments.module_start:
 print('[DEBBUBG] Script_Dir: {s}	module_location: {m}	dataset: {d}'.format(s=script_dir, m=module_location, d=dataset))
 # Checking if necessary files exist
 # If they dont, create them
-for name in ['LXD', 'FTP', 'Docker', 'SSH']:
+for name in ['LXD', 'FTP', 'Docker', 'SSH', 'FileInclusion', 'ReverseShell']:
     if not os.path.exists('./data/' + name + 'count.txt'):
         f = open('./data/' + name + 'count.txt', 'w')
         f.write('0')
@@ -106,6 +106,9 @@ class Auditing(BaseHTTPRequestHandler):
 				pid = os.popen('''ps aux | grep sshd | awk '{ print $2 }' ''').read().split('\n')
 			elif exploit == 'FTP':
 				pid = os.popen(''' ps aux | grep ftp | awk '{ print $2 }' ''').read().split('\n')
+			elif exploit == 'FileInclusion' or exploit == 'ReverseShell':
+				pid = os.popen('''ps aux | grep apache2 | awk '{ print $2 }' ''').read().split('\n')
+			
 			else:
 				return
 		    
