@@ -1,67 +1,46 @@
-version: '3.3'
+version: '3.1'
 
-# All services needed to run the wordpress service
 services:
-  # Container for the wordpress itself
-  #############################################
-  #                                           #    
-  #                 WARNING!                  #
-  #                                           #
-  #        Some configuration commands        #
-  #       are executed after the creation     #
-  #       of the container, so you might      #
-  #       need to wait some minutes before    #
-  #       the server is up and running        #
-  #                                           #
-  #############################################
 
-  
   wordpress:
-      container_name: Main_Container
-      build: .                                    # This grabs the Dockerfile in the current folder and uses it as the image
-      restart: always
-      ports: 
-          - 8080:80
+    build: .
+    restart: always
+    ports:
+      - 8080:80
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: wpuser
+      WORDPRESS_DB_PASSWORD: wppass
+      WORDPRESS_DB_NAME: wpdb
 
-      # Both cap_add (SYS_ADMIN) and security_opt (apparmor:unconfined)
-      # Were used in order to make it possible for a user to escape
-      # This was implemented on purpose to monitor the SYSCALLs of a
-      # Container escape and should be avoided in real implementations as
-      # much as possible (Explanation at the end of the file)
-      cap_add:
+    # Both cap_add (SYS_ADMIN) and security_opt (apparmor:unconfined)
+    # Were used in order to make it possible for a user to escape
+    # This was implemented on purpose to monitor the SYSCALLs of a
+    # Container escape and should be avoided in real implementations as
+    # much as possible (Explanation at the end of the file)
+    cap_add:
           - SYS_ADMIN
 
-      security_opt:
+    security_opt:
           - apparmor:unconfined
+    volumes:
+      - wordpress:/var/www/html
+      - ./plugins/:/var/www/html/wp-content/plugins
 
-      environment:
-          WORDPRESS_DB_HOST: db
-          WORDPRESS_DB_USER: wpuser
-          WORDPRESS_DB_PASSWORD: wppass
-          WORDPRESS_DB_NAME: wpdb
-      volumes:
-          - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini     # Used to increase the maximum upload file so that it is possible to install plugins
-          - ./wordpress/:/var/www/html/                             # Imports the wordpress files (Using an already configured server folder to avoid configuration via terminal)
-  # Container responsible for the database
   db:
-      container_name: db
-      image: mysql:5.7
-      restart: always
-      environment:
-          MYSQL_DATABASE: wpdb
-          MYSQL_USER: wpuser
-          MYSQL_PASSWORD: wppass
-          MYSQL_RANDOM_ROOT_PASSWORD: '1'
-      volumes:
-          - db:/var/lib/mysql
-
-
-
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_DATABASE: wpdb
+      MYSQL_USER: wpuser
+      MYSQL_PASSWORD: wppass
+      MYSQL_RANDOM_ROOT_PASSWORD: '1'
+    volumes:
+      - db:/var/lib/mysql
 
 volumes:
-    db:
-
-
+  wordpress:
+  db:
 
 # You can learn about Linux capabilities at:
 # https://manpages.ubuntu.com/manpages/jammy/man7/capabilities.7.html
