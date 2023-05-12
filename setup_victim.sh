@@ -181,7 +181,9 @@ else
         mkdir -p /srv/www
 fi
 chown www-data: /srv/www
-curl https://wordpress.org/latest.tar.gz 2>/dev/null | sudo -u www-data tar zx -C /srv/www
+curl https://wordpress.org/latest.tar.gz --output tmp_file.tar.gz 1>/dev/null 2>/dev/null
+sudo -u www-data tar zxf tmp_file.tar.gz -C /srv/www
+rm tmp_file.tar.gz
 
 $quiet && echo -e "${GREEN_BOLD}  [✓]${END}"
 
@@ -281,9 +283,81 @@ docker-compose -f ./docker-compose.yml 1>/dev/null 2>/dev/null build
 chown -R www-data:www-data /srv/www/wordpress/wp-content/plugins
 chown -R www-data:www-data /var/www
 
-# Hangs forever (Right now the user needs to start it himself, but we can also disown it with nohup)
-#docker-compose up 1>/dev/null 2>/dev/null
+nohup docker-compose up &
 $quiet && echo -e "${GREEN_BOLD}  [✓]${END}"
+
+cd $wd
+
+# Installing SSH
+$quiet && echo -en "${BOLD}[*] Installing OpenSSH Server${END}"
+apt-get install openssh-server -y
+$quiet && echo -e "${GREEN_BOLD}  [✓]${END}"
+
+# Starting SSH Server
+$quiet && echo -en "${BOLD}[*] Starting SSH Server${END}"
+systemctl enable ssh 1>/dev/null 2>/dev/null
+systemctl start ssh 1>/dev/null 2>/dev/null
+$quiet && echo -e "${GREEN_BOLD}  [✓]${END}"
+
+
+# Installing FTP server
+$quiet && echo -en "${BOLD}[*] Installing FTP Server${END}"
+apt install vsftpd -y 1>/dev/null 2>/dev/null
+$quiet && echo -e "${GREEN_BOLD}  [✓]${END}"
+
+# Starting FTP server
+$quiet && echo -en "${BOLD}[*] Installing FTP Server${END}"
+systemctl enable --now vsftpd 1>/dev/null 2>/dev/null
+$quiet && echo -e "${GREEN_BOLD}  [✓]${END}"
+
+# Opening ports in firewall just in case
+$quiet && echo -en "${BOLD}[*] Allowing FTP through firewall${END}"
+ufw allow 20/tcp 1>/dev/null 2>/dev/ull
+ufw allow 21/tcp 1>/dev/null 2>/dev/null
+$quiet && echo -e "${GREEN_BOLD}  [✓]${END}"
+
+# Allow URL include in php apache2 (Allow remote file inclusion)
+$quiet && echo -en "${BOLD}[*] Allowing PHP URL include${END}"
+sed 's/allow_url_include = Off/allow_url_include = On/g' /etc/php/7.2/apache2/php.ini > out.txt && cat out.txt | cat > /etc/php/7.2/apache2/php.ini && rm out.txt
+systemctl restart apache2
+$quiet && echo -e "${GREEN_BOLD}  [✓]${END}"
+
+# Adding RFI (Remote File Inclusion) endpoint
+if [ -f $wd/Aux/file_inclusion.php ]; then
+        $quiet && echo -en "${BOLD}[*] Adding RFI endpoint${END}"
+        mv $wd/Aux/file_inclusion.php /srv/www/wordpress/file_inclusion.php
+        chown www-data:www-data /srv/www/wordpress/file_inclusion.php
+        $quiet && echo -e "${GREEN_BOLD}  [✓]${END}"
+fi
+
+# Checking if data folder in our module exists
+if [ $module ]; then
+        if [ ! -d /ebriareospf/briareospf-master/data ]; then
+                mkdir /ebriareospf/briareospf-master/data
+                touch /ebriareospf/briareospf-master/data/sys_exit.txt
+        fi
+
+        # Copy Aux files
+        if [ -f $wd/Aux/server.py ]; then
+                mv $wd/Aux/server.py /ebriareospf/briareospf-master/server.py
+        fi
+
+        if [ -f $wd/Aux/search_pid.sh ]; then
+                mv $wd/Aux/search_pid.sh /ebriareospf/briareospf-master/search_pid.sh
+        fi
+
+        if [ -f $wd/Aux/overhead.sh ]; then
+                mv $wd/Aux/overhead.sh /ebriareospf/briareospf-master/overhead.sh
+        fi
+
+        if [ -f $wd/Aux/side_by_side.py ]; then
+                mv $wd/Aux/side_by_side.py /ebriareospf/briareospf-master/side_by_side.py
+        fi
+else
+        echo -e "${YELLOW_BOLD}Since you're not using our module, we will keep all the auxiliary files on the Aux folder${END}"
+        echo -e "${YELLOW_BOLD}We recommend that you move them to your module folder${END}"
+fi
+
 
 # DONE
 echo -e "${GREEN_BOLD}\n\n[*] Done configuring the machine! ${END}"
@@ -293,35 +367,11 @@ echo -e "${YELLOW_BOLD}[*] You should now configure the wordpress websites (both
 echo -e "${YELLOW_BOLD}[*] To do so, on your browser access:\n\thttp://localhost:80\t(Host)\n\thttp://localhost:8080\t(Docker)${END}"
 echo -e "${YELLOW_BOLD}[*] Don't forget to go to Dashboard -> Plugins and activate the wp-file-manager (Host and Docker) plugin, as it is required for the attacks${END}"
 
-if [ ! -d /ebriareospf/briareospf-master/data ]; then
-        mkdir /ebriareospf/briareospf-master/data
-        touch /ebriareospf/briareospf-master/data/sys_exit.txt
-fi
-
-# Copy Aux files
-if [ -f $wd/Aux/server.py ]; then
-        mv $wd/Aux/server.py /ebriareospf/briareospf-master/server.py
-fi
-
-if [ -f $wd/Aux/search_pid.sh ]; then
-        mv $wd/Aux/search_pid.sh /ebriareospf/briareospf-master/search_pid.sh
-fi
-
-if [ -f $wd/Aux/overhead.sh ]; then
-        mv $wd/Aux/overhead.sh /ebriareospf/briareospf-master/overhead.sh
-fi
-
-if [ -f $wd/Aux/side_by_side.py ]; then
-        mv $wd/Aux/side_by_side.py /ebriareospf/briareospf-master/side_by_side.py
-fi
 exit 0
 
 # TO DO:
-# Place the search_pid, server, compare ... on the right places
 # Confirm if the bcc installations is working with the server
-# Change line 177 so that it doenst display "OK" (Not using pipes might solve the issue)
 # Line 264, check what to do, (Make user start container, or disown process and start it in the background, Maybe a flag to decide??)
-
 
 
 

