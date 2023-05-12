@@ -95,6 +95,9 @@ $quiet && echo -e "${BOLD}\n[*] Build tested with Ubuntu 18.04 ${UNDERLINE}${BLU
 # Remove files meant for the attacker machine
 $quiet && echo -en "\n\n${BOLD}[*] Removing files meant for the attacker machine${END}"
 rm -drf $wd/Attacks 1>/dev/null 2>/dev/null
+if [ -f $wd/setup_attacker.sh ]; then
+        rm -f setup_attacker.sh
+fi
 $quiet && echo -e "${GREEN_BOLD}  [✓]${END}"
 
 # Update the system
@@ -218,6 +221,9 @@ $quiet && echo -en "${BOLD}[*] Initializing LXD${END}"
 lxd init --auto 1>/dev/null 2>/dev/null
 $quiet && echo -e "${GREEN_BOLD}  [✓] ${END}"
 
+# Change permissions of unix socket
+chmod 0666 /var/lib/lxd/unix.socket
+
 
 # Install auditd
 $quiet && echo -en "${BOLD}[*] Installing Auditd${END}"
@@ -279,7 +285,27 @@ echo -e "${YELLOW_BOLD}[*] You should now configure the wordpress websites (both
 echo -e "${YELLOW_BOLD}[*] To do so, on your browser access:\n\thttp://localhost:80\t(Host)\n\thttp://localhost:8080\t(Docker)${END}"
 echo -e "${YELLOW_BOLD}[*] Don't forget to go to Dashboard -> Plugins and activate the wp-file-manager (Host and Docker) plugin, as it is required for the attacks${END}"
 
+if [ ! -d /ebriareospf/briareospf-master/data ]; then
+        mkdir /ebriareospf/briareospf-master/data
+        touch /ebriareospf/briareospf-master/data/sys_exit.txt
+fi
 
+# Copy Aux files
+if [ -f $wd/server.py ]; then
+        mv $wd/server.py /ebriareospf/briareospf-master/server.py
+fi
+
+if [ -f $wd/search_pid.sh ]; then
+        mv $wd/search_pid.sh /ebriareospf/briareospf-master/search_pid.sh
+fi
+
+if [ -f $wd/overhead.sh ]; then
+        mv $wd/overhead.sh /ebriareospf/briareospf-master/overhead.sh
+fi
+
+if [ -f $wd/side_by_side.py ]; then
+        mv $wd/side_by_side.py /ebriareospf/briareospf-master/side_by_side.py
+fi
 exit 0
 
 # TO DO:
