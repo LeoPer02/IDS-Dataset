@@ -113,8 +113,8 @@ def listen(ip,port, t2, r_port, file_name, general_info, arguments, rep):
 				time.sleep(0.3)
 			print(color.YELLOW + '\n[-]' + color.END + ' Unbinding...')
 			# Cleanup
-			if rep == 0:
-				cleanup(conn, file_name, general_info, rep)
+			
+			cleanup(conn, file_name, general_info, rep)
 			time.sleep(0.2)
 			s.close()
 			print(color.GREEN + '[*]' + color.END + ' Ended exploit')

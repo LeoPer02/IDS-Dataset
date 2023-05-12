@@ -89,6 +89,10 @@ while getopts 'hqmb' OPTION; do
         esac
 done
 
+$quiet && echo -e "${GREEN_BOLD}Settings:${END}"
+$quiet && echo -e "\n\t${BOLD}Install our module:\t\t$module${END}"
+$quiet && echo -e "\t${BOLD}Skip BCC Installation:\t\t$bcc${END}"
+
 # General Info
 $quiet && echo -e "${BOLD}\n[*] Build tested with Ubuntu 18.04 ${UNDERLINE}${BLUE}https://releases.ubuntu.com/18.04/${END}"
 
@@ -114,11 +118,11 @@ if [ $module ]; then
 
         # A lot of the following commands write to the stderr, therefore I'm hiding it
         # Give the chance for the user to skip bcc installation
-        if [ ! bcc ]; then
+        if [ $bcc ]; then
                 # Get BCC dependecies
                 $quiet && echo -en "${BOLD}[*] Installing BCC dependecies${END}"
                 apt-get -y install bison build-essential cmake flex git libedit-dev \
-                libllvm6.0 llvm-6.0-dev libclang-6.0-dev python zlib1g-dev libelf-dev libfl-dev python3-distutils 1>/dev/null
+                libllvm6.0 llvm-6.0-dev libclang-6.0-dev python zlib1g-dev libelf-dev libfl-dev python3-distutils 1>/dev/null 2>/dev/null
                 $quiet && echo -e "${GREEN_BOLD}  [✓]${END}"
 
                 cd /
@@ -208,6 +212,7 @@ if [ -d /srv/www/wordpress/wp-content/plugins ]; then
         rm -drf /srv/www/wordpress/wp-content/plugins
 fi
 cp -R $wd/Docker/plugins /srv/www/wordpress/wp-content/plugins
+chown www-data:www-data /srv/www/wordpress/wp-content/plugins -R
 $quiet && echo -e "${GREEN_BOLD}  [✓]${END}"
 
 # Installing LXD
@@ -222,7 +227,7 @@ lxd init --auto 1>/dev/null 2>/dev/null
 $quiet && echo -e "${GREEN_BOLD}  [✓] ${END}"
 
 # Change permissions of unix socket
-chmod 0666 /var/lib/lxd/unix.socket
+# chmod 0666 /var/lib/lxd/unix.socket
 
 
 # Install auditd
@@ -291,20 +296,20 @@ if [ ! -d /ebriareospf/briareospf-master/data ]; then
 fi
 
 # Copy Aux files
-if [ -f $wd/server.py ]; then
-        mv $wd/server.py /ebriareospf/briareospf-master/server.py
+if [ -f $wd/Aux/server.py ]; then
+        mv $wd/Aux/server.py /ebriareospf/briareospf-master/server.py
 fi
 
-if [ -f $wd/search_pid.sh ]; then
-        mv $wd/search_pid.sh /ebriareospf/briareospf-master/search_pid.sh
+if [ -f $wd/Aux/search_pid.sh ]; then
+        mv $wd/Aux/search_pid.sh /ebriareospf/briareospf-master/search_pid.sh
 fi
 
-if [ -f $wd/overhead.sh ]; then
-        mv $wd/overhead.sh /ebriareospf/briareospf-master/overhead.sh
+if [ -f $wd/Aux/overhead.sh ]; then
+        mv $wd/Aux/overhead.sh /ebriareospf/briareospf-master/overhead.sh
 fi
 
-if [ -f $wd/side_by_side.py ]; then
-        mv $wd/side_by_side.py /ebriareospf/briareospf-master/side_by_side.py
+if [ -f $wd/Aux/side_by_side.py ]; then
+        mv $wd/Aux/side_by_side.py /ebriareospf/briareospf-master/side_by_side.py
 fi
 exit 0
 
