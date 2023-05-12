@@ -17,7 +17,11 @@ class color:
 def RFI(victim_info, attacker_info, general_info, arguments):
 
 	# Check if endpoint is up
-	if not urllib.request.urlopen("http://192.168.100.7:80/file_inclusion.php").getcode() == 200:
+	s = ''
+	if victim_info['secure'] == 'True':
+			s = 's'
+	url = "http" + s + '://' + victim_info['ip'] + ':' + victim_info['port'] + victim_info['file_inclusion_path'] + 'test'
+	if not urllib.request.urlopen(url).getcode() == 200:
 		print(color.RED + '[-] The endpoint is not alive, please check if the url provided is correct' + color.END)
 		sys.exit(1)
 	

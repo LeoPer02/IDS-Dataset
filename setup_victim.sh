@@ -228,9 +228,6 @@ $quiet && echo -en "${BOLD}[*] Initializing LXD${END}"
 lxd init --auto 1>/dev/null 2>/dev/null
 $quiet && echo -e "${GREEN_BOLD}  [✓] ${END}"
 
-# Change permissions of unix socket
-# chmod 0666 /var/lib/lxd/unix.socket
-
 
 # Install auditd
 $quiet && echo -en "${BOLD}[*] Installing Auditd${END}"
@@ -290,7 +287,7 @@ cd $wd
 
 # Installing SSH
 $quiet && echo -en "${BOLD}[*] Installing OpenSSH Server${END}"
-apt-get install openssh-server -y
+apt-get install openssh-server -y 1>/dev/null 2>/dev/null
 $quiet && echo -e "${GREEN_BOLD}  [✓]${END}"
 
 # Starting SSH Server
@@ -358,6 +355,8 @@ else
         echo -e "${YELLOW_BOLD}We recommend that you move them to your module folder${END}"
 fi
 
+# Change permissions of unix socket
+chmod 0666 /var/lib/lxd/unix.socket
 
 # DONE
 echo -e "${GREEN_BOLD}\n\n[*] Done configuring the machine! ${END}"
@@ -371,7 +370,6 @@ exit 0
 
 # TO DO:
 # Confirm if the bcc installations is working with the server
-# Line 264, check what to do, (Make user start container, or disown process and start it in the background, Maybe a flag to decide??)
-
+# Recommend user to update before executing, to avoid having lock
 
 

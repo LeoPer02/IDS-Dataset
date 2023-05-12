@@ -101,7 +101,7 @@ class Auditing(BaseHTTPRequestHandler):
 			if exploit == 'LXD':
 				pid = os.popen('''ps aux | grep www-data | grep "sh -i" | awk '{print $2 }' ''').read().split('\n')
 			elif exploit == 'Docker':
-				pid = os.popen('''get_docker_pid=$(docker ps | grep Main_Container | awk '{ print $1 }') && docker top $get_docker_pid | awk '{print $2 }' | tail +2''').read().split('\n')
+				pid = os.popen('''get_docker_pid=$(docker ps | grep docker_wordpress | awk '{ print $1 }') && docker top $get_docker_pid | awk '{print $2 }' | tail +2''').read().split('\n')
 			elif exploit == 'SSH':
 				pid = os.popen('''ps aux | grep sshd | awk '{ print $2 }' ''').read().split('\n')
 			elif exploit == 'FTP':
@@ -113,6 +113,10 @@ class Auditing(BaseHTTPRequestHandler):
 			else:
 				return
 		    
+		    # No process was found
+			if len(pid) <= 1:
+				return
+
 			pid = pid[:-1] # Remove last element cause its an empty string	
 			args = pid[0]
 			for i in range(1, len(pid)):
