@@ -212,7 +212,7 @@ $quiet && echo -e "${GREEN_BOLD}  [✓]${END}"
 
 # Installing LXD
 $quiet && echo -en "${BOLD}[*] Installing LXD" 
-snap install lxd 1>/dev/null 2>/dev/null
+apt install lxd 1>/dev/null 2>/dev/null
 $quiet && echo -e "${GREEN_BOLD}  [✓]${END}"
 
 
