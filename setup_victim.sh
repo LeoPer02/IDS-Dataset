@@ -217,7 +217,7 @@ $quiet && echo -e "${GREEN_BOLD}  [✓]${END}"
 
 # Installing LXD
 $quiet && echo -en "${BOLD}[*] Installing LXD" 
-apt install lxd 1>/dev/null 2>/dev/null
+apt install lxd -y 1>/dev/null 2>/dev/null
 $quiet && echo -e "${GREEN_BOLD}  [✓]${END}"
 
 
@@ -277,6 +277,9 @@ docker stop $(docker ps -a -q) 1>/dev/null 2>/dev/null
 docker container prune -f 1>/dev/null 2>/dev/null
 
 docker-compose -f ./docker-compose.yml 1>/dev/null 2>/dev/null build
+
+chown -R www-data:www-data /srv/www/wordpress/wp-content/plugins
+chown -R www-data:www-data /var/www
 
 # Hangs forever (Right now the user needs to start it himself, but we can also disown it with nohup)
 #docker-compose up 1>/dev/null 2>/dev/null
