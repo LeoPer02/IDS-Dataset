@@ -304,7 +304,7 @@ apt install vsftpd -y 1>/dev/null 2>/dev/null
 $quiet && echo -e "${GREEN_BOLD}  [✓]${END}"
 
 # Starting FTP server
-$quiet && echo -en "${BOLD}[*] Installing FTP Server${END}"
+$quiet && echo -en "${BOLD}[*] Starting FTP Server${END}"
 systemctl enable --now vsftpd 1>/dev/null 2>/dev/null
 $quiet && echo -e "${GREEN_BOLD}  [✓]${END}"
 
@@ -351,6 +351,10 @@ if [ $module ]; then
         if [ -f $wd/Aux/side_by_side.py ]; then
                 mv $wd/Aux/side_by_side.py /ebriareospf/briareospf-master/side_by_side.py
         fi
+
+        if [ -f $wd/Aux/compare.py ]; then
+                mv $wd/Aux/compare.py /ebriareospf/briareospf-master/compare.py
+        fi
 else
         echo -e "${YELLOW_BOLD}Since you're not using our module, we will keep all the auxiliary files on the Aux folder${END}"
         echo -e "${YELLOW_BOLD}We recommend that you move them to your module folder${END}"
@@ -362,9 +366,18 @@ chmod 0666 /var/lib/lxd/unix.socket
 # DONE
 echo -e "${GREEN_BOLD}\n\n[*] Done configuring the machine! ${END}"
 
-echo -e "${RED_BOLD}\t BEFORE PROCEEDING:${END}"
-echo -e "${BOLD}This configure configured almost everything, but there are some things the user is required to do manually${END}"
+echo -e "${RED_BOLD}\n\t!!! BEFORE PROCEEDING: !!!${END}"
+echo -e "${BOLD}This script configured almost everything, but there are some things the user is required to do manually${END}"
+echo -e "${BOLD}\nFistly, access: http://localhost:80 and http://localhost:8080 and follow the steps you will see"
+echo -e "${YELLOW_BOLD}If when accessing http://localhost:8080 you get an Database Error, just a wait a bit, the continainer most likely is still starting${END}"
+echo -e "${BOLD}\nAfter that, on the side bar, make sure to go to Plugins and activate WP-File-Manager, in both http://localhost:80 and http://localhost:8080${END}"
+echo -e "${BOLD}Then execute:\tdocker exec \$(docker ps | grep docker_wordpress | awk \'{ print \$1 }\') bash -c \"chown -R www-data:www-data /var/www/html/wp-content/\"${END}"
+echo -e "${YELLOW_BOLD}\nIf you wish to start the logging server:${END}"
+echo -e "${BOLD}\t If you're using our module: Access /ebriareospf/briareospf-master/\n\tOtherwise: Access /IDS-Dataset/Aux and move the server to wherever you want to${END}"
+echo -e "${YELLOW_BOLD}To start the server you can use: python3 server.py -p {port} -d {dataset_folder}\tFor more information check the Readme.md in the Aux folder"
+echo -e "${GREEN_BOLD}\n\nDoing this you should be all set up to proceed!${END}"
 exit 0
+
 
 # TO DO:
 # Confirm if the bcc installations is working with the server

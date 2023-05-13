@@ -52,7 +52,7 @@ def wp_file_manager(victim_info, attacker_info, general_info, exp, arguments):
 				# The rep value (k-(i+1)) represents the run we are currently in
 				# That way we only cleanup on the attacker side on the last iteration
 				# Otherwise we are required to download and install everything at every iteration
-				LXD_exploit.run(victim_info, attacker_info, general_info, arguments, k-(i+1))
+				LXD_exploit.run(victim_info, attacker_info, general_info, arguments, k-(i+1), k)
 				if i == k-1:
 					print(color.BOLD + '\n[R] End of LXD exploit.\n    Leaving Script!' + color.END)
 			case 2:

