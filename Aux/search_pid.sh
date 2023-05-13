@@ -33,6 +33,7 @@ default_IFS="$IFS"
 IFS=','
 for i in $1
 do
-	auditctl -a exit,always -F ppid=$i -S all -k parent_pid
+	# Maybe could be added later if we implement it also in our module
+	# auditctl -a exit,always -F ppid=$i -S all -k parent_pid
 	auditctl -a exit,always -F pid\>=$i -S all -k greater_than
 done

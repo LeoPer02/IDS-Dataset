@@ -280,6 +280,7 @@ docker-compose -f ./docker-compose.yml 1>/dev/null 2>/dev/null build
 chown -R www-data:www-data /srv/www/wordpress/wp-content/plugins
 chown -R www-data:www-data /var/www
 
+# Maybe add later
 nohup docker-compose up &
 $quiet && echo -e "${GREEN_BOLD}  [✓]${END}"
 
@@ -361,11 +362,8 @@ chmod 0666 /var/lib/lxd/unix.socket
 # DONE
 echo -e "${GREEN_BOLD}\n\n[*] Done configuring the machine! ${END}"
 
-echo -e "${GREEN_BOLD}[***] Before doing anything make sure to start the containers, you can do so with:\n\n\tcd $wd/Docker/ && docker-compose up\n${END}"
-echo -e "${YELLOW_BOLD}[*] You should now configure the wordpress websites (both in the host and in the docker)${END}"
-echo -e "${YELLOW_BOLD}[*] To do so, on your browser access:\n\thttp://localhost:80\t(Host)\n\thttp://localhost:8080\t(Docker)${END}"
-echo -e "${YELLOW_BOLD}[*] Don't forget to go to Dashboard -> Plugins and activate the wp-file-manager (Host and Docker) plugin, as it is required for the attacks${END}"
-
+echo -e "${RED_BOLD}\t BEFORE PROCEEDING:${END}"
+echo -e "${BOLD}This configure configured almost everything, but there are some things the user is required to do manually${END}"
 exit 0
 
 # TO DO:

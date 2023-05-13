@@ -111,6 +111,8 @@ def wp_file_manager(victim_info, attacker_info, general_info, exp, arguments):
 		# Generate a new port for each attack, avoid the TIME_WAIT
 		if i != k-1 :
 			create_conf.gen_config(False)
+		#Give enough time for audit and module to stop
+		time.sleep(0.3)
 			
 		
 def launch_exploit(attacker_info, victim_info):
