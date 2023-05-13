@@ -24,7 +24,7 @@ If your using our module, just place this file inside the module working directo
 
 parser = argparse.ArgumentParser(epilog=epilog)
 
-parser.add_argument("-s", "--module-start", action="store", help='Allows you to define the script that will start your module. Keep in mind that the execution will be made in the following way bash (your_module) -p pid1,pid2,...,pidn. If not defined, our module will be used')
+parser.add_argument("-s", "--module-start", action="store", help='Allows you to define the script that will start your module. Keep in mind that the execution will be made in the following way bash (your_module) pid1,pid2,...,pidn. If not defined, our module will be used')
 
 parser.add_argument("-e", "--module-end", action="store",help='''Allows you to define the script that will stop your module. You do not need necessarily to define this flag (In case your module_start stops by itself), althought it is recommended since if you chain attacks it would be better to make sure that the previous instance of the module was terminated''')
 
@@ -125,9 +125,9 @@ class Auditing(BaseHTTPRequestHandler):
 			args=str(min(pid))
 			# Execute module with the pids collected
 			if module_start != '':
-				subprocess.Popen('bash ' + module_start + ' -p ' + args, shell=True)
+				subprocess.Popen('bash ' + module_start + args, shell=True)
 			else:
-				subprocess.Popen('python3 ' + module_location +' -p ' + args, shell=True)
+				subprocess.Popen('python3 ' + module_location +' --bt ' + args, shell=True)
 		            
 			# Clear audit file and implement rules to filter output
 			p2 = subprocess.Popen('bash ./search_pid.sh {pid}'.format(pid=args), shell = True)
