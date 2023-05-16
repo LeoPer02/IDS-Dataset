@@ -115,11 +115,11 @@ apt-get install net-tools -y 1>/dev/null
 $quiet && echo -e "${GREEN_BOLD}  [✓]${END}"
 
 # Installing our module (by default, can be disabled)
-if [ $module ]; then
+if $module; then
 
         # A lot of the following commands write to the stderr, therefore I'm hiding it
         # Give the chance for the user to skip bcc installation
-        if [ $bcc ]; then
+        if $bcc; then
                 # Get BCC dependecies
                 $quiet && echo -en "${BOLD}[*] Installing BCC dependecies${END}"
                 apt-get -y install bison build-essential cmake flex git libedit-dev \
@@ -330,7 +330,7 @@ if [ -f $wd/Aux/file_inclusion.php ]; then
 fi
 
 # Checking if data folder in our module exists
-if [ $module ]; then
+if $module; then
         if [ ! -d /ebriareospf/briareospf-master/data ]; then
                 mkdir /ebriareospf/briareospf-master/data
                 touch /ebriareospf/briareospf-master/data/sys_exit.txt
