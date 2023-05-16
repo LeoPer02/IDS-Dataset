@@ -8,7 +8,7 @@
   * **[Interactive Mode](#for-interactive-mode)**
   * **[Repeat Mode](#for-repeat-mode)** 
 * **[Troubleshooting](#troubleshooting)**
-  * **[Error: Get http://unix.socket/1.0: dial unix /var/lib/lxd/unix.socket: connect: permission denied:](#error-get-http//unix.socket/1.0-dial-unix-/var/lib/lxd/unix.socket:-connect-permission-denied)**
+  * **[Error: Get http://unix.socket/1.0: dial unix /var/lib/lxd/unix.socket: connect: permission denied:](#error-get-httpunixsocket10-dial-unix-varliblxdunixsocket-connect-permission-denied)**
   * **[Using sequential repeat mode LXD attacks throws error on the lxc container:](using-sequential-repeat-mode-LXD-attacks-throws-error-on-the-lxc-container)**  
 <br/>
 
