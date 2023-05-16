@@ -172,7 +172,7 @@ init_module() {
 		cur_wd=$(pwd)
 		cd $module_location
 
-		python3 $(echo $module_location'syscall_exit_tracer.py') --bt $(echo $$) & > /dev/null 2>&1
+		python3 $(echo $module_location'syscall_exit_tracer.py') --bt $(echo $PPID) & > /dev/null 2>&1
 		cd $cur_wd
 	else
 		bash $module_start
