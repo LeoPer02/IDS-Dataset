@@ -2,11 +2,11 @@
 
 ## **Table of Contents**
 
-* [Explaining the Attack](#explaining-the-attack)
-* [**How to Use**](#how-to-use)
-  * [**Configurations**](#configurations)
-  * [**Interactive Mode**](#for-interactive-mode) 
-  * [**Repeat Mode**](#for-repeat-mode)
+* **[Explaining the Attack](#explaining-the-attack)**
+* **[How to Use](#how-to-use)**
+  * **[Configurations](#configurations)**
+  * **[Interactive Mode](#for-interactive-mode)**
+  * **[Repeat Mode](#for-repeat-mode)**
 
 <br/>
 
