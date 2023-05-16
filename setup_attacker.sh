@@ -75,7 +75,7 @@ $quiet && echo -e "${GREEN_BOLD}Settings:${END}"
 $quiet && echo -e "\n\t${BOLD}Using Kali Linux:\t\t$kali${END}"
 
 # Updating
-$quiet && echo -en "$\n\n{BOLD}Updating${END}"
+$quiet && echo -en "\n\n${BOLD}Updating${END}"
 apt update -y 1>/dev/null 2>/dev/null
 $quiet && echo -e "${GREEN_BOLD}  [✓]${END}"
 
