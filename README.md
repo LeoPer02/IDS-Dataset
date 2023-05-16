@@ -1,6 +1,6 @@
 # **IDS-Dataset project**
 
-## **Index**
+## **Table of Contents**
   - [**Background and Motivation**](#background-and-motivation)
   - [**Approaching the problem**](#approaching-the-problem)
     - [**Explaining the attacks:**](#explaining-the-attacks)
