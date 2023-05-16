@@ -13,7 +13,7 @@
 <br/>
 
 
-## **Explaining attack**
+## **Explaining the attack**
 
 > **📝 _NOTE:_** As mentioned on the project explanation, this attack uses the Wp File Manager vulnerability as an entry point to the victim system.
 
