@@ -7,6 +7,7 @@
 
 * **[Explaining the Attack](#explaining-the-attack)**
 * **[How to Use](#how-to-use)**
+  * **[Configurations](#configurations)**
   * **[Repeat Mode](#for-repeat-mode)** 
 
 <br/>
