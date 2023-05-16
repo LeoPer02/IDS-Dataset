@@ -2,10 +2,10 @@
 
 ## **Table of Contents**
 
-* [Explaining the attack](#explaining-the-attack)
-* [How to use](#how-to-use)
-  * [Configurations](#configurations)
-  * [Repeat Mode](#for-repeat-mode) 
+* **[Explaining the attack](#explaining-the-attack)**
+* **[How to use](#how-to-use)**
+  * **[Configurations](#configurations)**
+  * **[Repeat Mode](#for-repeat-mode)**
 
 
 <br/>
