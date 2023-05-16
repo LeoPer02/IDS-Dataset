@@ -55,7 +55,7 @@ module=true
 
 
 # Skip BCC installation
-bcc=false
+bcc=true
 
 # Getting the current directory
 wd=$(pwd)
@@ -83,7 +83,7 @@ while getopts 'hqmb' OPTION; do
                         module=false
                         ;;
                 b)
-                        bcc=true
+                        bcc=false
                         module=false
                         ;;
 
@@ -92,7 +92,7 @@ done
 
 $quiet && echo -e "${GREEN_BOLD}Settings:${END}"
 $quiet && echo -e "\n\t${BOLD}Install our module:\t\t$module${END}"
-$quiet && echo -e "\t${BOLD}Skip BCC Installation:\t\t$bcc${END}"
+$quiet && echo -e "\t${BOLD}Install BCC:\t\t$bcc${END}"
 
 # General Info
 $quiet && echo -e "${BOLD}\n[*] Build tested with Ubuntu 18.04 ${UNDERLINE}${BLUE}https://releases.ubuntu.com/18.04/${END}"
