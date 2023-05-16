@@ -3,7 +3,7 @@
 ## **Table of Contents**
 * [Explaining the attack](#explaining-the-attack)
 * [How to Use](#how-to-use)
-  * [Configurations](#configuration)
+  * [Configurations](#configurations)
   * [Repeat mode](#for-repeat-mode)
 * [Troubleshooting](#troubleshooting)
   * [Docker Escape attack fails on the reverse shell phase](#docker-escape-attack-fails-on-the-reverse-shell-phase)
