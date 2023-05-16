@@ -5,7 +5,7 @@
 
 ## **Table of Contents**
 
-* **[Explaining the Attack](#explaing-the-attack)**
+* **[Explaining the Attack](#explaining-the-attack)**
 * **[How to Use](#how-to-use)**
   * **[Repeat Mode](#for-repeat-mode)** 
 
