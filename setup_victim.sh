@@ -367,14 +367,14 @@ chmod 0666 /var/lib/lxd/unix.socket
 # DONE
 echo -e "${GREEN_BOLD}\n\n[*] Done configuring the machine! ${END}"
 
-echo -e "${RED_BOLD}\n\t!!! BEFORE PROCEEDING: !!!${END}"
+echo -e "${RED_BOLD}\n\t!!! BEFORE PROCEEDING: !!!\n${END}"
 echo -e "${BOLD}This script configured almost everything, but there are some things the user is required to do manually${END}"
-echo -e "${BOLD}\nFistly, access: http://localhost:80 and http://localhost:8080 and follow the steps you will see"
-echo -e "${YELLOW_BOLD}If when accessing http://localhost:8080 you get an Database Error, just a wait a bit, the continainer most likely is still starting${END}"
+echo -e "${BOLD}\nFistly, access: http://localhost:80 and http://localhost:8080 and follow the steps you will see\n"
+echo -e "${GREEN_BOLD}If when accessing http://localhost:8080 you get an Database Error, just a wait a bit, the containainer most likely is still starting${END}"
 echo -e "${BOLD}\nAfter that, on the side bar, make sure to go to Plugins and activate WP-File-Manager, in both http://localhost:80 and http://localhost:8080${END}"
-echo -e "${BOLD}Then execute:\tdocker exec \$(docker ps | grep docker_wordpress | awk \'{ print \$1 }\') bash -c \"chown -R www-data:www-data /var/www/html/wp-content/\"${END}"
-echo -e "${YELLOW_BOLD}\nIf you wish to start the logging server:${END}"
-echo -e "${BOLD}\t If you're using our module: Access /ebriareospf/briareospf-master/\n\tOtherwise: Access /IDS-Dataset/Aux and move the server to wherever you want to${END}"
-echo -e "${YELLOW_BOLD}To start the server you can use: python3 server.py -p {port} -d {dataset_folder}\tFor more information check the Readme.md in the Aux folder"
+echo -e "${BOLD}Then execute:\tdocker exec \$(docker ps | grep docker_wordpress | awk '{ print \$1 }') bash -c \"chown -R www-data:www-data /var/www/html/wp-content/\"${END}"
+echo -e "${GREEN_BOLD}\nIf you wish to start the logging server:${END}"
+echo -e "${BOLD}\tIf you're using our module: Access /ebriareospf/briareospf-master/\n\tOtherwise: Access /IDS-Dataset/Aux and move the server to wherever you want to${END}"
+echo -e "${GREEN_BOLD}\nTo start the server you can use: python3 server.py -p {port} -d {dataset_folder}\tFor more information check the Readme.md in the Aux folder"
 echo -e "${GREEN_BOLD}\n\nDoing this you should be all set up to proceed!${END}"
 exit 0
