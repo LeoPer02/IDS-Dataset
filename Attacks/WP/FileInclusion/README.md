@@ -2,7 +2,7 @@
 
 ## **Table of Contents**
 
-* [**Explaining the Attack**](#explaining-the-attack)
+* [Explaining the Attack](#explaining-the-attack)
 * [**How to Use**](#how-to-use)
   * [**Configurations**](#configurations)
   * [**Interactive Mode**](#for-interactive-mode) 
