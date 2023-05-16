@@ -23,6 +23,7 @@ file_path='/Overhead_Logging.txt'
 iter=5
 module_start=""
 module_end=""
+module_location="/ebriareospf/briareospf-master/"
 
 if [ $# -eq 0 ]
 then
@@ -30,7 +31,7 @@ then
 	exit 1
 fi
 
-while getopts ':hf:r:s:e:' OPTION; do
+while getopts ':hf:r:s:e:m:' OPTION; do
 	case "$OPTION" in
 		h)
 			echo ""
@@ -42,7 +43,8 @@ while getopts ':hf:r:s:e:' OPTION; do
 			echo ""
 			echo "##################### YOUR OWN MODULE #######################"
 			echo "-s defines the script used to start the module (in the case you want to use your own), for that, provide an .sh file that will monitor this script" 
-			echo "-e defines the script used to stop/end the module after is has been used, you can omit this step if the script in -e stops by itself"			
+			echo "-e defines the script used to stop/end the module after is has been used, you can omit this step if the script in -e stops by itself"
+			echo "-m defines the location of our module, in case you moved it elsewhere"
 			echo ""
 			echo "By default we will execute $HOME/ebriareospf/briareospf-master/syscall_exit_tracer.py"
 			exit 0
@@ -70,6 +72,15 @@ while getopts ':hf:r:s:e:' OPTION; do
 				echo "The Module_end script provided does not exist"
 				exit 1
 			fi
+			;;
+		m)
+			module_location="$OPTARG"
+			if [ ! -d $module_location ]; then
+				echo "The location you provided does not exist"
+				exit 1
+			fi
+			# Add / to the end of the path
+			module_location=$(echo $module_location'/')
 			;;
 	esac
 done
@@ -130,9 +141,7 @@ get_no_logging() {
 init_audit() {
 	service auditd start
 	auditctl -D > /dev/null 2>&1
-	auditctl -a exit,always -F pid=$(echo $$) -S all -k parent_pid
-	# Module for now does not allow filtering by PPID
-	# auditctl -a exit,always -F ppid=$(echo $PPID) -S all -k parent_pid
+	auditctl -a exit,always -F pid\>=$(echo $PPID) -S all -k greater_than
 }
 
 cleanup_audit() {
@@ -161,10 +170,9 @@ get_with_audit() {
 init_module() {
 	if [[ $module_start == "" ]]; then
 		cur_wd=$(pwd)
-		# Hardcoded (Will be changed later on)
-		cd /home/vagrant/ebriareospf/briareospf-master
-		# Execute the module
-		python3 /home/vagrant/ebriareospf/briareospf-master/syscall_exit_tracer.py -p $(echo $$) & > /dev/null 2>&1
+		cd $module_location
+
+		python3 $(echo $module_location'syscall_exit_tracer.py') --bt $(echo $$) & > /dev/null 2>&1
 		cd $cur_wd
 	else
 		bash $module_start
