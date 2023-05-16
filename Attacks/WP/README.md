@@ -57,16 +57,16 @@ Will display the help menu and give more information into the available flags.
 ``` Bash
 sudo python3 main.py -c
 ```
-The `-c` flag will start the [`Configuration`](#steps) step and once done will exit.
+The `-c` flag will start the [Configuration](#steps) step and once done will exit.
 
 <br/>
 
 ``` Bash
 sudo python3 main.py -r {number_of_executions}
 ```
-The `-r` flag will make the script enter the [`Repeat mode`](#modes) and check if the configuration file exists, if:
-- **YES:** Start the [`Initial Access`](#steps) step with the current configuration on a loop with `{numer_of_executions}` iterations.
-- **NO:** Will start the [`Configuration`](#steps) step and once done proceed to [`Initial Access`](#steps) with the same behavior as above.
+The `-r` flag will make the script enter the [Repeat mode](#modes) and check if the configuration file exists, if:
+- **YES:** Start the [Initial Access](#steps) step with the current configuration on a loop with `{numer_of_executions}` iterations.
+- **NO:** Will start the [Configuration](#steps) step and once done proceed to [Initial Access](#steps) with the same behavior as above.
 
 
 <br/>
@@ -74,13 +74,13 @@ The `-r` flag will make the script enter the [`Repeat mode`](#modes) and check i
 ``` Bash
 sudo python3 main.py
 ```
-This will start the script in [`Interactive Mode`](#modes) and if the configuration file exists, ask the user if he wants to change it. If it doesn't exit, it will enter the [`Configuration`](#steps) step.
+This will start the script in [Interactive Mode](#modes) and if the configuration file exists, ask the user if he wants to change it. If it doesn't exit, it will enter the [Configuration](#steps) step.
 
 <br/>
 
 ``` Bash
 sudo python3 main.py -c -r {number_of_executions}
 ```
-This will firstly enter the [`Configuration`](#steps) step, regardless if the config file exists or not, and then, in [`Repeat mode`](#modes), enter the [`Initial Access`](#steps).
+This will firstly enter the [Configuration](#steps) step, regardless if the config file exists or not, and then, in [Repeat mode](#modes), enter the [Initial Access](#steps).
 
 Use this combination if you want to execute a different attack multiple times.
