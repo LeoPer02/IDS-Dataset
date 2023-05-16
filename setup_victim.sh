@@ -54,7 +54,7 @@ quiet=true
 module=true
 
 
-# BCC already have bcc installed
+# Skip BCC installation
 bcc=false
 
 # Getting the current directory
@@ -84,6 +84,7 @@ while getopts 'hqmb' OPTION; do
                         ;;
                 b)
                         bcc=true
+                        module=false
                         ;;
 
         esac
@@ -377,10 +378,3 @@ echo -e "${BOLD}\t If you're using our module: Access /ebriareospf/briareospf-ma
 echo -e "${YELLOW_BOLD}To start the server you can use: python3 server.py -p {port} -d {dataset_folder}\tFor more information check the Readme.md in the Aux folder"
 echo -e "${GREEN_BOLD}\n\nDoing this you should be all set up to proceed!${END}"
 exit 0
-
-
-# TO DO:
-# Confirm if the bcc installations is working with the server
-# Recommend user to update before executing, to avoid having lock
-
-
