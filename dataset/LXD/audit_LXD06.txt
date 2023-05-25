@@ -1,0 +1,634 @@
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251376): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251376): arch=c000003e syscall=13 success=yes exit=0 a0=37 a1=7ffea8070b20 a2=0 a3=8 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="(sd-askpwagent)" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251377): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251377): arch=c000003e syscall=13 success=yes exit=0 a0=38 a1=7ffea8070b20 a2=0 a3=8 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="(sd-askpwagent)" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251378): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251378): arch=c000003e syscall=13 success=yes exit=0 a0=39 a1=7ffea8070b20 a2=0 a3=8 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="(sd-askpwagent)" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251379): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251379): arch=c000003e syscall=13 success=yes exit=0 a0=3a a1=7ffea8070b20 a2=0 a3=8 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="(sd-askpwagent)" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251380): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251380): arch=c000003e syscall=13 success=yes exit=0 a0=3b a1=7ffea8070b20 a2=0 a3=8 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="(sd-askpwagent)" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251381): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251381): arch=c000003e syscall=13 success=yes exit=0 a0=3c a1=7ffea8070b20 a2=0 a3=8 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="(sd-askpwagent)" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251382): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251382): arch=c000003e syscall=13 success=yes exit=0 a0=3d a1=7ffea8070b20 a2=0 a3=8 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="(sd-askpwagent)" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251383): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251383): arch=c000003e syscall=13 success=yes exit=0 a0=3e a1=7ffea8070b20 a2=0 a3=8 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="(sd-askpwagent)" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251384): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251384): arch=c000003e syscall=13 success=yes exit=0 a0=3f a1=7ffea8070b20 a2=0 a3=8 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="(sd-askpwagent)" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251385): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251385): arch=c000003e syscall=13 success=yes exit=0 a0=40 a1=7ffea8070b20 a2=0 a3=8 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="(sd-askpwagent)" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251386): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251386): arch=c000003e syscall=14 success=yes exit=0 a0=2 a1=7ffea8070bf0 a2=0 a3=8 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="(sd-askpwagent)" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251388): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251388): arch=c000003e syscall=110 success=yes exit=13442 a0=2 a1=7ffea8070bf0 a2=0 a3=8 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="(sd-askpwagent)" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251387): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019486.837:251387): arch=c000003e syscall=46 success=yes exit=233 a0=3 a1=7ffea8070b10 a2=4040 a3=b0 items=0 ppid=13438 pid=13442 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251389): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019486.837:251389): arch=c000003e syscall=47 success=yes exit=24 a0=3 a1=7ffea806fbb0 a2=40004040 a3=564d29d17010 items=0 ppid=13438 pid=13442 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251390): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019486.837:251390): arch=c000003e syscall=47 success=yes exit=56 a0=3 a1=7ffea806fbb0 a2=40004040 a3=564d29d17010 items=0 ppid=13438 pid=13442 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251391): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019486.837:251391): arch=c000003e syscall=47 success=no exit=-11 a0=3 a1=7ffea806fc80 a2=40004040 a3=1 items=0 ppid=13438 pid=13442 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251392): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=PATH msg=audit(1685019486.837:251392): item=0 name="/proc/self/fd" inode=345788 dev=00:05 mode=040500 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019486.837:251392): cwd="/"
+type=SYSCALL msg=audit(1685019486.837:251392): arch=c000003e syscall=257 success=yes exit=4 a0=ffffff9c a1=7f02c8f2fcd2 a2=90800 a3=0 items=1 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="(sd-askpwagent)" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251393): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251393): arch=c000003e syscall=5 success=yes exit=0 a0=4 a1=7ffea8070b50 a2=7ffea8070b50 a3=0 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="(sd-askpwagent)" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251394): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251394): arch=c000003e syscall=78 success=yes exit=168 a0=4 a1=564d29d19600 a2=8000 a3=564d29d17010 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="(sd-askpwagent)" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251395): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251395): arch=c000003e syscall=3 success=yes exit=0 a0=3 a1=0 a2=0 a3=7f02c93b5bc0 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="(sd-askpwagent)" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251396): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251396): arch=c000003e syscall=78 success=yes exit=0 a0=4 a1=564d29d19600 a2=8000 a3=7f02c93b5bc0 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="(sd-askpwagent)" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251397): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251397): arch=c000003e syscall=3 success=yes exit=0 a0=4 a1=0 a2=16a00 a3=7f02c93b5bc0 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="(sd-askpwagent)" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251398): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251398): arch=c000003e syscall=39 success=yes exit=13487 a0=4 a1=0 a2=ffffffff a3=7f02c93b5bc0 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="(sd-askpwagent)" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251399): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251399): arch=c000003e syscall=16 success=yes exit=0 a0=1 a1=5401 a2=7ffea8070d60 a3=7f02c93b5bc0 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="(sd-askpwagent)" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251400): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251400): arch=c000003e syscall=16 success=yes exit=0 a0=2 a1=5401 a2=7ffea8070d60 a3=7f02c93b5bc0 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="(sd-askpwagent)" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251401): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=PATH msg=audit(1685019486.837:251401): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1308167 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1685019486.837:251401): item=0 name="/bin/systemd-tty-ask-password-agent" inode=1439147 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019486.837:251401): cwd="/"
+type=EXECVE msg=audit(1685019486.837:251401): argc=2 a0="/bin/systemd-tty-ask-password-agent" a1="--watch"
+type=SYSCALL msg=audit(1685019486.837:251401): arch=c000003e syscall=59 success=yes exit=0 a0=7f02c8f4e050 a1=7ffea8070dd0 a2=7ffea8071268 a3=7ffea8070f10 items=2 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251402): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251402): arch=c000003e syscall=12 success=yes exit=94322657525760 a0=0 a1=56 a2=4d a3=0 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251403): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=PATH msg=audit(1685019486.837:251403): item=0 name="/etc/ld.so.nohwcap" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019486.837:251403): cwd="/"
+type=SYSCALL msg=audit(1685019486.837:251403): arch=c000003e syscall=21 success=no exit=-2 a0=7f3ab1a29b02 a1=0 a2=17 a3=54 items=1 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251404): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=PATH msg=audit(1685019486.837:251404): item=0 name="/etc/ld.so.preload" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019486.837:251404): cwd="/"
+type=SYSCALL msg=audit(1685019486.837:251404): arch=c000003e syscall=21 success=no exit=-2 a0=7f3ab1a2c880 a1=4 a2=7f3ab1a07190 a3=8 items=1 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251405): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=PATH msg=audit(1685019486.837:251405): item=0 name="/lib/systemd/tls/x86_64/x86_64/libc.so.6" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019486.837:251405): cwd="/"
+type=SYSCALL msg=audit(1685019486.837:251405): arch=c000003e syscall=257 success=no exit=-2 a0=ffffff9c a1=7ffdcd7be410 a2=80000 a3=0 items=1 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251406): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=PATH msg=audit(1685019486.837:251406): item=0 name="/lib/systemd/tls/x86_64/x86_64" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019486.837:251406): cwd="/"
+type=SYSCALL msg=audit(1685019486.837:251406): arch=c000003e syscall=4 success=no exit=-2 a0=7ffdcd7be410 a1=7ffdcd7be4d0 a2=7ffdcd7be4d0 a3=0 items=1 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251407): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=PATH msg=audit(1685019486.837:251407): item=0 name="/lib/systemd/tls/x86_64/libc.so.6" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019486.837:251407): cwd="/"
+type=SYSCALL msg=audit(1685019486.837:251407): arch=c000003e syscall=257 success=no exit=-2 a0=ffffff9c a1=7ffdcd7be410 a2=80000 a3=0 items=1 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251408): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=PATH msg=audit(1685019486.837:251408): item=0 name="/lib/systemd/tls/x86_64" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019486.837:251408): cwd="/"
+type=SYSCALL msg=audit(1685019486.837:251408): arch=c000003e syscall=4 success=no exit=-2 a0=7ffdcd7be410 a1=7ffdcd7be4d0 a2=7ffdcd7be4d0 a3=0 items=1 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251409): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=PATH msg=audit(1685019486.837:251409): item=0 name="/lib/systemd/tls/x86_64/libc.so.6" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019486.837:251409): cwd="/"
+type=SYSCALL msg=audit(1685019486.837:251409): arch=c000003e syscall=257 success=no exit=-2 a0=ffffff9c a1=7ffdcd7be410 a2=80000 a3=0 items=1 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251410): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=PATH msg=audit(1685019486.837:251410): item=0 name="/lib/systemd/tls/x86_64" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019486.837:251410): cwd="/"
+type=SYSCALL msg=audit(1685019486.837:251410): arch=c000003e syscall=4 success=no exit=-2 a0=7ffdcd7be410 a1=7ffdcd7be4d0 a2=7ffdcd7be4d0 a3=0 items=1 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251411): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=PATH msg=audit(1685019486.837:251411): item=0 name="/lib/systemd/tls/libc.so.6" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019486.837:251411): cwd="/"
+type=SYSCALL msg=audit(1685019486.837:251411): arch=c000003e syscall=257 success=no exit=-2 a0=ffffff9c a1=7ffdcd7be410 a2=80000 a3=0 items=1 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251412): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=PATH msg=audit(1685019486.837:251412): item=0 name="/lib/systemd/tls" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019486.837:251412): cwd="/"
+type=SYSCALL msg=audit(1685019486.837:251412): arch=c000003e syscall=4 success=no exit=-2 a0=7ffdcd7be410 a1=7ffdcd7be4d0 a2=7ffdcd7be4d0 a3=0 items=1 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251413): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=PATH msg=audit(1685019486.837:251413): item=0 name="/lib/systemd/x86_64/x86_64/libc.so.6" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019486.837:251413): cwd="/"
+type=SYSCALL msg=audit(1685019486.837:251413): arch=c000003e syscall=257 success=no exit=-2 a0=ffffff9c a1=7ffdcd7be410 a2=80000 a3=0 items=1 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251414): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=PATH msg=audit(1685019486.837:251414): item=0 name="/lib/systemd/x86_64/x86_64" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019486.837:251414): cwd="/"
+type=SYSCALL msg=audit(1685019486.837:251414): arch=c000003e syscall=4 success=no exit=-2 a0=7ffdcd7be410 a1=7ffdcd7be4d0 a2=7ffdcd7be4d0 a3=0 items=1 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251415): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=PATH msg=audit(1685019486.837:251415): item=0 name="/lib/systemd/x86_64/libc.so.6" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019486.837:251415): cwd="/"
+type=SYSCALL msg=audit(1685019486.837:251415): arch=c000003e syscall=257 success=no exit=-2 a0=ffffff9c a1=7ffdcd7be410 a2=80000 a3=0 items=1 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251416): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=PATH msg=audit(1685019486.837:251416): item=0 name="/lib/systemd/x86_64" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019486.837:251416): cwd="/"
+type=SYSCALL msg=audit(1685019486.837:251416): arch=c000003e syscall=4 success=no exit=-2 a0=7ffdcd7be410 a1=7ffdcd7be4d0 a2=7ffdcd7be4d0 a3=0 items=1 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251417): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=PATH msg=audit(1685019486.837:251417): item=0 name="/lib/systemd/x86_64/libc.so.6" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019486.837:251417): cwd="/"
+type=SYSCALL msg=audit(1685019486.837:251417): arch=c000003e syscall=257 success=no exit=-2 a0=ffffff9c a1=7ffdcd7be410 a2=80000 a3=0 items=1 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251418): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=PATH msg=audit(1685019486.837:251418): item=0 name="/lib/systemd/x86_64" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019486.837:251418): cwd="/"
+type=SYSCALL msg=audit(1685019486.837:251418): arch=c000003e syscall=4 success=no exit=-2 a0=7ffdcd7be410 a1=7ffdcd7be4d0 a2=7ffdcd7be4d0 a3=0 items=1 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251419): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=PATH msg=audit(1685019486.837:251419): item=0 name="/lib/systemd/libc.so.6" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019486.837:251419): cwd="/"
+type=SYSCALL msg=audit(1685019486.837:251419): arch=c000003e syscall=257 success=no exit=-2 a0=ffffff9c a1=7ffdcd7be410 a2=80000 a3=0 items=1 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251420): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=PATH msg=audit(1685019486.837:251420): item=0 name="/lib/systemd" inode=1308179 dev=08:01 mode=040755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019486.837:251420): cwd="/"
+type=SYSCALL msg=audit(1685019486.837:251420): arch=c000003e syscall=4 success=yes exit=0 a0=7ffdcd7be410 a1=7ffdcd7be4d0 a2=7ffdcd7be4d0 a3=0 items=1 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251421): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=PATH msg=audit(1685019486.837:251421): item=0 name="/etc/ld.so.cache" inode=1716548 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019486.837:251421): cwd="/"
+type=SYSCALL msg=audit(1685019486.837:251421): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7f3ab1a29ea8 a2=80000 a3=0 items=1 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251422): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251422): arch=c000003e syscall=5 success=yes exit=0 a0=3 a1=7ffdcd7be470 a2=7ffdcd7be470 a3=0 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251423): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=MMAP msg=audit(1685019486.837:251423): fd=3 flags=0x2
+type=SYSCALL msg=audit(1685019486.837:251423): arch=c000003e syscall=9 success=yes exit=139890067091456 a0=0 a1=1402f a2=1 a3=2 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251424): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251424): arch=c000003e syscall=3 success=yes exit=0 a0=3 a1=1402f a2=1 a3=2 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251425): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=PATH msg=audit(1685019486.837:251425): item=0 name="/etc/ld.so.nohwcap" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019486.837:251425): cwd="/"
+type=SYSCALL msg=audit(1685019486.837:251425): arch=c000003e syscall=21 success=no exit=-2 a0=7f3ab1a29b02 a1=0 a2=0 a3=2 items=1 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251426): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=PATH msg=audit(1685019486.837:251426): item=0 name="/lib/x86_64-linux-gnu/libc.so.6" inode=1308243 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019486.837:251426): cwd="/"
+type=SYSCALL msg=audit(1685019486.837:251426): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7f3ab1c32e60 a2=80000 a3=0 items=1 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251427): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251427): arch=c000003e syscall=0 success=yes exit=832 a0=3 a1=7ffdcd7be638 a2=340 a3=0 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251428): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251428): arch=c000003e syscall=5 success=yes exit=0 a0=3 a1=7ffdcd7be4d0 a2=7ffdcd7be4d0 a3=7f3ab1c32e60 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251429): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251429): arch=c000003e syscall=9 success=yes exit=139890067083264 a0=0 a1=2000 a2=3 a3=22 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251430): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=MMAP msg=audit(1685019486.837:251430): fd=3 flags=0x802
+type=SYSCALL msg=audit(1685019486.837:251430): arch=c000003e syscall=9 success=yes exit=139890060779520 a0=0 a1=3f0ae0 a2=5 a3=802 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251431): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251431): arch=c000003e syscall=10 success=yes exit=0 a0=7f3ab17fd000 a1=200000 a2=0 a3=7ffdcd7be260 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251432): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=MMAP msg=audit(1685019486.837:251432): fd=3 flags=0x812
+type=SYSCALL msg=audit(1685019486.837:251432): arch=c000003e syscall=9 success=yes exit=139890064871424 a0=7f3ab19fd000 a1=6000 a2=3 a3=812 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251433): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251433): arch=c000003e syscall=9 success=yes exit=139890064896000 a0=7f3ab1a03000 a1=3ae0 a2=3 a3=32 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251434): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251434): arch=c000003e syscall=3 success=yes exit=0 a0=3 a1=28 a2=0 a3=31 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251435): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=PATH msg=audit(1685019486.837:251435): item=0 name="/lib/systemd/libsystemd-shared-237.so" inode=1313702 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019486.837:251435): cwd="/"
+type=SYSCALL msg=audit(1685019486.837:251435): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7ffdcd7be3d0 a2=80000 a3=0 items=1 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251436): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251436): arch=c000003e syscall=0 success=yes exit=832 a0=3 a1=7ffdcd7be608 a2=340 a3=0 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251437): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251437): arch=c000003e syscall=5 success=yes exit=0 a0=3 a1=7ffdcd7be4a0 a2=7ffdcd7be4a0 a3=0 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251438): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=MMAP msg=audit(1685019486.837:251438): fd=3 flags=0x802
+type=SYSCALL msg=audit(1685019486.837:251438): arch=c000003e syscall=9 success=yes exit=139890056306688 a0=0 a1=4433c8 a2=5 a3=802 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251439): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251439): arch=c000003e syscall=10 success=yes exit=0 a0=7f3ab138a000 a1=1ff000 a2=0 a3=7ffdcd7be290 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251440): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=MMAP msg=audit(1685019486.837:251440): fd=3 flags=0x812
+type=SYSCALL msg=audit(1685019486.837:251440): arch=c000003e syscall=9 success=yes exit=139890060201984 a0=7f3ab1589000 a1=8b000 a2=3 a3=812 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251441): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251441): arch=c000003e syscall=9 success=yes exit=139890060771328 a0=7f3ab1614000 a1=13c8 a2=3 a3=32 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251442): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251442): arch=c000003e syscall=3 success=yes exit=0 a0=3 a1=28 a2=0 a3=31 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251443): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=PATH msg=audit(1685019486.837:251443): item=0 name="/etc/ld.so.nohwcap" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019486.837:251443): cwd="/"
+type=SYSCALL msg=audit(1685019486.837:251443): arch=c000003e syscall=21 success=no exit=-2 a0=7f3ab1a29b02 a1=0 a2=0 a3=ffffffffffffffe6 items=1 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251444): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=PATH msg=audit(1685019486.837:251444): item=0 name="/lib/x86_64-linux-gnu/librt.so.1" inode=1313813 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019486.837:251444): cwd="/"
+type=SYSCALL msg=audit(1685019486.837:251444): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7f3ab1c19a00 a2=80000 a3=0 items=1 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251445): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251445): arch=c000003e syscall=0 success=yes exit=832 a0=3 a1=7ffdcd7be318 a2=340 a3=0 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251446): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251446): arch=c000003e syscall=5 success=yes exit=0 a0=3 a1=7ffdcd7be1b0 a2=7ffdcd7be1b0 a3=7f3ab1c19a00 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251447): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=MMAP msg=audit(1685019486.837:251447): fd=3 flags=0x802
+type=SYSCALL msg=audit(1685019486.837:251447): arch=c000003e syscall=9 success=yes exit=139890054176768 a0=0 a1=207be0 a2=5 a3=802 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251448): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251448): arch=c000003e syscall=10 success=yes exit=0 a0=7f3ab0fd1000 a1=1ff000 a2=0 a3=7ffdcd7bdfd0 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251449): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=MMAP msg=audit(1685019486.837:251449): fd=3 flags=0x812
+type=SYSCALL msg=audit(1685019486.837:251449): arch=c000003e syscall=9 success=yes exit=139890056298496 a0=7f3ab11d0000 a1=2000 a2=3 a3=812 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251450): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251450): arch=c000003e syscall=3 success=yes exit=0 a0=3 a1=28 a2=0 a3=31 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251451): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=PATH msg=audit(1685019486.837:251451): item=0 name="/etc/ld.so.nohwcap" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019486.837:251451): cwd="/"
+type=SYSCALL msg=audit(1685019486.837:251451): arch=c000003e syscall=21 success=no exit=-2 a0=7f3ab1a29b02 a1=0 a2=0 a3=fffffffffffff80f items=1 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251452): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=PATH msg=audit(1685019486.837:251452): item=0 name="/lib/x86_64-linux-gnu/libcap.so.2" inode=1314161 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019486.837:251452): cwd="/"
+type=SYSCALL msg=audit(1685019486.837:251452): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7f3ab1c19f00 a2=80000 a3=0 items=1 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251453): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251453): arch=c000003e syscall=0 success=yes exit=832 a0=3 a1=7ffdcd7be2e8 a2=340 a3=0 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251454): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251454): arch=c000003e syscall=5 success=yes exit=0 a0=3 a1=7ffdcd7be180 a2=7ffdcd7be180 a3=7f3ab1c19f00 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251455): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=MMAP msg=audit(1685019486.837:251455): fd=3 flags=0x802
+type=SYSCALL msg=audit(1685019486.837:251455): arch=c000003e syscall=9 success=yes exit=139890052055040 a0=0 a1=205158 a2=5 a3=802 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251456): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251456): arch=c000003e syscall=10 success=yes exit=0 a0=7f3ab0dc8000 a1=200000 a2=0 a3=7ffdcd7bdfa0 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251457): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=MMAP msg=audit(1685019486.837:251457): fd=3 flags=0x812
+type=SYSCALL msg=audit(1685019486.837:251457): arch=c000003e syscall=9 success=yes exit=139890054168576 a0=7f3ab0fc8000 a1=2000 a2=3 a3=812 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251458): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251458): arch=c000003e syscall=3 success=yes exit=0 a0=3 a1=28 a2=0 a3=31 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251459): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=PATH msg=audit(1685019486.837:251459): item=0 name="/etc/ld.so.nohwcap" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019486.837:251459): cwd="/"
+type=SYSCALL msg=audit(1685019486.837:251459): arch=c000003e syscall=21 success=no exit=-2 a0=7f3ab1a29b02 a1=0 a2=0 a3=7f3ab1a251b0 items=1 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251460): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=PATH msg=audit(1685019486.837:251460): item=0 name="/lib/x86_64-linux-gnu/libacl.so.1" inode=1314134 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019486.837:251460): cwd="/"
+type=SYSCALL msg=audit(1685019486.837:251460): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7f3ab1c1a400 a2=80000 a3=0 items=1 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251461): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251461): arch=c000003e syscall=0 success=yes exit=832 a0=3 a1=7ffdcd7be2b8 a2=340 a3=0 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251462): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251462): arch=c000003e syscall=5 success=yes exit=0 a0=3 a1=7ffdcd7be150 a2=7ffdcd7be150 a3=7f3ab1c1a400 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251463): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=MMAP msg=audit(1685019486.837:251463): fd=3 flags=0x802
+type=SYSCALL msg=audit(1685019486.837:251463): arch=c000003e syscall=9 success=yes exit=139890049925120 a0=0 a1=207200 a2=5 a3=802 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251464): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251464): arch=c000003e syscall=10 success=yes exit=0 a0=7f3ab0bc3000 a1=1ff000 a2=0 a3=7ffdcd7bdf70 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251465): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=MMAP msg=audit(1685019486.837:251465): fd=3 flags=0x812
+type=SYSCALL msg=audit(1685019486.837:251465): arch=c000003e syscall=9 success=yes exit=139890052046848 a0=7f3ab0dc2000 a1=2000 a2=3 a3=812 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251466): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251466): arch=c000003e syscall=3 success=yes exit=0 a0=3 a1=28 a2=0 a3=31 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251467): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=PATH msg=audit(1685019486.837:251467): item=0 name="/etc/ld.so.nohwcap" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019486.837:251467): cwd="/"
+type=SYSCALL msg=audit(1685019486.837:251467): arch=c000003e syscall=21 success=no exit=-2 a0=7f3ab1a29b02 a1=0 a2=0 a3=7f3ab1a252f0 items=1 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251468): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=PATH msg=audit(1685019486.837:251468): item=0 name="/lib/x86_64-linux-gnu/libcryptsetup.so.12" inode=1314169 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019486.837:251468): cwd="/"
+type=SYSCALL msg=audit(1685019486.837:251468): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7f3ab1c1a900 a2=80000 a3=0 items=1 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251469): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251469): arch=c000003e syscall=0 success=yes exit=832 a0=3 a1=7ffdcd7be288 a2=340 a3=0 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251470): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251470): arch=c000003e syscall=5 success=yes exit=0 a0=3 a1=7ffdcd7be120 a2=7ffdcd7be120 a3=7f3ab1c1a900 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251471): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=MMAP msg=audit(1685019486.837:251471): fd=3 flags=0x802
+type=SYSCALL msg=audit(1685019486.837:251471): arch=c000003e syscall=9 success=yes exit=139890047512576 a0=0 a1=24c3e8 a2=5 a3=802 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251472): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251472): arch=c000003e syscall=10 success=yes exit=0 a0=7f3ab09b9000 a1=200000 a2=0 a3=7ffdcd7bdf40 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251473): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=MMAP msg=audit(1685019486.837:251473): fd=3 flags=0x812
+type=SYSCALL msg=audit(1685019486.837:251473): arch=c000003e syscall=9 success=yes exit=139890049912832 a0=7f3ab0bb9000 a1=3000 a2=3 a3=812 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251474): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251474): arch=c000003e syscall=3 success=yes exit=0 a0=3 a1=28 a2=0 a3=31 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251475): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=PATH msg=audit(1685019486.837:251475): item=0 name="/etc/ld.so.nohwcap" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019486.837:251475): cwd="/"
+type=SYSCALL msg=audit(1685019486.837:251475): arch=c000003e syscall=21 success=no exit=-2 a0=7f3ab1a29b02 a1=0 a2=0 a3=7f3ab1a251b0 items=1 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251476): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=PATH msg=audit(1685019486.837:251476): item=0 name="/lib/x86_64-linux-gnu/libgcrypt.so.20" inode=1314195 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019486.837:251476): cwd="/"
+type=SYSCALL msg=audit(1685019486.837:251476): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7f3ab1c1ae10 a2=80000 a3=0 items=1 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251477): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251477): arch=c000003e syscall=0 success=yes exit=832 a0=3 a1=7ffdcd7be258 a2=340 a3=0 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251478): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251478): arch=c000003e syscall=5 success=yes exit=0 a0=3 a1=7ffdcd7be0f0 a2=7ffdcd7be0f0 a3=7f3ab1c1ae10 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251479): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251479): arch=c000003e syscall=9 success=yes exit=139890067075072 a0=0 a1=2000 a2=3 a3=22 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251480): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=MMAP msg=audit(1685019486.837:251480): fd=3 flags=0x802
+type=SYSCALL msg=audit(1685019486.837:251480): arch=c000003e syscall=9 success=yes exit=139890044252160 a0=0 a1=31b008 a2=5 a3=802 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251481): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251481): arch=c000003e syscall=10 success=yes exit=0 a0=7f3ab0767000 a1=200000 a2=0 a3=7ffdcd7bdf10 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251482): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=MMAP msg=audit(1685019486.837:251482): fd=3 flags=0x812
+type=SYSCALL msg=audit(1685019486.837:251482): arch=c000003e syscall=9 success=yes exit=139890047479808 a0=7f3ab0967000 a1=7000 a2=3 a3=812 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251483): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251483): arch=c000003e syscall=9 success=yes exit=139890047508480 a0=7f3ab096e000 a1=8 a2=3 a3=32 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251484): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251484): arch=c000003e syscall=3 success=yes exit=0 a0=3 a1=28 a2=0 a3=31 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251485): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=PATH msg=audit(1685019486.837:251485): item=0 name="/etc/ld.so.nohwcap" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019486.837:251485): cwd="/"
+type=SYSCALL msg=audit(1685019486.837:251485): arch=c000003e syscall=21 success=no exit=-2 a0=7f3ab1a29b02 a1=0 a2=0 a3=7f3ab1a251b0 items=1 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251486): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=PATH msg=audit(1685019486.837:251486): item=0 name="/usr/lib/x86_64-linux-gnu/libip4tc.so.0" inode=1579013 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019486.837:251486): cwd="/"
+type=SYSCALL msg=audit(1685019486.837:251486): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7f3ab1c174d0 a2=80000 a3=0 items=1 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251487): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251487): arch=c000003e syscall=0 success=yes exit=832 a0=3 a1=7ffdcd7be228 a2=340 a3=0 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251488): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251488): arch=c000003e syscall=5 success=yes exit=0 a0=3 a1=7ffdcd7be0c0 a2=7ffdcd7be0c0 a3=7f3ab1c174d0 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251489): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=MMAP msg=audit(1685019486.837:251489): fd=3 flags=0x802
+type=SYSCALL msg=audit(1685019486.837:251489): arch=c000003e syscall=9 success=yes exit=139890042126336 a0=0 a1=206240 a2=5 a3=802 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251490): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251490): arch=c000003e syscall=10 success=yes exit=0 a0=7f3ab0452000 a1=1ff000 a2=0 a3=7ffdcd7bdee0 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251491): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=MMAP msg=audit(1685019486.837:251491): fd=3 flags=0x812
+type=SYSCALL msg=audit(1685019486.837:251491): arch=c000003e syscall=9 success=yes exit=139890044243968 a0=7f3ab0651000 a1=2000 a2=3 a3=812 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251492): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251492): arch=c000003e syscall=3 success=yes exit=0 a0=3 a1=28 a2=0 a3=31 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251493): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=PATH msg=audit(1685019486.837:251493): item=0 name="/etc/ld.so.nohwcap" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019486.837:251493): cwd="/"
+type=SYSCALL msg=audit(1685019486.837:251493): arch=c000003e syscall=21 success=no exit=-2 a0=7f3ab1a29b02 a1=0 a2=0 a3=7f3ab1a25570 items=1 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251494): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=PATH msg=audit(1685019486.837:251494): item=0 name="/lib/x86_64-linux-gnu/libseccomp.so.2" inode=1314300 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019486.837:251494): cwd="/"
+type=SYSCALL msg=audit(1685019486.837:251494): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7f3ab1c179d0 a2=80000 a3=0 items=1 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251495): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251495): arch=c000003e syscall=0 success=yes exit=832 a0=3 a1=7ffdcd7be1f8 a2=340 a3=0 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251496): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251496): arch=c000003e syscall=5 success=yes exit=0 a0=3 a1=7ffdcd7be090 a2=7ffdcd7be090 a3=7f3ab1c179d0 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251497): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=MMAP msg=audit(1685019486.837:251497): fd=3 flags=0x802
+type=SYSCALL msg=audit(1685019486.837:251497): arch=c000003e syscall=9 success=yes exit=139890039898112 a0=0 a1=21f160 a2=5 a3=802 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251498): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251498): arch=c000003e syscall=10 success=yes exit=0 a0=7f3ab024a000 a1=200000 a2=0 a3=7ffdcd7bdeb0 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251499): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=MMAP msg=audit(1685019486.837:251499): fd=3 flags=0x812
+type=SYSCALL msg=audit(1685019486.837:251499): arch=c000003e syscall=9 success=yes exit=139890042118144 a0=7f3ab044a000 a1=2000 a2=3 a3=812 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251500): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251500): arch=c000003e syscall=3 success=yes exit=0 a0=3 a1=28 a2=0 a3=31 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251501): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=PATH msg=audit(1685019486.837:251501): item=0 name="/etc/ld.so.nohwcap" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019486.837:251501): cwd="/"
+type=SYSCALL msg=audit(1685019486.837:251501): arch=c000003e syscall=21 success=no exit=-2 a0=7f3ab1a29b02 a1=0 a2=0 a3=7f3ab1a25430 items=1 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251502): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=PATH msg=audit(1685019486.837:251502): item=0 name="/lib/x86_64-linux-gnu/libselinux.so.1" inode=1314301 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019486.837:251502): cwd="/"
+type=SYSCALL msg=audit(1685019486.837:251502): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7f3ab1c17ed0 a2=80000 a3=0 items=1 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=SYSCALL msg=audit(1685019486.837:251503): arch=c000003e syscall=0 success=yes exit=832 a0=3 a1=7ffdcd7be1c8 a2=340 a3=0 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251504): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251504): arch=c000003e syscall=5 success=yes exit=0 a0=3 a1=7ffdcd7be060 a2=7ffdcd7be060 a3=7f3ab1c17ed0 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251505): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=MMAP msg=audit(1685019486.837:251505): fd=3 flags=0x802
+type=SYSCALL msg=audit(1685019486.837:251505): arch=c000003e syscall=9 success=yes exit=139890037637120 a0=0 a1=2278d0 a2=5 a3=802 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251506): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251506): arch=c000003e syscall=10 success=yes exit=0 a0=7f3ab0029000 a1=1ff000 a2=0 a3=7ffdcd7bde50 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251507): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=MMAP msg=audit(1685019486.837:251507): fd=3 flags=0x812
+type=SYSCALL msg=audit(1685019486.837:251507): arch=c000003e syscall=9 success=yes exit=139890039881728 a0=7f3ab0228000 a1=2000 a2=3 a3=812 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"
+----
+time->Thu May 25 13:58:06 2023
+type=PROCTITLE msg=audit(1685019486.837:251508): proctitle=73797374656D63746C0073746F70006175646974642E73657276696365
+type=SYSCALL msg=audit(1685019486.837:251508): arch=c000003e syscall=9 success=yes exit=139890039889920 a0=7f3ab022a000 a1=18d0 a2=3 a3=32 items=0 ppid=13442 pid=13487 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemd-tty-ask" exe="/bin/systemd-tty-ask-password-agent" key="greater_than"

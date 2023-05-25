@@ -1,0 +1,1547 @@
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287205): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287205): arch=c000003e syscall=10 success=yes exit=0 a0=7fac8bc5c000 a1=200000 a2=0 a3=7ffdb6727770 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287206): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=MMAP msg=audit(1685019497.766:287206): fd=3 flags=0x812
+type=SYSCALL msg=audit(1685019497.766:287206): arch=c000003e syscall=9 success=yes exit=140379058192384 a0=7fac8be5c000 a1=3000 a2=3 a3=812 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287207): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287207): arch=c000003e syscall=3 success=yes exit=0 a0=3 a1=28 a2=0 a3=31 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287208): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.766:287208): item=0 name="/etc/ld.so.nohwcap" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.766:287208): cwd="/"
+type=SYSCALL msg=audit(1685019497.766:287208): arch=c000003e syscall=21 success=no exit=-2 a0=7fac8ccccb02 a1=0 a2=0 a3=7fac8ccc8570 items=1 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287209): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.766:287209): item=0 name="/lib/x86_64-linux-gnu/libgcrypt.so.20" inode=1314195 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.766:287209): cwd="/"
+type=SYSCALL msg=audit(1685019497.766:287209): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7fac8cebde10 a2=80000 a3=0 items=1 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287210): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287210): arch=c000003e syscall=0 success=yes exit=832 a0=3 a1=7ffdb6727a88 a2=340 a3=0 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287211): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287211): arch=c000003e syscall=5 success=yes exit=0 a0=3 a1=7ffdb6727920 a2=7ffdb6727920 a3=7fac8cebde10 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287212): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287212): arch=c000003e syscall=9 success=yes exit=140379075354624 a0=0 a1=2000 a2=3 a3=22 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287213): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=MMAP msg=audit(1685019497.766:287213): fd=3 flags=0x802
+type=SYSCALL msg=audit(1685019497.766:287213): arch=c000003e syscall=9 success=yes exit=140379052531712 a0=0 a1=31b008 a2=5 a3=802 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287214): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287214): arch=c000003e syscall=10 success=yes exit=0 a0=7fac8ba0a000 a1=200000 a2=0 a3=7ffdb6727740 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287215): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=MMAP msg=audit(1685019497.766:287215): fd=3 flags=0x812
+type=SYSCALL msg=audit(1685019497.766:287215): arch=c000003e syscall=9 success=yes exit=140379055759360 a0=7fac8bc0a000 a1=7000 a2=3 a3=812 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287216): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287216): arch=c000003e syscall=9 success=yes exit=140379055788032 a0=7fac8bc11000 a1=8 a2=3 a3=32 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287217): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287217): arch=c000003e syscall=3 success=yes exit=0 a0=3 a1=28 a2=0 a3=31 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287218): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.766:287218): item=0 name="/etc/ld.so.nohwcap" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.766:287218): cwd="/"
+type=SYSCALL msg=audit(1685019497.766:287218): arch=c000003e syscall=21 success=no exit=-2 a0=7fac8ccccb02 a1=0 a2=0 a3=7fac8ccc8570 items=1 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287219): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.766:287219): item=0 name="/usr/lib/x86_64-linux-gnu/libip4tc.so.0" inode=1579013 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.766:287219): cwd="/"
+type=SYSCALL msg=audit(1685019497.766:287219): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7fac8ceba4d0 a2=80000 a3=0 items=1 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287220): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287220): arch=c000003e syscall=0 success=yes exit=832 a0=3 a1=7ffdb6727a58 a2=340 a3=0 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287221): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287221): arch=c000003e syscall=5 success=yes exit=0 a0=3 a1=7ffdb67278f0 a2=7ffdb67278f0 a3=7fac8ceba4d0 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287222): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=MMAP msg=audit(1685019497.766:287222): fd=3 flags=0x802
+type=SYSCALL msg=audit(1685019497.766:287222): arch=c000003e syscall=9 success=yes exit=140379050405888 a0=0 a1=206240 a2=5 a3=802 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287223): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287223): arch=c000003e syscall=10 success=yes exit=0 a0=7fac8b6f5000 a1=1ff000 a2=0 a3=7ffdb6727710 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287224): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=MMAP msg=audit(1685019497.766:287224): fd=3 flags=0x812
+type=SYSCALL msg=audit(1685019497.766:287224): arch=c000003e syscall=9 success=yes exit=140379052523520 a0=7fac8b8f4000 a1=2000 a2=3 a3=812 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287225): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287225): arch=c000003e syscall=3 success=yes exit=0 a0=3 a1=28 a2=0 a3=31 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287226): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.766:287226): item=0 name="/etc/ld.so.nohwcap" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.766:287226): cwd="/"
+type=SYSCALL msg=audit(1685019497.766:287226): arch=c000003e syscall=21 success=no exit=-2 a0=7fac8ccccb02 a1=0 a2=0 a3=7fac8ccc8570 items=1 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287227): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.766:287227): item=0 name="/lib/x86_64-linux-gnu/libseccomp.so.2" inode=1314300 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.766:287227): cwd="/"
+type=SYSCALL msg=audit(1685019497.766:287227): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7fac8ceba9d0 a2=80000 a3=0 items=1 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287228): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287228): arch=c000003e syscall=0 success=yes exit=832 a0=3 a1=7ffdb6727a28 a2=340 a3=0 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287229): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287229): arch=c000003e syscall=5 success=yes exit=0 a0=3 a1=7ffdb67278c0 a2=7ffdb67278c0 a3=7fac8ceba9d0 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287230): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=MMAP msg=audit(1685019497.766:287230): fd=3 flags=0x802
+type=SYSCALL msg=audit(1685019497.766:287230): arch=c000003e syscall=9 success=yes exit=140379048177664 a0=0 a1=21f160 a2=5 a3=802 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287231): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287231): arch=c000003e syscall=10 success=yes exit=0 a0=7fac8b4ed000 a1=200000 a2=0 a3=7ffdb67276e0 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287232): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=MMAP msg=audit(1685019497.766:287232): fd=3 flags=0x812
+type=SYSCALL msg=audit(1685019497.766:287232): arch=c000003e syscall=9 success=yes exit=140379050397696 a0=7fac8b6ed000 a1=2000 a2=3 a3=812 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287233): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287233): arch=c000003e syscall=3 success=yes exit=0 a0=3 a1=28 a2=0 a3=31 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287234): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.766:287234): item=0 name="/etc/ld.so.nohwcap" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.766:287234): cwd="/"
+type=SYSCALL msg=audit(1685019497.766:287234): arch=c000003e syscall=21 success=no exit=-2 a0=7fac8ccccb02 a1=0 a2=0 a3=7fac8ccc8570 items=1 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287235): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.766:287235): item=0 name="/lib/x86_64-linux-gnu/libselinux.so.1" inode=1314301 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.766:287235): cwd="/"
+type=SYSCALL msg=audit(1685019497.766:287235): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7fac8cebaed0 a2=80000 a3=0 items=1 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287236): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287236): arch=c000003e syscall=0 success=yes exit=832 a0=3 a1=7ffdb67279f8 a2=340 a3=0 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287237): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287237): arch=c000003e syscall=5 success=yes exit=0 a0=3 a1=7ffdb6727890 a2=7ffdb6727890 a3=7fac8cebaed0 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287238): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=MMAP msg=audit(1685019497.766:287238): fd=3 flags=0x802
+type=SYSCALL msg=audit(1685019497.766:287238): arch=c000003e syscall=9 success=yes exit=140379045916672 a0=0 a1=2278d0 a2=5 a3=802 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287239): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287239): arch=c000003e syscall=10 success=yes exit=0 a0=7fac8b2cc000 a1=1ff000 a2=0 a3=7ffdb6727680 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287240): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=MMAP msg=audit(1685019497.766:287240): fd=3 flags=0x812
+type=SYSCALL msg=audit(1685019497.766:287240): arch=c000003e syscall=9 success=yes exit=140379048161280 a0=7fac8b4cb000 a1=2000 a2=3 a3=812 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287241): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287241): arch=c000003e syscall=9 success=yes exit=140379048169472 a0=7fac8b4cd000 a1=18d0 a2=3 a3=32 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287242): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287242): arch=c000003e syscall=3 success=yes exit=0 a0=3 a1=28 a2=0 a3=31 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287243): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.766:287243): item=0 name="/etc/ld.so.nohwcap" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.766:287243): cwd="/"
+type=SYSCALL msg=audit(1685019497.766:287243): arch=c000003e syscall=21 success=no exit=-2 a0=7fac8ccccb02 a1=0 a2=0 a3=7fac8ccc8570 items=1 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287244): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.766:287244): item=0 name="/lib/x86_64-linux-gnu/libidn.so.11" inode=1314203 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.766:287244): cwd="/"
+type=SYSCALL msg=audit(1685019497.766:287244): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7fac8cebb3d0 a2=80000 a3=0 items=1 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287245): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287245): arch=c000003e syscall=0 success=yes exit=832 a0=3 a1=7ffdb67279c8 a2=340 a3=0 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287246): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287246): arch=c000003e syscall=5 success=yes exit=0 a0=3 a1=7ffdb6727860 a2=7ffdb6727860 a3=7fac8cebb3d0 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287247): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=MMAP msg=audit(1685019497.766:287247): fd=3 flags=0x802
+type=SYSCALL msg=audit(1685019497.766:287247): arch=c000003e syscall=9 success=yes exit=140379043610624 a0=0 a1=232030 a2=5 a3=802 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287248): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287248): arch=c000003e syscall=10 success=yes exit=0 a0=7fac8b0a6000 a1=1ff000 a2=0 a3=7ffdb6727680 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287249): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=MMAP msg=audit(1685019497.766:287249): fd=3 flags=0x812
+type=SYSCALL msg=audit(1685019497.766:287249): arch=c000003e syscall=9 success=yes exit=140379045908480 a0=7fac8b2a5000 a1=2000 a2=3 a3=812 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287250): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287250): arch=c000003e syscall=3 success=yes exit=0 a0=3 a1=28 a2=0 a3=31 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287251): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.766:287251): item=0 name="/etc/ld.so.nohwcap" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.766:287251): cwd="/"
+type=SYSCALL msg=audit(1685019497.766:287251): arch=c000003e syscall=21 success=no exit=-2 a0=7fac8ccccb02 a1=0 a2=0 a3=7fac8ccc8570 items=1 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287252): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.766:287252): item=0 name="/lib/x86_64-linux-gnu/liblzma.so.5" inode=1314216 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.766:287252): cwd="/"
+type=SYSCALL msg=audit(1685019497.766:287252): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7fac8cebb8d0 a2=80000 a3=0 items=1 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287253): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287253): arch=c000003e syscall=0 success=yes exit=832 a0=3 a1=7ffdb6727998 a2=340 a3=0 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287254): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287254): arch=c000003e syscall=5 success=yes exit=0 a0=3 a1=7ffdb6727830 a2=7ffdb6727830 a3=7fac8cebb8d0 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287255): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=MMAP msg=audit(1685019497.766:287255): fd=3 flags=0x802
+type=SYSCALL msg=audit(1685019497.766:287255): arch=c000003e syscall=9 success=yes exit=140379041357824 a0=0 a1=225108 a2=5 a3=802 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287256): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287256): arch=c000003e syscall=10 success=yes exit=0 a0=7fac8ae72000 a1=200000 a2=0 a3=7ffdb6727650 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287257): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=MMAP msg=audit(1685019497.766:287257): fd=3 flags=0x812
+type=SYSCALL msg=audit(1685019497.766:287257): arch=c000003e syscall=9 success=yes exit=140379043602432 a0=7fac8b072000 a1=2000 a2=3 a3=812 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287258): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287258): arch=c000003e syscall=3 success=yes exit=0 a0=3 a1=28 a2=0 a3=31 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287259): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.766:287259): item=0 name="/etc/ld.so.nohwcap" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.766:287259): cwd="/"
+type=SYSCALL msg=audit(1685019497.766:287259): arch=c000003e syscall=21 success=no exit=-2 a0=7fac8ccccb02 a1=0 a2=0 a3=7fac8ccc8570 items=1 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287260): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.766:287260): item=0 name="/usr/lib/x86_64-linux-gnu/liblz4.so.1" inode=1579087 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.766:287260): cwd="/"
+type=SYSCALL msg=audit(1685019497.766:287260): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7fac8cebbdd0 a2=80000 a3=0 items=1 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287261): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287261): arch=c000003e syscall=0 success=yes exit=832 a0=3 a1=7ffdb6727968 a2=340 a3=0 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287262): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287262): arch=c000003e syscall=5 success=yes exit=0 a0=3 a1=7ffdb6727800 a2=7ffdb6727800 a3=7fac8cebbdd0 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287263): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287263): arch=c000003e syscall=9 success=yes exit=140379075346432 a0=0 a1=2000 a2=3 a3=22 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287264): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=MMAP msg=audit(1685019497.766:287264): fd=3 flags=0x802
+type=SYSCALL msg=audit(1685019497.766:287264): arch=c000003e syscall=9 success=yes exit=140379039145984 a0=0 a1=21b060 a2=5 a3=802 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287265): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287265): arch=c000003e syscall=10 success=yes exit=0 a0=7fac8ac4d000 a1=1ff000 a2=0 a3=7ffdb6727620 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287266): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=MMAP msg=audit(1685019497.766:287266): fd=3 flags=0x812
+type=SYSCALL msg=audit(1685019497.766:287266): arch=c000003e syscall=9 success=yes exit=140379041349632 a0=7fac8ae4c000 a1=2000 a2=3 a3=812 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287267): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287267): arch=c000003e syscall=3 success=yes exit=0 a0=3 a1=28 a2=0 a3=31 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287268): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.766:287268): item=0 name="/etc/ld.so.nohwcap" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.766:287268): cwd="/"
+type=SYSCALL msg=audit(1685019497.766:287268): arch=c000003e syscall=21 success=no exit=-2 a0=7fac8ccccb02 a1=0 a2=0 a3=7fac8ccc8570 items=1 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287269): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.766:287269): item=0 name="/lib/x86_64-linux-gnu/libblkid.so.1" inode=1314148 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.766:287269): cwd="/"
+type=SYSCALL msg=audit(1685019497.766:287269): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7fac8ceb84d0 a2=80000 a3=0 items=1 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287270): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287270): arch=c000003e syscall=0 success=yes exit=832 a0=3 a1=7ffdb6727938 a2=340 a3=0 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287271): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287271): arch=c000003e syscall=5 success=yes exit=0 a0=3 a1=7ffdb67277d0 a2=7ffdb67277d0 a3=7fac8ceb84d0 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287272): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=MMAP msg=audit(1685019497.766:287272): fd=3 flags=0x802
+type=SYSCALL msg=audit(1685019497.766:287272): arch=c000003e syscall=9 success=yes exit=140379036733440 a0=0 a1=24cd00 a2=5 a3=802 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287273): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287273): arch=c000003e syscall=10 success=yes exit=0 a0=7fac8aa2c000 a1=200000 a2=0 a3=7ffdb67275c0 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287274): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=MMAP msg=audit(1685019497.766:287274): fd=3 flags=0x812
+type=SYSCALL msg=audit(1685019497.766:287274): arch=c000003e syscall=9 success=yes exit=140379039121408 a0=7fac8ac2c000 a1=5000 a2=3 a3=812 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287275): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287275): arch=c000003e syscall=9 success=yes exit=140379039141888 a0=7fac8ac31000 a1=d00 a2=3 a3=32 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287276): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287276): arch=c000003e syscall=3 success=yes exit=0 a0=3 a1=28 a2=0 a3=31 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287277): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.766:287277): item=0 name="/etc/ld.so.nohwcap" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.766:287277): cwd="/"
+type=SYSCALL msg=audit(1685019497.766:287277): arch=c000003e syscall=21 success=no exit=-2 a0=7fac8ccccb02 a1=0 a2=0 a3=7fac8ccc8570 items=1 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287278): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.766:287278): item=0 name="/lib/x86_64-linux-gnu/libpthread.so.0" inode=1313774 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.766:287278): cwd="/"
+type=SYSCALL msg=audit(1685019497.766:287278): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7fac8ceb89d0 a2=80000 a3=0 items=1 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287279): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287279): arch=c000003e syscall=0 success=yes exit=832 a0=3 a1=7ffdb6727908 a2=340 a3=0 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287280): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287280): arch=c000003e syscall=5 success=yes exit=0 a0=3 a1=7ffdb67277a0 a2=7ffdb67277a0 a3=7fac8ceb89d0 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287281): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=MMAP msg=audit(1685019497.766:287281): fd=3 flags=0x802
+type=SYSCALL msg=audit(1685019497.766:287281): arch=c000003e syscall=9 success=yes exit=140379034509312 a0=0 a1=21e480 a2=5 a3=802 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287282): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287282): arch=c000003e syscall=10 success=yes exit=0 a0=7fac8a7e0000 a1=1ff000 a2=0 a3=7ffdb6727560 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287283): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=MMAP msg=audit(1685019497.766:287283): fd=3 flags=0x812
+type=SYSCALL msg=audit(1685019497.766:287283): arch=c000003e syscall=9 success=yes exit=140379036708864 a0=7fac8a9df000 a1=2000 a2=3 a3=812 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287284): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287284): arch=c000003e syscall=9 success=yes exit=140379036717056 a0=7fac8a9e1000 a1=3480 a2=3 a3=32 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287285): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287285): arch=c000003e syscall=3 success=yes exit=0 a0=3 a1=28 a2=0 a3=31 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287286): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.766:287286): item=0 name="/etc/ld.so.nohwcap" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.766:287286): cwd="/"
+type=SYSCALL msg=audit(1685019497.766:287286): arch=c000003e syscall=21 success=no exit=-2 a0=7fac8ccccb02 a1=0 a2=0 a3=7fac8ccc8570 items=1 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287287): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.766:287287): item=0 name="/lib/x86_64-linux-gnu/libattr.so.1" inode=1314144 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.766:287287): cwd="/"
+type=SYSCALL msg=audit(1685019497.766:287287): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7fac8ceb9050 a2=80000 a3=0 items=1 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287288): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287288): arch=c000003e syscall=0 success=yes exit=832 a0=3 a1=7ffdb67278d8 a2=340 a3=0 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287289): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287289): arch=c000003e syscall=5 success=yes exit=0 a0=3 a1=7ffdb6727770 a2=7ffdb6727770 a3=7fac8ceb9050 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287290): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=MMAP msg=audit(1685019497.766:287290): fd=3 flags=0x802
+type=SYSCALL msg=audit(1685019497.766:287290): arch=c000003e syscall=9 success=yes exit=140379032391680 a0=0 a1=2040d8 a2=5 a3=802 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287291): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287291): arch=c000003e syscall=10 success=yes exit=0 a0=7fac8a5c5000 a1=1ff000 a2=0 a3=7ffdb6727590 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287292): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=MMAP msg=audit(1685019497.766:287292): fd=3 flags=0x812
+type=SYSCALL msg=audit(1685019497.766:287292): arch=c000003e syscall=9 success=yes exit=140379034501120 a0=7fac8a7c4000 a1=2000 a2=3 a3=812 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287293): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287293): arch=c000003e syscall=3 success=yes exit=0 a0=3 a1=28 a2=0 a3=31 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287294): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.766:287294): item=0 name="/etc/ld.so.nohwcap" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.766:287294): cwd="/"
+type=SYSCALL msg=audit(1685019497.766:287294): arch=c000003e syscall=21 success=no exit=-2 a0=7fac8ccccb02 a1=0 a2=0 a3=7fac8ccc8570 items=1 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287295): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.766:287295): item=0 name="/lib/x86_64-linux-gnu/libuuid.so.1" inode=1314324 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.766:287295): cwd="/"
+type=SYSCALL msg=audit(1685019497.766:287295): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7fac8ceb9590 a2=80000 a3=0 items=1 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287296): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287296): arch=c000003e syscall=0 success=yes exit=832 a0=3 a1=7ffdb67278a8 a2=340 a3=0 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287297): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287297): arch=c000003e syscall=5 success=yes exit=0 a0=3 a1=7ffdb6727740 a2=7ffdb6727740 a3=7fac8ceb9590 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287298): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=MMAP msg=audit(1685019497.766:287298): fd=3 flags=0x802
+type=SYSCALL msg=audit(1685019497.766:287298): arch=c000003e syscall=9 success=yes exit=140379030265856 a0=0 a1=206180 a2=5 a3=802 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287299): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287299): arch=c000003e syscall=10 success=yes exit=0 a0=7fac8a3c0000 a1=1ff000 a2=0 a3=7ffdb6727530 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287300): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=MMAP msg=audit(1685019497.766:287300): fd=3 flags=0x812
+type=SYSCALL msg=audit(1685019497.766:287300): arch=c000003e syscall=9 success=yes exit=140379032383488 a0=7fac8a5bf000 a1=2000 a2=3 a3=812 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287301): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287301): arch=c000003e syscall=3 success=yes exit=0 a0=3 a1=28 a2=0 a3=31 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287302): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.766:287302): item=0 name="/etc/ld.so.nohwcap" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.766:287302): cwd="/"
+type=SYSCALL msg=audit(1685019497.766:287302): arch=c000003e syscall=21 success=no exit=-2 a0=7fac8ccccb02 a1=0 a2=0 a3=7fac8ccc8570 items=1 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287303): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.766:287303): item=0 name="/lib/x86_64-linux-gnu/libdevmapper.so.1.02.1" inode=1314178 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.766:287303): cwd="/"
+type=SYSCALL msg=audit(1685019497.766:287303): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7fac8ceb9a90 a2=80000 a3=0 items=1 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287304): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287304): arch=c000003e syscall=0 success=yes exit=832 a0=3 a1=7ffdb6727878 a2=340 a3=0 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287305): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287305): arch=c000003e syscall=5 success=yes exit=0 a0=3 a1=7ffdb6727710 a2=7ffdb6727710 a3=7fac8ceb9a90 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287306): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=MMAP msg=audit(1685019497.766:287306): fd=3 flags=0x802
+type=SYSCALL msg=audit(1685019497.766:287306): arch=c000003e syscall=9 success=yes exit=140379027730432 a0=0 a1=26a2d0 a2=5 a3=802 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287307): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287307): arch=c000003e syscall=10 success=yes exit=0 a0=7fac8a1b5000 a1=1ff000 a2=0 a3=7ffdb6727530 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287308): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=MMAP msg=audit(1685019497.766:287308): fd=3 flags=0x812
+type=SYSCALL msg=audit(1685019497.766:287308): arch=c000003e syscall=9 success=yes exit=140379030241280 a0=7fac8a3b4000 a1=5000 a2=3 a3=812 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287309): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287309): arch=c000003e syscall=9 success=yes exit=140379030261760 a0=7fac8a3b9000 a1=2d0 a2=3 a3=32 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287310): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287310): arch=c000003e syscall=3 success=yes exit=0 a0=3 a1=28 a2=0 a3=31 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287311): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.766:287311): item=0 name="/etc/ld.so.nohwcap" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.766:287311): cwd="/"
+type=SYSCALL msg=audit(1685019497.766:287311): arch=c000003e syscall=21 success=no exit=-2 a0=7fac8ccccb02 a1=0 a2=0 a3=7fac8ccc8570 items=1 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287312): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.766:287312): item=0 name="/usr/lib/x86_64-linux-gnu/libargon2.so.0" inode=1578443 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.766:287312): cwd="/"
+type=SYSCALL msg=audit(1685019497.766:287312): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7fac8ceb9fa0 a2=80000 a3=0 items=1 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287313): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287313): arch=c000003e syscall=0 success=yes exit=832 a0=3 a1=7ffdb6727848 a2=340 a3=0 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287314): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287314): arch=c000003e syscall=5 success=yes exit=0 a0=3 a1=7ffdb67276e0 a2=7ffdb67276e0 a3=7fac8ceb9fa0 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287315): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287315): arch=c000003e syscall=9 success=yes exit=140379075338240 a0=0 a1=2000 a2=3 a3=22 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287316): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=MMAP msg=audit(1685019497.766:287316): fd=3 flags=0x802
+type=SYSCALL msg=audit(1685019497.766:287316): arch=c000003e syscall=9 success=yes exit=140379025596416 a0=0 a1=2080a0 a2=5 a3=802 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287317): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287317): arch=c000003e syscall=10 success=yes exit=0 a0=7fac89f4e000 a1=1ff000 a2=0 a3=7ffdb6727500 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287318): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=MMAP msg=audit(1685019497.766:287318): fd=3 flags=0x812
+type=SYSCALL msg=audit(1685019497.766:287318): arch=c000003e syscall=9 success=yes exit=140379027722240 a0=7fac8a14d000 a1=2000 a2=3 a3=812 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287319): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287319): arch=c000003e syscall=3 success=yes exit=0 a0=3 a1=28 a2=0 a3=31 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287320): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.766:287320): item=0 name="/etc/ld.so.nohwcap" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.766:287320): cwd="/"
+type=SYSCALL msg=audit(1685019497.766:287320): arch=c000003e syscall=21 success=no exit=-2 a0=7fac8ccccb02 a1=0 a2=0 a3=7fac8ccc8570 items=1 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287321): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.766:287321): item=0 name="/lib/x86_64-linux-gnu/libjson-c.so.3" inode=1314208 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.766:287321): cwd="/"
+type=SYSCALL msg=audit(1685019497.766:287321): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7fac8ceb64d0 a2=80000 a3=0 items=1 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287322): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287322): arch=c000003e syscall=0 success=yes exit=832 a0=3 a1=7ffdb6727818 a2=340 a3=0 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287323): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287323): arch=c000003e syscall=5 success=yes exit=0 a0=3 a1=7ffdb67276b0 a2=7ffdb67276b0 a3=7fac8ceb64d0 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287324): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=MMAP msg=audit(1685019497.766:287324): fd=3 flags=0x802
+type=SYSCALL msg=audit(1685019497.766:287324): arch=c000003e syscall=9 success=yes exit=140379023454208 a0=0 a1=20a160 a2=5 a3=802 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287325): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287325): arch=c000003e syscall=10 success=yes exit=0 a0=7fac89d45000 a1=1ff000 a2=0 a3=7ffdb67274d0 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287326): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=MMAP msg=audit(1685019497.766:287326): fd=3 flags=0x812
+type=SYSCALL msg=audit(1685019497.766:287326): arch=c000003e syscall=9 success=yes exit=140379025588224 a0=7fac89f44000 a1=2000 a2=3 a3=812 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287327): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287327): arch=c000003e syscall=3 success=yes exit=0 a0=3 a1=28 a2=0 a3=31 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287328): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.766:287328): item=0 name="/etc/ld.so.nohwcap" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.766:287328): cwd="/"
+type=SYSCALL msg=audit(1685019497.766:287328): arch=c000003e syscall=21 success=no exit=-2 a0=7fac8ccccb02 a1=0 a2=0 a3=7fac8ccc8570 items=1 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287329): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.766:287329): item=0 name="/lib/x86_64-linux-gnu/libgpg-error.so.0" inode=1314197 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.766:287329): cwd="/"
+type=SYSCALL msg=audit(1685019497.766:287329): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7fac8ceb6a60 a2=80000 a3=0 items=1 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287330): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287330): arch=c000003e syscall=0 success=yes exit=832 a0=3 a1=7ffdb67277e8 a2=340 a3=0 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287331): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287331): arch=c000003e syscall=5 success=yes exit=0 a0=3 a1=7ffdb6727680 a2=7ffdb6727680 a3=7fac8ceb6a60 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287332): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=MMAP msg=audit(1685019497.766:287332): fd=3 flags=0x802
+type=SYSCALL msg=audit(1685019497.766:287332): arch=c000003e syscall=9 success=yes exit=140379021271040 a0=0 a1=2140e8 a2=5 a3=802 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287333): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287333): arch=c000003e syscall=10 success=yes exit=0 a0=7fac89b3a000 a1=1ff000 a2=0 a3=7ffdb67274a0 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287334): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=MMAP msg=audit(1685019497.766:287334): fd=3 flags=0x812
+type=SYSCALL msg=audit(1685019497.766:287334): arch=c000003e syscall=9 success=yes exit=140379023446016 a0=7fac89d39000 a1=2000 a2=3 a3=812 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287335): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287335): arch=c000003e syscall=3 success=yes exit=0 a0=3 a1=28 a2=0 a3=31 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287336): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.766:287336): item=0 name="/etc/ld.so.nohwcap" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.766:287336): cwd="/"
+type=SYSCALL msg=audit(1685019497.766:287336): arch=c000003e syscall=21 success=no exit=-2 a0=7fac8ccccb02 a1=0 a2=0 a3=7fac8ccc8570 items=1 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287337): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.766:287337): item=0 name="/lib/x86_64-linux-gnu/libpcre.so.3" inode=1314278 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.766:287337): cwd="/"
+type=SYSCALL msg=audit(1685019497.766:287337): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7fac8ceb7010 a2=80000 a3=0 items=1 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287338): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287338): arch=c000003e syscall=0 success=yes exit=832 a0=3 a1=7ffdb67277b8 a2=340 a3=0 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287339): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287339): arch=c000003e syscall=5 success=yes exit=0 a0=3 a1=7ffdb6727650 a2=7ffdb6727650 a3=7fac8ceb7010 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287340): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=MMAP msg=audit(1685019497.766:287340): fd=3 flags=0x802
+type=SYSCALL msg=audit(1685019497.766:287340): arch=c000003e syscall=9 success=yes exit=140379018706944 a0=0 a1=271108 a2=5 a3=802 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287341): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287341): arch=c000003e syscall=10 success=yes exit=0 a0=7fac89924000 a1=200000 a2=0 a3=7ffdb6727470 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287342): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=MMAP msg=audit(1685019497.766:287342): fd=3 flags=0x812
+type=SYSCALL msg=audit(1685019497.766:287342): arch=c000003e syscall=9 success=yes exit=140379021262848 a0=7fac89b24000 a1=2000 a2=3 a3=812 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287343): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287343): arch=c000003e syscall=3 success=yes exit=0 a0=3 a1=28 a2=0 a3=31 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287344): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.766:287344): item=0 name="/etc/ld.so.nohwcap" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.766:287344): cwd="/"
+type=SYSCALL msg=audit(1685019497.766:287344): arch=c000003e syscall=21 success=no exit=-2 a0=7fac8ccccb02 a1=0 a2=0 a3=7fac8ccc8570 items=1 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287345): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.766:287345): item=0 name="/lib/x86_64-linux-gnu/libdl.so.2" inode=1308246 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.766:287345): cwd="/"
+type=SYSCALL msg=audit(1685019497.766:287345): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7fac8ceb7510 a2=80000 a3=0 items=1 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287346): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287346): arch=c000003e syscall=0 success=yes exit=832 a0=3 a1=7ffdb6727788 a2=340 a3=0 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287347): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287347): arch=c000003e syscall=5 success=yes exit=0 a0=3 a1=7ffdb6727620 a2=7ffdb6727620 a3=7fac8ceb7510 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287348): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=MMAP msg=audit(1685019497.766:287348): fd=3 flags=0x802
+type=SYSCALL msg=audit(1685019497.766:287348): arch=c000003e syscall=9 success=yes exit=140379016593408 a0=0 a1=203110 a2=5 a3=802 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287349): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287349): arch=c000003e syscall=10 success=yes exit=0 a0=7fac896b3000 a1=1ff000 a2=0 a3=7ffdb6727440 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287350): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=MMAP msg=audit(1685019497.766:287350): fd=3 flags=0x812
+type=SYSCALL msg=audit(1685019497.766:287350): arch=c000003e syscall=9 success=yes exit=140379018698752 a0=7fac898b2000 a1=2000 a2=3 a3=812 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287351): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287351): arch=c000003e syscall=3 success=yes exit=0 a0=3 a1=28 a2=0 a3=31 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287352): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.766:287352): item=0 name="/etc/ld.so.nohwcap" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.766:287352): cwd="/"
+type=SYSCALL msg=audit(1685019497.766:287352): arch=c000003e syscall=21 success=no exit=-2 a0=7fac8ccccb02 a1=0 a2=0 a3=7fac8ccc8570 items=1 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287353): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.766:287353): item=0 name="/lib/x86_64-linux-gnu/libudev.so.1" inode=1314316 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.766:287353): cwd="/"
+type=SYSCALL msg=audit(1685019497.766:287353): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7fac8ceb7c20 a2=80000 a3=0 items=1 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287354): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287354): arch=c000003e syscall=0 success=yes exit=832 a0=3 a1=7ffdb6727758 a2=340 a3=0 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287355): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287355): arch=c000003e syscall=5 success=yes exit=0 a0=3 a1=7ffdb67275f0 a2=7ffdb67275f0 a3=7fac8ceb7c20 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287356): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287356): arch=c000003e syscall=9 success=yes exit=140379075330048 a0=0 a1=2000 a2=3 a3=22 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287357): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=MMAP msg=audit(1685019497.766:287357): fd=3 flags=0x802
+type=SYSCALL msg=audit(1685019497.766:287357): arch=c000003e syscall=9 success=yes exit=140379014373376 a0=0 a1=21d908 a2=5 a3=802 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287358): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287358): arch=c000003e syscall=10 success=yes exit=0 a0=7fac894af000 a1=1ff000 a2=0 a3=7ffdb67273e0 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287359): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=MMAP msg=audit(1685019497.766:287359): fd=3 flags=0x812
+type=SYSCALL msg=audit(1685019497.766:287359): arch=c000003e syscall=9 success=yes exit=140379016585216 a0=7fac896ae000 a1=2000 a2=3 a3=812 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287360): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287360): arch=c000003e syscall=3 success=yes exit=0 a0=3 a1=28 a2=0 a3=31 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287361): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.766:287361): item=0 name="/etc/ld.so.nohwcap" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.766:287361): cwd="/"
+type=SYSCALL msg=audit(1685019497.766:287361): arch=c000003e syscall=21 success=no exit=-2 a0=7fac8ccccb02 a1=0 a2=0 a3=7fac8ccc8570 items=1 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287362): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.766:287362): item=0 name="/lib/x86_64-linux-gnu/libm.so.6" inode=1308247 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.766:287362): cwd="/"
+type=SYSCALL msg=audit(1685019497.766:287362): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7fac8ceb44d0 a2=80000 a3=0 items=1 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287363): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287363): arch=c000003e syscall=0 success=yes exit=832 a0=3 a1=7ffdb6727728 a2=340 a3=0 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287364): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287364): arch=c000003e syscall=5 success=yes exit=0 a0=3 a1=7ffdb67275c0 a2=7ffdb67275c0 a3=7fac8ceb44d0 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287365): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=MMAP msg=audit(1685019497.766:287365): fd=3 flags=0x802
+type=SYSCALL msg=audit(1685019497.766:287365): arch=c000003e syscall=9 success=yes exit=140379010580480 a0=0 a1=39d158 a2=5 a3=802 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287366): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287366): arch=c000003e syscall=10 success=yes exit=0 a0=7fac89291000 a1=1ff000 a2=0 a3=7ffdb67273e0 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287367): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=MMAP msg=audit(1685019497.766:287367): fd=3 flags=0x812
+type=SYSCALL msg=audit(1685019497.766:287367): arch=c000003e syscall=9 success=yes exit=140379014365184 a0=7fac89490000 a1=2000 a2=3 a3=812 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287368): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287368): arch=c000003e syscall=3 success=yes exit=0 a0=3 a1=28 a2=0 a3=31 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287369): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287369): arch=c000003e syscall=9 success=yes exit=140379075321856 a0=0 a1=2000 a2=3 a3=22 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287370): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287370): arch=c000003e syscall=9 success=yes exit=140379075309568 a0=0 a1=3000 a2=3 a3=22 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287371): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287371): arch=c000003e syscall=158 success=yes exit=0 a0=1002 a1=7fac8ceaf940 a2=7fac8ceb0290 a3=22 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287372): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287372): arch=c000003e syscall=10 success=yes exit=0 a0=7fac8cca0000 a1=4000 a2=1 a3=7fac8cebc000 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287373): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287373): arch=c000003e syscall=10 success=yes exit=0 a0=7fac89490000 a1=1000 a2=1 a3=7fac8ceb44f0 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287374): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287374): arch=c000003e syscall=10 success=yes exit=0 a0=7fac8a9df000 a1=1000 a2=1 a3=7fac8ceb8a00 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287375): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287375): arch=c000003e syscall=10 success=yes exit=0 a0=7fac8c473000 a1=1000 a2=1 a3=7fac8cebca30 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287376): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287376): arch=c000003e syscall=10 success=yes exit=0 a0=7fac896ae000 a1=1000 a2=1 a3=7fac8ceb4000 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287377): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287377): arch=c000003e syscall=10 success=yes exit=0 a0=7fac898b2000 a1=1000 a2=1 a3=7fac8ceb7540 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287378): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287378): arch=c000003e syscall=10 success=yes exit=0 a0=7fac89b24000 a1=1000 a2=1 a3=7fac8ceb7040 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287379): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287379): arch=c000003e syscall=10 success=yes exit=0 a0=7fac89d39000 a1=1000 a2=1 a3=7fac8ceb6a90 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287380): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287380): arch=c000003e syscall=10 success=yes exit=0 a0=7fac89f44000 a1=1000 a2=1 a3=7fac8ceb6500 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287381): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287381): arch=c000003e syscall=10 success=yes exit=0 a0=7fac8a14d000 a1=1000 a2=1 a3=7fac8ceb6000 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287382): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287382): arch=c000003e syscall=10 success=yes exit=0 a0=7fac8b4cb000 a1=1000 a2=1 a3=7fac8cebaf00 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287383): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287383): arch=c000003e syscall=10 success=yes exit=0 a0=7fac8a3b4000 a1=1000 a2=1 a3=7fac8ceb9ac0 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287384): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287384): arch=c000003e syscall=10 success=yes exit=0 a0=7fac8a5bf000 a1=1000 a2=1 a3=7fac8ceb95c0 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287385): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287385): arch=c000003e syscall=10 success=yes exit=0 a0=7fac8a7c4000 a1=1000 a2=1 a3=7fac8ceb9080 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287386): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287386): arch=c000003e syscall=10 success=yes exit=0 a0=7fac8ac2c000 a1=4000 a2=1 a3=7fac8ceb8500 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287387): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287387): arch=c000003e syscall=10 success=yes exit=0 a0=7fac8ae4c000 a1=1000 a2=1 a3=7fac8ceb8000 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287388): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287388): arch=c000003e syscall=10 success=yes exit=0 a0=7fac8b072000 a1=1000 a2=1 a3=7fac8cebb900 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287389): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287389): arch=c000003e syscall=10 success=yes exit=0 a0=7fac8b2a5000 a1=1000 a2=1 a3=7fac8cebb400 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287390): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287390): arch=c000003e syscall=10 success=yes exit=0 a0=7fac8b6ed000 a1=1000 a2=1 a3=7fac8cebaa00 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287391): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287391): arch=c000003e syscall=10 success=yes exit=0 a0=7fac8b8f4000 a1=1000 a2=1 a3=7fac8ceba500 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287392): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287392): arch=c000003e syscall=10 success=yes exit=0 a0=7fac8bc0a000 a1=2000 a2=1 a3=7fac8ceba000 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287393): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287393): arch=c000003e syscall=10 success=yes exit=0 a0=7fac8be5c000 a1=1000 a2=1 a3=7fac8cebd930 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287394): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287394): arch=c000003e syscall=10 success=yes exit=0 a0=7fac8c065000 a1=1000 a2=1 a3=7fac8cebd430 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287395): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287395): arch=c000003e syscall=10 success=yes exit=0 a0=7fac8c26b000 a1=1000 a2=1 a3=7fac8cebcf30 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287396): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287396): arch=c000003e syscall=10 success=yes exit=0 a0=7fac8c82c000 a1=8a000 a2=1 a3=7fac8cebc4f0 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287397): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287397): arch=c000003e syscall=10 success=yes exit=0 a0=55fee20dc000 a1=3000 a2=1 a3=7fac8ced5170 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287398): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287398): arch=c000003e syscall=10 success=yes exit=0 a0=7fac8ced3000 a1=1000 a2=1 a3=7fac8ced49f0 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287399): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287399): arch=c000003e syscall=11 success=yes exit=0 a0=7fac8cebe000 a1=1402f a2=29c00000000 a3=7fac8ced49f0 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287400): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287400): arch=c000003e syscall=218 success=yes exit=13680 a0=7fac8ceafc10 a1=7ffdb6728778 a2=7fac8ceaf940 a3=7fac8ced49f0 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287401): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287401): arch=c000003e syscall=273 success=yes exit=0 a0=7fac8ceafc20 a1=18 a2=7fac8ceaf940 a3=7fac8ced49f0 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287402): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287402): arch=c000003e syscall=13 success=yes exit=0 a0=20 a1=7ffdb67284e0 a2=0 a3=8 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287403): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287403): arch=c000003e syscall=13 success=yes exit=0 a0=21 a1=7ffdb67284e0 a2=0 a3=8 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287404): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287404): arch=c000003e syscall=14 success=yes exit=0 a0=1 a1=7ffdb6728658 a2=0 a3=8 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287405): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287405): arch=c000003e syscall=302 success=yes exit=0 a0=0 a1=3 a2=0 a3=7ffdb6728640 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287406): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287406): arch=c000003e syscall=12 success=yes exit=94553203249152 a0=0 a1=7fac8cca4c40 a2=20270 a3=fffffffffffff000 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287407): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287407): arch=c000003e syscall=12 success=yes exit=94553203384320 a0=55fee219a000 a1=7fac8cca4c40 a2=55fee2179000 a3=fffffffffffff000 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287408): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.766:287408): item=0 name="/sys/fs/selinux" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.766:287408): cwd="/"
+type=SYSCALL msg=audit(1685019497.766:287408): arch=c000003e syscall=137 success=no exit=-2 a0=7fac8b2c4c63 a1=7ffdb6728610 a2=1000 a3=1b items=1 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287409): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.766:287409): item=0 name="/selinux" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.766:287409): cwd="/"
+type=SYSCALL msg=audit(1685019497.766:287409): arch=c000003e syscall=137 success=no exit=-2 a0=7fac8b2c4c6a a1=7ffdb6728610 a2=1000 a3=1b items=1 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287410): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.766:287410): item=0 name="/proc/filesystems" inode=4026532072 dev=00:05 mode=0100444 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.766:287410): cwd="/"
+type=SYSCALL msg=audit(1685019497.766:287410): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7fac8b2c4c47 a2=80000 a3=0 items=1 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287411): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287411): arch=c000003e syscall=5 success=yes exit=0 a0=3 a1=7ffdb67284f0 a2=7ffdb67284f0 a3=0 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287412): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287412): arch=c000003e syscall=0 success=yes exit=412 a0=3 a1=55fee2179540 a2=400 a3=55fee2179010 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287413): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287413): arch=c000003e syscall=0 success=yes exit=0 a0=3 a1=55fee2179540 a2=400 a3=55fee21796dc items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287414): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287414): arch=c000003e syscall=3 success=yes exit=0 a0=3 a1=0 a2=7fac8cca0760 a3=1b items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287415): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.766:287415): item=0 name="/etc/selinux/config" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.766:287415): cwd="/"
+type=SYSCALL msg=audit(1685019497.766:287415): arch=c000003e syscall=21 success=no exit=-2 a0=7fac8b2c4c8b a1=0 a2=0 a3=1b items=1 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287416): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.766:287416): item=0 name="/usr/lib/locale/locale-archive" inode=1576840 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.766:287416): cwd="/"
+type=SYSCALL msg=audit(1685019497.766:287416): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7fac8ca74080 a2=80000 a3=0 items=1 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287417): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287417): arch=c000003e syscall=5 success=yes exit=0 a0=3 a1=7fac8cca5ac0 a2=7fac8cca5ac0 a3=0 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287418): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=MMAP msg=audit(1685019497.766:287418): fd=3 flags=0x2
+type=SYSCALL msg=audit(1685019497.766:287418): arch=c000003e syscall=9 success=yes exit=140379000295424 a0=0 a1=9ce3d0 a2=1 a3=2 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287419): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287419): arch=c000003e syscall=3 success=yes exit=0 a0=3 a1=9ce3d0 a2=2d69 a3=2 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287420): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.766:287420): item=0 name="/proc/self/stat" inode=344878 dev=00:05 mode=0100444 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.766:287420): cwd="/"
+type=SYSCALL msg=audit(1685019497.766:287420): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7fac8c5d8e15 a2=80000 a3=0 items=1 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287421): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287421): arch=c000003e syscall=5 success=yes exit=0 a0=3 a1=7ffdb67283c0 a2=7ffdb67283c0 a3=55fee2179010 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287422): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287422): arch=c000003e syscall=0 success=yes exit=315 a0=3 a1=55fee2179540 a2=400 a3=55fee2179010 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287423): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287423): arch=c000003e syscall=3 success=yes exit=0 a0=3 a1=0 a2=7fac8cca0760 a3=55fee2179010 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287424): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287424): arch=c000003e syscall=13 success=yes exit=0 a0=7 a1=7ffdb6728400 a2=7ffdb67284a0 a3=8 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287425): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287425): arch=c000003e syscall=16 success=no exit=-25 a0=1 a1=5401 a2=7ffdb6728560 a3=8 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287426): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.766:287426): item=0 name="/proc/1/root" inode=2 dev=08:01 mode=040755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.766:287426): cwd="/"
+type=SYSCALL msg=audit(1685019497.766:287426): arch=c000003e syscall=262 success=yes exit=0 a0=ffffff9c a1=7fac8c5d881a a2=7ffdb67284b0 a3=0 items=1 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287427): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.766:287427): item=0 name="/" inode=2 dev=08:01 mode=040755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.766:287427): cwd="/"
+type=SYSCALL msg=audit(1685019497.766:287427): arch=c000003e syscall=262 success=yes exit=0 a0=ffffff9c a1=7fac8c5db1bf a2=7ffdb6728420 a3=0 items=1 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287428): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.766:287428): item=0 name="/run/systemd/system/" inode=210 dev=00:18 mode=040755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.766:287428): cwd="/"
+type=SYSCALL msg=audit(1685019497.766:287428): arch=c000003e syscall=262 success=yes exit=0 a0=ffffff9c a1=7fac8c5f2d25 a2=7ffdb6728240 a3=100 items=1 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287429): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287429): arch=c000003e syscall=107 success=yes exit=0 a0=55fee20df0e8 a1=0 a2=0 a3=100 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287430): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287430): arch=c000003e syscall=39 success=yes exit=13680 a0=55fee217acb0 a1=0 a2=ffffffff a3=55fee2179010 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287431): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287431): arch=c000003e syscall=41 success=yes exit=3 a0=1 a1=80801 a2=0 a3=55fee2179010 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287432): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287432): arch=c000003e syscall=55 success=yes exit=0 a0=3 a1=1 a2=8 a3=7ffdb6728104 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287433): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287433): arch=c000003e syscall=54 success=yes exit=0 a0=3 a1=1 a2=21 a3=7ffdb6728104 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287434): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287434): arch=c000003e syscall=55 success=yes exit=0 a0=3 a1=1 a2=7 a3=7ffdb6728104 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287435): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287435): arch=c000003e syscall=54 success=yes exit=0 a0=3 a1=1 a2=20 a3=7ffdb6728104 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287436): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.766:287436): item=0 name="/run/systemd/private" inode=245 dev=00:18 mode=0140777 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.766:287436): cwd="/"
+type=SOCKADDR msg=audit(1685019497.766:287436): saddr=01002F72756E2F73797374656D642F70726976617465
+type=SYSCALL msg=audit(1685019497.766:287436): arch=c000003e syscall=42 success=yes exit=0 a0=3 a1=55fee217ada0 a2=16 a3=7ffdb6728104 items=1 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287437): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287437): arch=c000003e syscall=55 success=yes exit=0 a0=3 a1=1 a2=11 a3=7ffdb67280ec items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287438): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287438): arch=c000003e syscall=55 success=yes exit=0 a0=3 a1=1 a2=1f a3=55fee217b4c0 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287439): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287439): arch=c000003e syscall=55 success=yes exit=0 a0=3 a1=1 a2=3b a3=55fee217b510 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287440): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287440): arch=c000003e syscall=5 success=yes exit=0 a0=3 a1=7ffdb6727f90 a2=7ffdb6727f90 a3=7ffdb67280a0 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287441): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287441): arch=c000003e syscall=55 success=yes exit=0 a0=3 a1=1 a2=1e a3=7ffdb6727f88 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287442): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SOCKADDR msg=audit(1685019497.766:287442): saddr=0100
+type=SYSCALL msg=audit(1685019497.766:287442): arch=c000003e syscall=51 success=yes exit=0 a0=3 a1=7ffdb6728060 a2=7ffdb672805c a3=7ffdb6727f88 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287443): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287443): arch=c000003e syscall=107 success=yes exit=0 a0=3 a1=7ffdb6728060 a2=0 a3=7ffdb6727f88 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287444): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287444): arch=c000003e syscall=46 success=yes exit=45 a0=3 a1=7ffdb67280b0 a2=4040 a3=55fee2179010 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287445): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287445): arch=c000003e syscall=55 success=yes exit=0 a0=3 a1=1 a2=11 a3=7ffdb672829c items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287446): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287446): arch=c000003e syscall=16 success=no exit=-25 a0=1 a1=5401 a2=7ffdb6728220 a3=7ffdb672829c items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287447): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287447): arch=c000003e syscall=47 success=no exit=-11 a0=3 a1=7ffdb6726b90 a2=40004040 a3=55fee2179010 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287448): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287448): arch=c000003e syscall=271 success=yes exit=1 a0=7ffdb6727d10 a1=1 a2=7ffdb6727cc0 a3=0 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287449): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287449): arch=c000003e syscall=47 success=yes exit=52 a0=3 a1=7ffdb6726b90 a2=40004040 a3=7ffdb6727b90 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287450): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287450): arch=c000003e syscall=46 success=yes exit=181 a0=3 a1=7ffdb6727c30 a2=4040 a3=b0 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287451): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287451): arch=c000003e syscall=47 success=no exit=-11 a0=3 a1=7ffdb6726cd0 a2=40004040 a3=7ffdb6727ce0 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287452): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287452): arch=c000003e syscall=271 success=yes exit=1 a0=7ffdb6727d30 a1=1 a2=7ffdb6727ce0 a3=0 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287453): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287453): arch=c000003e syscall=47 success=yes exit=24 a0=3 a1=7ffdb6726cd0 a2=40004040 a3=0 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287454): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287454): arch=c000003e syscall=47 success=yes exit=10265 a0=3 a1=7ffdb6726cd0 a2=40004040 a3=27e10101026c items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287455): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287455): arch=c000003e syscall=186 success=yes exit=13680 a0=2 a1=ffffffff a2=0 a3=7ffdb6727e90 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287456): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287456): arch=c000003e syscall=318 success=yes exit=16 a0=7fac8c8b7350 a1=10 a2=1 a3=55fee2179010 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287457): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287457): arch=c000003e syscall=202 success=yes exit=0 a0=7fac8c8b7360 a1=81 a2=7fffffff a3=0 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287458): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287458): arch=c000003e syscall=318 success=yes exit=16 a0=7fac8c8b7370 a1=10 a2=1 a3=55fee217fe50 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287459): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287459): arch=c000003e syscall=318 success=yes exit=16 a0=7fac8c8b7370 a1=10 a2=1 a3=55fee217fe50 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287460): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287460): arch=c000003e syscall=318 success=yes exit=16 a0=7fac8c8b7370 a1=10 a2=1 a3=55fee217fe50 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287461): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287461): arch=c000003e syscall=318 success=yes exit=16 a0=7fac8c8b7370 a1=10 a2=1 a3=55fee217fe50 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287462): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287462): arch=c000003e syscall=318 success=yes exit=16 a0=7fac8c8b7370 a1=10 a2=1 a3=55fee217fe50 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287463): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287463): arch=c000003e syscall=318 success=yes exit=16 a0=7fac8c8b7370 a1=10 a2=1 a3=55fee217fe50 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287464): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287464): arch=c000003e syscall=5 success=yes exit=0 a0=1 a1=7ffdb6727600 a2=7ffdb6727600 a3=fffffff8 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287465): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287465): arch=c000003e syscall=3 success=yes exit=0 a0=3 a1=55fee2179028 a2=55fee2179010 a3=9a8 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287466): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.790:287466): arch=c000003e syscall=1 success=yes exit=23 a0=1 a1=55fee2180e60 a2=17 a3=7fac89491140 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287467): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.790:287467): arch=c000003e syscall=231 a0=0 a1=3c a2=0 a3=7fac89491140 items=0 ppid=13624 pid=13680 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.766:287468): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.766:287468): arch=c000003e syscall=0 success=yes exit=23 a0=3 a1=7ffc57de6c20 a2=80 a3=7f90f5ac8810 items=0 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="service" exe="/bin/dash" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287469): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.790:287469): arch=c000003e syscall=15 success=yes exit=23 a0=11 a1=7ffc57de6870 a2=7ffc57de6740 a3=7f90f5ac8810 items=0 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="service" exe="/bin/dash" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287470): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.790:287470): arch=c000003e syscall=0 success=yes exit=0 a0=3 a1=7ffc57de6c20 a2=80 a3=55720708d962 items=0 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="service" exe="/bin/dash" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287471): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.790:287471): arch=c000003e syscall=3 success=yes exit=0 a0=3 a1=0 a2=80 a3=55720708d962 items=0 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="service" exe="/bin/dash" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287472): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.790:287472): arch=c000003e syscall=61 success=yes exit=13680 a0=ffffffff a1=7ffc57de6a1c a2=0 a3=0 items=0 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="service" exe="/bin/dash" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287473): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.790:287473): item=0 name="/usr/local/sbin/systemctl" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.790:287473): cwd="/"
+type=SYSCALL msg=audit(1685019497.790:287473): arch=c000003e syscall=59 success=no exit=-2 a0=557207e5f5d0 a1=557207e5dcd0 a2=557207e5f418 a3=7ffc57de8403 items=1 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="service" exe="/bin/dash" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287474): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.790:287474): item=0 name="/usr/local/bin/systemctl" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.790:287474): cwd="/"
+type=SYSCALL msg=audit(1685019497.790:287474): arch=c000003e syscall=59 success=no exit=-2 a0=557207e5f5d0 a1=557207e5dcd0 a2=557207e5f418 a3=7ffc57de8403 items=1 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="service" exe="/bin/dash" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287475): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.790:287475): item=0 name="/usr/sbin/systemctl" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.790:287475): cwd="/"
+type=SYSCALL msg=audit(1685019497.790:287475): arch=c000003e syscall=59 success=no exit=-2 a0=557207e5f5d0 a1=557207e5dcd0 a2=557207e5f418 a3=7ffc57de8403 items=1 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="service" exe="/bin/dash" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287476): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.790:287476): item=0 name="/usr/bin/systemctl" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.790:287476): cwd="/"
+type=SYSCALL msg=audit(1685019497.790:287476): arch=c000003e syscall=59 success=no exit=-2 a0=557207e5f5d0 a1=557207e5dcd0 a2=557207e5f418 a3=7ffc57de8403 items=1 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="service" exe="/bin/dash" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287477): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.790:287477): item=0 name="/sbin/systemctl" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.790:287477): cwd="/"
+type=SYSCALL msg=audit(1685019497.790:287477): arch=c000003e syscall=59 success=no exit=-2 a0=557207e5f5d0 a1=557207e5dcd0 a2=557207e5f418 a3=7ffc57de8403 items=1 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="service" exe="/bin/dash" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287478): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.790:287478): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1308167 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1685019497.790:287478): item=0 name="/bin/systemctl" inode=1439137 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.790:287478): cwd="/"
+type=EXECVE msg=audit(1685019497.790:287478): argc=3 a0="systemctl" a1="stop" a2="auditd.service"
+type=SYSCALL msg=audit(1685019497.790:287478): arch=c000003e syscall=59 success=yes exit=0 a0=557207e5f5d0 a1=557207e5dcd0 a2=557207e5f418 a3=7ffc57de8403 items=2 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287479): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.790:287479): arch=c000003e syscall=12 success=yes exit=94518488117248 a0=0 a1=56 a2=4d a3=0 items=0 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287480): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.790:287480): item=0 name="/etc/ld.so.nohwcap" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.790:287480): cwd="/"
+type=SYSCALL msg=audit(1685019497.790:287480): arch=c000003e syscall=21 success=no exit=-2 a0=7fa4e1066b02 a1=0 a2=17 a3=54 items=1 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287481): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.790:287481): item=0 name="/etc/ld.so.preload" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.790:287481): cwd="/"
+type=SYSCALL msg=audit(1685019497.790:287481): arch=c000003e syscall=21 success=no exit=-2 a0=7fa4e1069880 a1=4 a2=7fa4e1044190 a3=8 items=1 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287482): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.790:287482): item=0 name="/lib/systemd/tls/x86_64/x86_64/libc.so.6" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.790:287482): cwd="/"
+type=SYSCALL msg=audit(1685019497.790:287482): arch=c000003e syscall=257 success=no exit=-2 a0=ffffff9c a1=7fffb2ae4c50 a2=80000 a3=0 items=1 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287483): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.790:287483): item=0 name="/lib/systemd/tls/x86_64/x86_64" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.790:287483): cwd="/"
+type=SYSCALL msg=audit(1685019497.790:287483): arch=c000003e syscall=4 success=no exit=-2 a0=7fffb2ae4c50 a1=7fffb2ae4d10 a2=7fffb2ae4d10 a3=0 items=1 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287484): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.790:287484): item=0 name="/lib/systemd/tls/x86_64/libc.so.6" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.790:287484): cwd="/"
+type=SYSCALL msg=audit(1685019497.790:287484): arch=c000003e syscall=257 success=no exit=-2 a0=ffffff9c a1=7fffb2ae4c50 a2=80000 a3=0 items=1 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287485): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.790:287485): item=0 name="/lib/systemd/tls/x86_64" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.790:287485): cwd="/"
+type=SYSCALL msg=audit(1685019497.790:287485): arch=c000003e syscall=4 success=no exit=-2 a0=7fffb2ae4c50 a1=7fffb2ae4d10 a2=7fffb2ae4d10 a3=0 items=1 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287486): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.790:287486): item=0 name="/lib/systemd/tls/x86_64/libc.so.6" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.790:287486): cwd="/"
+type=SYSCALL msg=audit(1685019497.790:287486): arch=c000003e syscall=257 success=no exit=-2 a0=ffffff9c a1=7fffb2ae4c50 a2=80000 a3=0 items=1 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287487): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.790:287487): item=0 name="/lib/systemd/tls/x86_64" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.790:287487): cwd="/"
+type=SYSCALL msg=audit(1685019497.790:287487): arch=c000003e syscall=4 success=no exit=-2 a0=7fffb2ae4c50 a1=7fffb2ae4d10 a2=7fffb2ae4d10 a3=0 items=1 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287488): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.790:287488): item=0 name="/lib/systemd/tls/libc.so.6" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.790:287488): cwd="/"
+type=SYSCALL msg=audit(1685019497.790:287488): arch=c000003e syscall=257 success=no exit=-2 a0=ffffff9c a1=7fffb2ae4c50 a2=80000 a3=0 items=1 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287489): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.790:287489): item=0 name="/lib/systemd/tls" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.790:287489): cwd="/"
+type=SYSCALL msg=audit(1685019497.790:287489): arch=c000003e syscall=4 success=no exit=-2 a0=7fffb2ae4c50 a1=7fffb2ae4d10 a2=7fffb2ae4d10 a3=0 items=1 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287490): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.790:287490): item=0 name="/lib/systemd/x86_64/x86_64/libc.so.6" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.790:287490): cwd="/"
+type=SYSCALL msg=audit(1685019497.790:287490): arch=c000003e syscall=257 success=no exit=-2 a0=ffffff9c a1=7fffb2ae4c50 a2=80000 a3=0 items=1 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287491): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.790:287491): item=0 name="/lib/systemd/x86_64/x86_64" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.790:287491): cwd="/"
+type=SYSCALL msg=audit(1685019497.790:287491): arch=c000003e syscall=4 success=no exit=-2 a0=7fffb2ae4c50 a1=7fffb2ae4d10 a2=7fffb2ae4d10 a3=0 items=1 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287492): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.790:287492): item=0 name="/lib/systemd/x86_64/libc.so.6" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.790:287492): cwd="/"
+type=SYSCALL msg=audit(1685019497.790:287492): arch=c000003e syscall=257 success=no exit=-2 a0=ffffff9c a1=7fffb2ae4c50 a2=80000 a3=0 items=1 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287493): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.790:287493): item=0 name="/lib/systemd/x86_64" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.790:287493): cwd="/"
+type=SYSCALL msg=audit(1685019497.790:287493): arch=c000003e syscall=4 success=no exit=-2 a0=7fffb2ae4c50 a1=7fffb2ae4d10 a2=7fffb2ae4d10 a3=0 items=1 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287494): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.790:287494): item=0 name="/lib/systemd/x86_64/libc.so.6" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.790:287494): cwd="/"
+type=SYSCALL msg=audit(1685019497.790:287494): arch=c000003e syscall=257 success=no exit=-2 a0=ffffff9c a1=7fffb2ae4c50 a2=80000 a3=0 items=1 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287495): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.790:287495): item=0 name="/lib/systemd/x86_64" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.790:287495): cwd="/"
+type=SYSCALL msg=audit(1685019497.790:287495): arch=c000003e syscall=4 success=no exit=-2 a0=7fffb2ae4c50 a1=7fffb2ae4d10 a2=7fffb2ae4d10 a3=0 items=1 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287496): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.790:287496): item=0 name="/lib/systemd/libc.so.6" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.790:287496): cwd="/"
+type=SYSCALL msg=audit(1685019497.790:287496): arch=c000003e syscall=257 success=no exit=-2 a0=ffffff9c a1=7fffb2ae4c50 a2=80000 a3=0 items=1 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287497): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.790:287497): item=0 name="/lib/systemd" inode=1308179 dev=08:01 mode=040755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.790:287497): cwd="/"
+type=SYSCALL msg=audit(1685019497.790:287497): arch=c000003e syscall=4 success=yes exit=0 a0=7fffb2ae4c50 a1=7fffb2ae4d10 a2=7fffb2ae4d10 a3=0 items=1 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287498): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.790:287498): item=0 name="/etc/ld.so.cache" inode=1716548 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.790:287498): cwd="/"
+type=SYSCALL msg=audit(1685019497.790:287498): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7fa4e1066ea8 a2=80000 a3=0 items=1 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287499): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.790:287499): arch=c000003e syscall=5 success=yes exit=0 a0=3 a1=7fffb2ae4cb0 a2=7fffb2ae4cb0 a3=0 items=0 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287500): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=MMAP msg=audit(1685019497.790:287500): fd=3 flags=0x2
+type=SYSCALL msg=audit(1685019497.790:287500): arch=c000003e syscall=9 success=yes exit=140346128695296 a0=0 a1=1402f a2=1 a3=2 items=0 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287501): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.790:287501): arch=c000003e syscall=3 success=yes exit=0 a0=3 a1=1402f a2=1 a3=2 items=0 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287502): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.790:287502): item=0 name="/etc/ld.so.nohwcap" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.790:287502): cwd="/"
+type=SYSCALL msg=audit(1685019497.790:287502): arch=c000003e syscall=21 success=no exit=-2 a0=7fa4e1066b02 a1=0 a2=0 a3=7fa4e1062570 items=1 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287503): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.790:287503): item=0 name="/lib/x86_64-linux-gnu/libc.so.6" inode=1308243 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.790:287503): cwd="/"
+type=SYSCALL msg=audit(1685019497.790:287503): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7fa4e126fe60 a2=80000 a3=0 items=1 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287504): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.790:287504): arch=c000003e syscall=0 success=yes exit=832 a0=3 a1=7fffb2ae4e78 a2=340 a3=0 items=0 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287505): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.790:287505): arch=c000003e syscall=5 success=yes exit=0 a0=3 a1=7fffb2ae4d10 a2=7fffb2ae4d10 a3=7fa4e126fe60 items=0 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287506): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.790:287506): arch=c000003e syscall=9 success=yes exit=140346128687104 a0=0 a1=2000 a2=3 a3=22 items=0 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287507): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=MMAP msg=audit(1685019497.790:287507): fd=3 flags=0x802
+type=SYSCALL msg=audit(1685019497.790:287507): arch=c000003e syscall=9 success=yes exit=140346122383360 a0=0 a1=3f0ae0 a2=5 a3=802 items=0 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287508): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.790:287508): arch=c000003e syscall=10 success=yes exit=0 a0=7fa4e0e3a000 a1=200000 a2=0 a3=7fffb2ae4aa0 items=0 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287509): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=MMAP msg=audit(1685019497.790:287509): fd=3 flags=0x812
+type=SYSCALL msg=audit(1685019497.790:287509): arch=c000003e syscall=9 success=yes exit=140346126475264 a0=7fa4e103a000 a1=6000 a2=3 a3=812 items=0 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287510): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.790:287510): arch=c000003e syscall=9 success=yes exit=140346126499840 a0=7fa4e1040000 a1=3ae0 a2=3 a3=32 items=0 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287511): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.790:287511): arch=c000003e syscall=3 success=yes exit=0 a0=3 a1=28 a2=0 a3=31 items=0 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287512): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.790:287512): item=0 name="/lib/systemd/libsystemd-shared-237.so" inode=1313702 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.790:287512): cwd="/"
+type=SYSCALL msg=audit(1685019497.790:287512): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7fffb2ae4c10 a2=80000 a3=0 items=1 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287513): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.790:287513): arch=c000003e syscall=0 success=yes exit=832 a0=3 a1=7fffb2ae4e48 a2=340 a3=0 items=0 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287514): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.790:287514): arch=c000003e syscall=5 success=yes exit=0 a0=3 a1=7fffb2ae4ce0 a2=7fffb2ae4ce0 a3=0 items=0 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287515): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=MMAP msg=audit(1685019497.790:287515): fd=3 flags=0x802
+type=SYSCALL msg=audit(1685019497.790:287515): arch=c000003e syscall=9 success=yes exit=140346117910528 a0=0 a1=4433c8 a2=5 a3=802 items=0 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287516): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.790:287516): arch=c000003e syscall=10 success=yes exit=0 a0=7fa4e09c7000 a1=1ff000 a2=0 a3=7fffb2ae4ad0 items=0 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287517): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=MMAP msg=audit(1685019497.790:287517): fd=3 flags=0x812
+type=SYSCALL msg=audit(1685019497.790:287517): arch=c000003e syscall=9 success=yes exit=140346121805824 a0=7fa4e0bc6000 a1=8b000 a2=3 a3=812 items=0 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287518): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.790:287518): arch=c000003e syscall=9 success=yes exit=140346122375168 a0=7fa4e0c51000 a1=13c8 a2=3 a3=32 items=0 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287519): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.790:287519): arch=c000003e syscall=3 success=yes exit=0 a0=3 a1=28 a2=0 a3=31 items=0 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287520): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.790:287520): item=0 name="/etc/ld.so.nohwcap" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.790:287520): cwd="/"
+type=SYSCALL msg=audit(1685019497.790:287520): arch=c000003e syscall=21 success=no exit=-2 a0=7fa4e1066b02 a1=0 a2=0 a3=7fa4e1062570 items=1 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287521): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.790:287521): item=0 name="/lib/x86_64-linux-gnu/librt.so.1" inode=1313813 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.790:287521): cwd="/"
+type=SYSCALL msg=audit(1685019497.790:287521): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7fa4e1256a00 a2=80000 a3=0 items=1 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287522): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.790:287522): arch=c000003e syscall=0 success=yes exit=832 a0=3 a1=7fffb2ae4b58 a2=340 a3=0 items=0 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287523): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.790:287523): arch=c000003e syscall=5 success=yes exit=0 a0=3 a1=7fffb2ae49f0 a2=7fffb2ae49f0 a3=7fa4e1256a00 items=0 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287524): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=MMAP msg=audit(1685019497.790:287524): fd=3 flags=0x802
+type=SYSCALL msg=audit(1685019497.790:287524): arch=c000003e syscall=9 success=yes exit=140346115780608 a0=0 a1=207be0 a2=5 a3=802 items=0 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287525): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.790:287525): arch=c000003e syscall=10 success=yes exit=0 a0=7fa4e060e000 a1=1ff000 a2=0 a3=7fffb2ae4810 items=0 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287526): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=MMAP msg=audit(1685019497.790:287526): fd=3 flags=0x812
+type=SYSCALL msg=audit(1685019497.790:287526): arch=c000003e syscall=9 success=yes exit=140346117902336 a0=7fa4e080d000 a1=2000 a2=3 a3=812 items=0 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287527): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.790:287527): arch=c000003e syscall=3 success=yes exit=0 a0=3 a1=28 a2=0 a3=31 items=0 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287528): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.790:287528): item=0 name="/etc/ld.so.nohwcap" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.790:287528): cwd="/"
+type=SYSCALL msg=audit(1685019497.790:287528): arch=c000003e syscall=21 success=no exit=-2 a0=7fa4e1066b02 a1=0 a2=0 a3=7fa4e1062570 items=1 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287529): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.790:287529): item=0 name="/lib/x86_64-linux-gnu/libcap.so.2" inode=1314161 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.790:287529): cwd="/"
+type=SYSCALL msg=audit(1685019497.790:287529): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7fa4e1256f00 a2=80000 a3=0 items=1 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287530): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.790:287530): arch=c000003e syscall=0 success=yes exit=832 a0=3 a1=7fffb2ae4b28 a2=340 a3=0 items=0 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287531): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.790:287531): arch=c000003e syscall=5 success=yes exit=0 a0=3 a1=7fffb2ae49c0 a2=7fffb2ae49c0 a3=7fa4e1256f00 items=0 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287532): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=MMAP msg=audit(1685019497.790:287532): fd=3 flags=0x802
+type=SYSCALL msg=audit(1685019497.790:287532): arch=c000003e syscall=9 success=yes exit=140346113658880 a0=0 a1=205158 a2=5 a3=802 items=0 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287533): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.790:287533): arch=c000003e syscall=10 success=yes exit=0 a0=7fa4e0405000 a1=200000 a2=0 a3=7fffb2ae47e0 items=0 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287534): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=MMAP msg=audit(1685019497.790:287534): fd=3 flags=0x812
+type=SYSCALL msg=audit(1685019497.790:287534): arch=c000003e syscall=9 success=yes exit=140346115772416 a0=7fa4e0605000 a1=2000 a2=3 a3=812 items=0 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287535): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=SYSCALL msg=audit(1685019497.790:287535): arch=c000003e syscall=3 success=yes exit=0 a0=3 a1=28 a2=0 a3=31 items=0 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=PROCTITLE msg=audit(1685019497.790:287536): proctitle=2F62696E2F7368002F7573722F7362696E2F73657276696365006175646974640073746F70
+type=PATH msg=audit(1685019497.790:287536): item=0 name="/etc/ld.so.nohwcap" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1685019497.790:287536): cwd="/"
+type=SYSCALL msg=audit(1685019497.790:287536): arch=c000003e syscall=21 success=no exit=-2 a0=7fa4e1066b02 a1=0 a2=0 a3=7fa4e1062570 items=1 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
+----
+time->Thu May 25 13:58:17 2023
+type=CWD msg=audit(1685019497.790:287537): cwd="/"
+type=SYSCALL msg=audit(1685019497.790:287537): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7fa4e1257400 a2=80000 a3=0 items=1 ppid=13619 pid=13624 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="systemctl" exe="/bin/systemctl" key="greater_than"
