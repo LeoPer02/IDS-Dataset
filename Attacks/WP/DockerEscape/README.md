@@ -111,7 +111,7 @@ At the end of the setup process of the victim machine you will be instructed to 
 
 * Access http://localhost:8080 and follow the installation steps
 * Access the Plugins tab and Activate the Wp File Manager plugin
-* Execute in the terminal -> ```shell docker exec $(docker ps | grep docker_wordpress | awk '{ print $1 }') bash -c "chown -R www-data:www-data /var/www/html/wp-content/"```
+* Execute in the terminal -> ```docker exec $(docker ps | grep docker_wordpress | awk '{ print $1 }') bash -c "chown -R www-data:www-data /var/www/html/wp-content/"```
 
 
 This will setup the Docker machine to be in the exact same state it was during development.
