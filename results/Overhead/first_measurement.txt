@@ -1,0 +1,147 @@
+##########################################
+Sample taken at:  Thu 8 Jun 17:28:18 BST 2023
+
+NOTE:
+The execution time was calculated using 2 different commands 'time' and 'date' but the average is calculate only using the date time
+Within the time calculate by 'date' is also the time execution of the command 'time' is self so that might justify some level of disparity
+However, from our tests, that disparity is usually too small to be considered, so we decided to keep both for matters of validation
+
+NO LOGGING
+==============================
+Measure 0:
+  With time: 3.674s
+  With date: 3.678022877
+
+Measure 1:
+  With time: 3.128s
+  With date: 3.135887776
+
+Measure 2:
+  With time: 3.307s
+  With date: 3.312128074
+
+Measure 3:
+  With time: 2.941s
+  With date: 2.948005930
+
+Measure 4:
+  With time: 2.910s
+  With date: 2.913118183
+
+Measure 5:
+  With time: 2.797s
+  With date: 2.802052900
+
+Measure 6:
+  With time: 2.894s
+  With date: 2.897812041
+
+Measure 7:
+  With time: 2.908s
+  With date: 2.912253216
+
+Measure 8:
+  With time: 2.904s
+  With date: 2.907889686
+
+Measure 9:
+  With time: 2.902s
+  With date: 2.906427188
+
+==============================
+Average: 3.041359787
+
+WITH AUDITD
+==============================
+Measure 0:
+  With time: 8.352s
+  With date: 8.365203879
+
+Measure 1:
+  With time: 8.720s
+  With date: 8.730727009
+
+Measure 2:
+  With time: 9.241s
+  With date: 9.258922250
+
+Measure 3:
+  With time: 8.668s
+  With date: 8.686534815
+
+Measure 4:
+  With time: 8.474s
+  With date: 8.489078466
+
+Measure 5:
+  With time: 8.350s
+  With date: 8.367131833
+
+Measure 6:
+  With time: 4.750s
+  With date: 4.765553685
+
+Measure 7:
+  With time: 9.673s
+  With date: 9.683862380
+
+Measure 8:
+  With time: 9.835s
+  With date: 9.855268329
+
+Measure 9:
+  With time: 8.976s
+  With date: 8.994881383
+
+==============================
+Average: 8.519716402
+
+WITH MODULE
+==============================
+Measure 0:
+  With time: 15.512s
+  With date: 15.554255559
+
+Measure 1:
+  With time: 23.999s
+  With date: 24.046190012
+
+Measure 2:
+  With time: 24.696s
+  With date: 24.745610662
+
+Measure 3:
+  With time: 25.371s
+  With date: 25.415779852
+
+Measure 4:
+  With time: 46.422s
+  With date: 46.481103889
+
+Measure 5:
+  With time: 49.306s
+  With date: 49.366821529
+
+Measure 6:
+  With time: 34.493s
+  With date: 34.562914993
+
+Measure 7:
+  With time: 32.632s
+  With date: 32.691364698
+
+Measure 8:
+  With time: 32.967s
+  With date: 33.029933769
+
+Measure 9:
+  With time: 26.599s
+  With date: 26.644458677
+
+==============================
+Average: 31.253843364
+
+
+Without any type of logging: 3.041359787
+With auditctl: 8.519716402
+With our module: 31.253843364
