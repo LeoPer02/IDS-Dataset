@@ -51,8 +51,13 @@ audit_list = []
 for i in all_pids:
 	p = os.popen('''cat ''' + sys.argv[2] + ''' | grep pid=''' +i +''' | grep type=SYSCALL | awk '{ print $4 }' | cut -d '=' -f2''').read().split('\n')
 	p[:] = (value for value in p if value.isdigit())
-	for v in p:
-		audit_list.append((i, v))
+	if len(p) == 0:
+		for item in module_list:
+			if item[0] == i:
+				module_list.remove(item)
+	else:
+		for v in p:
+			audit_list.append((i, v))
 
 f = open('differences.txt', 'w')
 f.write('Module Entrys: {0: <{fill}} Audit Entrys: {1: <{fill}}\n'.format(len(module_list), len(audit_list), fill=16))
