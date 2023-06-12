@@ -4,6 +4,9 @@ import sys, re, os
 if(len(sys.argv) != 3):
 	sys.exit('Wrong number of arguments\nUsage: python3 '+ sys.argv[0] +' module_file audit_file')
 
+module_name = sys.argv[1][sys.argv[1].rindex('/')+1:]
+audit_name = sys.argv[2][sys.argv[2].rindex('/')+1:]
+
 module_list = []
 audit_list = []
 
@@ -62,7 +65,9 @@ for i in p:
 m = len(module_list)
 a = len(audit_list)
 
+print("NOTE: Files used -> " + module_name + " "  +  audit_name + "\n\n")
 print('{0: <53} {1: <53}\n'.format('Module', 'Audit'))
+print('{0: <53} {1: <53}\n'.format(m, a))
 for i in range(0, max(a, m)):
 	if i < a and i < m:
 		print('pid={0: <{fill}} syscall={1: <{fill}} {2: <{fill}} {3: <{fill}}'.format(module_list[i][0], module_list[i][1], audit_list[i][0], audit_list[i][1], fill = 20))
@@ -70,4 +75,3 @@ for i in range(0, max(a, m)):
 		print('pid={0: <{fill}} syscall={0: <{fill}} {1: <{fill}} {2: <{fill}}'.format('?', audit_list[i][0], audit_list[i][1], fill = 20))
 	else:
 		print('pid={0: <{fill}} syscall={1: <{fill}} pid={2: <{fill}} syscall={2: <{fill}}'.format(module_list[i][0], module_list[i][1], '?', fill = 20))
-
