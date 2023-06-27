@@ -117,7 +117,8 @@ def wp_file_manager(victim_info, attacker_info, general_info, exp, arguments):
 		if i != k-1 :
 			create_conf.gen_config(False)
 		#Give enough time for audit and module to stop
-		time.sleep(0.3)
+		print(color.YELLOW + '[-] ' + color.BOLD + 'Giving server time to store info' + color.END)
+		time.sleep(2.5)
 			
 		
 def launch_exploit(attacker_info, victim_info):
